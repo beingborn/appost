@@ -140,11 +140,14 @@
 .flex {display: flex;}
 .flex-ac {display: flex; align-items: center;}
 .flex-acjs {display: flex; align-items: center; justify-content: space-between;}
+.flex-ajs {display: flex; justify-content: space-between;}
 .flex-grow-1 {flex-grow: 1;}
 .flex-item-right {margin-left: auto;}
 .flex-item-left {margin-right: auto;}
 .flex-evenly > * {flex: 1;}
 
+/* flex column */
+.flex-col {display: flex; flex-direction: column;}
 
 /* flex item gap */
 .gap-8 {gap: .8rem;}
@@ -179,7 +182,7 @@
 .sm-only-768 {display: none;}
 @media screen and (max-width: 768px){
 	.sm-only-768 {display:block}
-	.sm-flexColumn-only-768 {flex-direction: column!important;}
+	.sm-flexColumn-768 {flex-direction: column!important;}
 	.sm-py-32 {padding: 3.2rem 0!important}
 }
 
