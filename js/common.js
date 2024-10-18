@@ -64,8 +64,6 @@ $('#gnb-lg .gnb-submenu-link > button').on('click', function(){
 	$(this).parent().addClass('is-active')
 })
 
-
-
 /**
  * 함수명 : gnbBgOpen
  * 설명   : gnb 오픈 여부에 따라 배경 추가 및 삭제
@@ -89,8 +87,6 @@ $('body').on("click", '.gnb-backdrop', function() {
 	$(this).hide();
 	$('#gnb-lg .gnb-menu').removeClass('is-active')
 });
-
-
 
 // 팝업 열기
 function openPop(modalname) {
@@ -120,7 +116,6 @@ $(".openPopup").on("click", function(event) {
 	$("#popup").fadeOut(400); 
 	$(".bgPopup").fadeOut(400);
 });
-
 
 /**
  * 함수명 : 
@@ -172,14 +167,11 @@ $(".datepicker1").on('click', function(){
 	$('.ui-datepicker').addClass('clickEvent');
 })
 
-
 /**
  * 함수명 : fn_layer
  * 설명   : 다중 레이어 팝업 관리
  * param  : 
  */
-
-// 레이어 팝업 (제외동포청)
 function fn_layer(e,t,s) {
 var pdt = $('#'+e).find('> .inner').css('padding-top').replace(/[^-\d\.]/g, ''),
 	pdb = $('#'+e).find('> .inner').css('padding-bottom').replace(/[^-\d\.]/g, '');
@@ -199,7 +191,6 @@ function fn_layer_close(t){
 		$("." + backFocus).focus().removeClass(backFocus);
 	},200)
 }
-
 
 /**
  * 함수명 : 
