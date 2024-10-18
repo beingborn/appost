@@ -15,10 +15,10 @@
 
 /* WEB FONT */
 @font-face {
-	font-family: 'Pretendard GOV';
-	font-weight: 800;
-	font-display: swap;
-	src: local('Pretendard GOV ExtraBold'), url(../assets/font/woff2/PretendardGOV-ExtraBold.woff2) format('woff2'), url(../assets/font/woff/PretendardGOV-ExtraBold.woff) format('woff');
+font-family: 'Pretendard GOV';
+font-weight: 800;
+font-display: swap;
+src: local('Pretendard GOV ExtraBold'), url(../assets/font/woff2/PretendardGOV-ExtraBold.woff2) format('woff2'), url(../assets/font/woff/PretendardGOV-ExtraBold.woff) format('woff');
 }
 @font-face {
 font-family: 'Pretendard GOV';

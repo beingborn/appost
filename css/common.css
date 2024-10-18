@@ -25,7 +25,6 @@
 --gray03: #d8d8d8;
 --gray04: #c6c6c6;
 --gray07: #555555;
---gray01: #ddd;
 --lightblue00: #EDF1F5;
 
 /* font size */
@@ -70,6 +69,7 @@
 .mt-10 {margin-top: 1rem;}
 .mt-15 {margin-top: 1.5rem;}
 .mt-17 {margin-top: 1.7rem;}
+.mt-64 {margin-top: 6.4rem;}
 /* bottom */
 .mb-5 {margin-bottom: 0.5rem;}
 .mb-10 {margin-bottom: 1rem;}
@@ -117,6 +117,7 @@
 /* padding 상하 값 (y축) */
 .py-5 {padding: .5rem 0;}
 .py-10 {padding: 1rem 0;}
+.py-40 {padding: 4rem 0;}
 
 /* min-width*/
 .miw-200{min-width: 20rem;}
@@ -159,6 +160,10 @@
 /* position */
 .relative {position: relative;}
 
+/* display */
+.hidden {display: none;}
+
+
 /* overflow */
 .overflow-auto {overflow: auto;}
 .overflow-hidden {overflow: hidden;}
@@ -175,6 +180,7 @@
 @media screen and (max-width: 768px){
 	.sm-only-768 {display:block}
 	.sm-flexColumn-only-768 {flex-direction: column!important;}
+	.sm-py-32 {padding: 3.2rem 0!important}
 }
 
 /* 접근성 */
@@ -221,11 +227,13 @@ table caption {display: none;}
 /* backdrop bg */
 .gnb-backdrop {position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 999; background-color: rgba(0, 0, 0, 0.5);}
 /* border */
+.hp-header-border {height: .1rem; background: var(--gray03); width: 100%;}
 .hp-border-radius-2 {border-radius: .2rem;}
 .hp-border-radius-10 {border-radius: 1rem;}
 .hp-border-gray-04 {border: .1rem solid var(--gray04);}
 /* font weight */
 .hp-font-bold {font-weight: 700;}
+
 
 
 .header-btn {padding: 20rem; background-color: blue;}
