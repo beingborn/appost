@@ -79,7 +79,6 @@ html {
 
 /* 핵심 body의 기본값을 설정합니다. */
 body {
-    height: 100%;
 	font-size: 1.7rem;
 	color: #1d1d1d;
 	line-height: 1.5;
