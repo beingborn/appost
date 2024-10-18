@@ -1,0 +1,62 @@
+/****************************************************
+	파일명	: Layout.css
+	최초작성자	: 이민혁
+	최초작성일	: 2024-09-28
+	-------------------------------------------------
+	Dec. 레이아웃 관련 CSS 정의
+	-------------------------------------------------
+	최종수정자	: 이민혁
+	최종수정일	: 2024-09-28
+	수정내용	: 최초작성
+	속성순서    : 레이아웃 > 크기/간격 > 박스모양 > 폰트/정렬 > 기타
+*****************************************************/
+
+/* body */
+body {position: relative;}
+
+/* ly-cont */
+.ly-cont { margin: 0 auto;max-width: 128rem;}
+
+.ly-cont-w { margin: 0 auto; border: 1px solid brown;max-width: 128rem; padding-top: 7rem;}
+.ly-section {padding-top: 8rem; padding-bottom: 8rem;}
+.ly-section-w {margin-top: 8rem;}
+.ly-inner { margin: 0 auto; max-width: 128rem; padding: 0 1.6rem;}
+
+/* header */
+.ly-header {position: relative; background: var(--white00); z-index: 1000;} 
+.ly-header > .ly-inner {position: relative;}
+.ly-header.is-fixed {position: fixed; top: 0; left: 0; width: 100%;}
+.ly-header .logo > a {display: inline-block; height: 100%; line-height: 100%; max-width: 17.2rem;}  
+.ly-header .header-bottom {height: 4rem; margin: .4rem 0 1.6rem 0;}
+
+/* header util */
+.header-util > ul {padding: 1rem 0;}
+.header-util > ul > li {position: relative; font-size: 1.5rem; line-height: 2rem;}
+.header-util > ul > li:not(:last-child){padding-right: 1.2rem;}
+.header-util > ul > li {padding-left: 1.2rem;}
+.header-util > ul > li:not(:first-child)::before { position: absolute; top: 50%; left: 0; height: 1.6rem;content: ''; transform: translateY(-50%); border-left: 0.1rem solid #ddd;}
+/* header global */
+.header-global > ul > li > a { padding: 1rem 1.2rem; font-weight: 700;font-size: 1.7rem; line-height: 2rem;}
+.header-global .login::before { display: inline-block; width: 2rem; height: 2rem; background: url(../assets/images/icon_login_00_link.svg) no-repeat center;content: ''; margin-right: .8rem;}
+.header-global .sign-up::before { display: inline-block; width: 2rem; height: 2rem; background: url(../assets/images/icon_signup_00_link.svg) no-repeat center;content: ''; margin-right: .8rem;}
+
+/* header gnb */
+/* pc gnb */
+.header-gnb { position: relative;border-top: .1rem solid var(--gray03); border-bottom: .1rem solid var(--gray03);}
+#gnb-lg .gnb-area .gnb-menu {max-height: 6.4rem;}
+#gnb-lg .gnb-area .gnb-menu > button {display: inline-flex; padding: 0 1.6rem; color: var(--gray07); font-weight: 700; font-size: 1.9rem; line-height: 6.4rem; align-items: center;}
+#gnb-lg .gnb-area .gnb-menu > button::after { display: inline-block; width: 2rem; height: 2rem; background: url(../assets/images/icon_arrow_00_bottom_20x20.svg) no-repeat center;content: ''; margin-left: .8rem;}
+#gnb-lg .gnb-area .gnb-menu.is-active {border-bottom: .3rem solid #003675;}
+#gnb-lg .gnb-area .gnb-menu.is-active > button::after {transform: rotate(180deg);}
+#gnb-lg .gnb-area .gnb-menu.is-active > .gnb-submenu {display: block;}
+#gnb-lg .gnb-submenu { display: none; position: absolute; top: 100%; left: 50%; height: auto; width: 100%; max-width: 100%; border-bottom: .1rem solid var(--gray04); border-top: .1rem solid var(--gray04); transform: translateX(-50%); background-color: var(--white00);}
+#gnb-lg .gnb-submenu > ul { position: relative; height: 100%; display: flex; flex-direction: column;}
+#gnb-lg .gnb-submenu-link {display: inline-flex; min-height: 5.6rem; align-items: center; font-weight: 700; font-size: 1.9rem;}
+#gnb-lg .gnb-submenu-link.is-active > button {color: #003675; text-decoration: underline; background-color: aliceblue;}
+#gnb-lg .gnb-submenu-link.is-active > .dep3 {display: block;}
+#gnb-lg .gnb-submenu .dep3 {position: absolute; top: 1.6; left: 0; width: calc(100% - 26rem); margin-left: 26rem; display: none;}
+#gnb-lg .gnb-submenu > ul::after {content: ''; display: inline-block; background: aliceblue; width: 26rem; height: 100%;}
+
+
+
+

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="외교부">
+    <title>대민 아포스티유</title>
+
+    <!-- css -->
+    <link rel="shortcut icon" type="text/css" href="assets/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- js -->
+    <script defer src="js/jquery-3.7.1.js"></script>
+    <script defer src="js/jquery-ui.min.js"></script>
+    <script defer src="js/common.js"></script>
+</head>
+<body>
+    <!-- skip navigation -->
+    <div id="skip-nav">
+        <a href="#main-body">본문 바로가기</a>
+    </div>
+    <!-- .// skip navigation -->
+    <div id="wrap">
+        <!-- header -->
+        <header class="ly-header">
+                <!-- gov-banner -->
+                <div class="gov-banner">
+                    <div class="ly-inner">
+                        <span class="gov-desc">
+                            <img src="/assets/images/icon_taegeukgi.png" width="24" height="16" alt="태극기">
+                            이 누리집은 대한민국 공식 전자정부 누리집입니다.
+                        </span>
+                    </div>
+                </div>
+                <!-- ./ gov-banner -->
+                <div class="ly-inner">
+                    <!-- header-top -->
+                    <div class="header-top"> 
+                        <!-- header-util -->
+                        <div class="header-util flex">
+                            <ul class="flex-ac flex-item-right">
+                                <li><a href="#" class="flex-ac">재외동포청 365민원포탈<img src="/assets/images/icon_link_00.svg" alt="재외동포청 365민원포탈 바로가기" class="ml-2"></a></li>
+                                <li><button type="button" class="el-toggleList el-toggle-open">화면크기</button></li>
+                            </ul>
+                        </div>
+                        <!-- .// header-util -->
+                    </div> 
+                    <!-- header-top -->
+                    <!-- header-bottom -->
+                    <div class="header-bottom flex-acjs">
+                        <h1 class="logo">
+                            <a href="index.html">
+                                <img src="/assets/images/logo_header_00_pc.png" alt="pc용 대민 아포스티유 로고">
+                            </a>
+                        </h1>
+                        <div class="header-global">
+                            <ul class="flex-ac gap-8">
+                                <li><button type="button" class="el-btn-xs hp-border-gray-04">ENGLISH</button></li>
+                                <li><a href="#" class="flex-ac login">로그인</a></li>
+                                <!-- 
+                                    P : 로그인 완료 시 마이페이지 주석 활성화 , 로그인 비활성화    
+                                    <li><button type="button" class="hp-font-bold">마이페이지</button></li>
+                                -->
+                                <li><a href="#" class="flex-ac sign-up">회원가입</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- .// header-bottom -->
+                </div>
+                <div class="header-gnb">
+                    <div class="ly-inner">
+                        <!-- pc용 gnb -->
+                        <nav id="gnb-lg">
+                            <ul class="gnb-area flex gap-16" role="tablist"> 
+                                <li class="gnb-menu">
+                                    <button type="button">제도 소개</button>
+                                    <div class="gnb-submenu">
+                                        <ul class="ly-inner">
+                                            <!-- submenu depth 2 -->
+                                            <li class="gnb-submenu-link">
+                                                <button type="button">서브메뉴 링크 1</button>
+                                                <div class="dep3">
+                                                    <strong class="dep3-title"><a href="#">증명서1</a></strong>  
+                                                    <div class="dep3-content">
+                                                    </div>                
+                                                </div>
+                                            </li>
+                                            <!-- ./ submenu depth 2 -->
+                                            <!-- submenu depth 2 -->
+                                            <li class="gnb-submenu-link">
+                                                <button type="button">서브메뉴 링크 2</button>
+                                                <div class="dep3">
+                                                    <strong class="dep3-title"><a href="#">증명서2</a></strong>  
+                                                    <div class="dep3-content">
+                                                    </div>                
+                                                </div>
+                                            </li>
+                                            <!-- ./ submenu depth 2 -->
+                                            <!-- submenu depth 2 -->
+                                            <li class="gnb-submenu-link">
+                                                <button type="button">서브메뉴 링크 3</button>
+                                                <div class="dep3">
+                                                    <strong class="dep3-title"><a href="#">증명서3</a></strong>  
+                                                    <div class="dep3-content">
+                                                    </div>                
+                                                </div>
+                                            </li>
+                                            <!-- ./ submenu depth 2 -->
+                                            <!-- submenu depth 2 -->
+                                            <li class="gnb-submenu-link">
+                                                <button type="button">서브메뉴 링크 4</button>
+                                                <div class="dep3">
+                                                    <strong class="dep3-title"><a href="#">증명서4</a></strong>  
+                                                    <div class="dep3-content">
+                                                    </div>                
+                                                </div>
+                                            </li>
+                                            <!-- ./ submenu depth 2 -->
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="gnb-menu">
+                                    <button type="button">인증서 검증</button>
+                                    <div class="gnb-submenu">
+                                        <ul class="ly-inner">
+                                            <li class="gnb-submenu-link">
+                                                <button type="button">서브메뉴2 링크 1</button>
+                                                <div class="dep3">
+                                                    <strong class="dep3__title"><a href="#">증명서1-1</a></strong>  
+                                                    <div class="dep3-content">
+                                                    </div>                
+                                                </div>
+                                            </li>
+                                            <li class="gnb-submenu-link">
+                                                <button type="button">서브메뉴2 링크 2</button>
+                                                <div class="dep3">
+                                                    <strong class="dep3-title"><a href="#">증명서2-1</a></strong>  
+                                                    <div class="dep3-content">
+                                                    </div>                
+                                                </div>
+                                            </li>
+                                            <li class="gnb-submenu-link">
+                                                <button type="button">서브메뉴2 링크 3</button>
+                                                <div class="dep3">
+                                                    <strong class="dep3__title"><a href="#">증명서3-1</a></strong>  
+                                                    <div class="dep3-content">
+                                                    </div>                
+                                                </div>
+                                            </li>
+                                            <li class="gnb-submenu-link">
+                                                <button type="button">서브메뉴2 링크 4</button>
+                                                <div class="dep3">
+                                                    <strong class="dep3__title"><a href="#">증명서4-1</a></strong>  
+                                                    <div class="dep3-content">
+                                                    </div>                
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="gnb-menu"><button type="button">정책 정보</button></li>
+                                <li class="gnb-menu"><button type="button">고객센터</button></li>
+                            </ul>
+                        </nav>
+                        <!-- .// pc용 gnb -->
+                    </div>
+
+                    <nav id="gnb-sm">
+
+                    </nav>
+                </div>
+            
+        </header>
+        <!-- .// header -->
+        <!-- main -->
+        <main id="main-body">
+
+        </main>
+        <!-- .// main -->
+        <!-- footer -->
+        <footer>
+
+        </footer>
+        <!-- .// footer -->
+    </div>
+
+</body>
+</html>
