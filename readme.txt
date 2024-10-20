@@ -37,6 +37,12 @@ function과 관련 있는 아이디 네이밍의 경우 앞에 fn- 접두어를 
 Class 명에 접두어로 "is" 또는 "s-"를 붙여서 사용
 ex) .btn.is-active {color: red;}
 
+/* 모듈 생성 규칙 */
+해당 모듈에 4개 이상의 헬퍼 or 모디파이어 클래스가 붙을 시 html 가독성을 위해
+복합모듈로써 판단하여 고유 클래스 지정
+ex) <div class="flex mr-4 bg-white content-pd overflowHidden">
+
+
 // 본문과의 간격 통일
 .ly-cont-inner {padding : 0 0 120px 0}
 .max-width (767px) {padding : 0 0 80px 0}
