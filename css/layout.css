@@ -22,7 +22,6 @@ body {position: relative;}
 .ly-section-w {margin-top: 8rem;}
 .ly-inner {margin: 0 auto; max-width: 128rem;}
 
-
 /* header */
 .ly-header {position: relative; background: var(--white00); z-index: 1000;} 
 .ly-header > .ly-inner {position: relative;}
@@ -58,7 +57,6 @@ body {position: relative;}
 #gnb-lg .gnb-submenu .dep3 { display: none;position: absolute; top: 1.6; left: 0; width: calc(100% - 26rem); margin-left: 26rem;}
 #gnb-lg .gnb-submenu > ul::after { display: inline-block; width: 26rem; height: 100%; background: aliceblue;content: '';}
 
-
 /* footer */
 .ly-footer .footer-logo > a {display: inline-block; height: 100%; max-width: 17.2rem;}
 /* footer quick */
@@ -69,11 +67,22 @@ body {position: relative;}
 .footer-quick-link > button::after {content: ""; position: absolute; right: 2.4rem; top: 50%; transform: translateY(-50%); width: 2rem; height: 2rem; background: url(../assets/images/icon_plus_00_20x20.svg) no-repeat center;}
 /* footer body */
 .footer-body {background: var(--gray01); padding: 4rem 0;}
-
+.footer-body .link-go > a {line-height: 2.4rem; font-weight: 700;}
+.footer-menu {display: inline-flex; align-items: center; flex-wrap: wrap; gap: 1.6rem;}
+.footer-body .info-cs {display: flex; flex-direction: column; gap: 2rem; margin-top: 2.4rem;}
+.footer-body .info-cs > p {line-height: 2rem;}
+/* footer sns-link */
+.footer-body .sns-wrap > li > a {display:inline-flex; align-items: center; justify-content: center; width: 4rem; height: 4rem; background: var(--white00); border-radius: 50%;}
+.footer-body .sns-wrap > li > a.insta {background: url(../assets/images/icon_link_instagram_00.svg) no-repeat center;}
+.footer-body .sns-wrap > li > a.youtube {background: url(../assets/images/icon_link_youtube_00.svg) no-repeat center;}
+.footer-body .sns-wrap > li > a.facebook {background: url(../assets/images/icon_link_facebook_00.svg) no-repeat center;}
+.footer-body .sns-wrap > li > a.naverblog {background: url(../assets/images/icon_link_blog_00.svg) no-repeat center;}
 
 @media screen and (max-width: 768px){
 	.footer-body {padding: 3.2rem 0;}
 	.footer-quick .footer-quick-link:not(:last-child) {border-bottom: .1rem solid var(--gray03);}
+	.footer-body .link-go {margin-top: 3.2rem;}
+	.copyright {padding-top: 2.4rem;}
 }
 
 @media screen and (max-width: 1280px){

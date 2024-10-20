@@ -19,6 +19,7 @@
 --black01: #000; 
 --white00: #fff;
 --blue00: blue;
+--navy00 : #003675;
 --gray00: #f8f8f8;
 --gray01: #f0f0f0;
 --gray02: #e4e4e4;
@@ -67,8 +68,10 @@
 /* top */
 .mt-5 {margin-top: 0.5rem;}
 .mt-10 {margin-top: 1rem;}
-.mt-15 {margin-top: 1.5rem;}
+.mt-16 {margin-top: 1.6rem;}
 .mt-17 {margin-top: 1.7rem;}
+.mt-24 {margin-top: 2.4rem;}
+.mt-40 {margin-top: 4rem;}
 .mt-64 {margin-top: 6.4rem;}
 /* bottom */
 .mb-5 {margin-bottom: 0.5rem;}
@@ -102,6 +105,7 @@
 /* top */
 .pt-5 {padding-top: .5rem;}
 .pt-10 {padding-top: 1rem;}
+.pt-16 {padding-top: 1.6rem;}
 /* bottom */
 .pb-5 {padding-bottom: .5rem;}
 .pb-10 {padding-bottom: 1rem;}
@@ -145,6 +149,8 @@
 .flex-item-right {margin-left: auto;}
 .flex-item-left {margin-right: auto;}
 .flex-evenly > * {flex: 1;}
+.flex-wrap {flex-wrap: wrap;}
+.flex-nowrap {flex-wrap: nowrap;}
 
 /* flex column */
 .flex-col {display: flex; flex-direction: column;}
@@ -152,8 +158,8 @@
 /* flex item gap */
 .gap-8 {gap: .8rem;}
 .gap-16 {gap: 1.6rem;}
+.gap-20 {gap: 2rem;}
 .gap-40 {gap: 40rem;}
-.gap-20 {gap: 20rem;}
 
 /* text align */
 .txt-l {text-align: left;}
@@ -170,21 +176,6 @@
 /* overflow */
 .overflow-auto {overflow: auto;}
 .overflow-hidden {overflow: hidden;}
-
-/* pc 전용 콘텐츠 (모바일에서 display: none) */
-.lg-only {display: block;}
-
-@media screen and (max-width: 768px){
-	.lg-only {display:none}
-}
-
-/* 모바일 전용 클래스 (모바일에서 display: block) */
-.sm-only-768 {display: none;}
-@media screen and (max-width: 768px){
-	.sm-only-768 {display:block}
-	.sm-flexColumn-768 {flex-direction: column!important;}
-	.sm-py-32 {padding: 3.2rem 0!important}
-}
 
 /* 접근성 */
 /* screen reader */
@@ -221,8 +212,7 @@ table caption {display: none;}
 /* horizontal table */
 /* hp : 특정 스타일, 테마, 색상, 이미지 등을 변경 적용 범위 넓을 시 hp 접두어 추가 */
 /* emphasis : 강조 */
-.emp01 {color: blue;}
-.emp02 {color: red;}
+.hp-txt-emp-00 {color: var(--navy00);}
 /* bg */
 .hp-bg-white00 {background: #fff;}
 .hp-bg-lightblue00 {background: lightblue;}
@@ -234,9 +224,23 @@ table caption {display: none;}
 .hp-border-radius-2 {border-radius: .2rem;}
 .hp-border-radius-10 {border-radius: 1rem;}
 .hp-border-gray-04 {border: .1rem solid var(--gray04);}
+.hp-borderTop-gray-04 {border-top: .1rem solid var(--gray04);}
 /* font weight */
 .hp-font-bold {font-weight: 700;}
-
-
-
+.hp-font-regular {font-weight: 400;}
 .header-btn {padding: 20rem; background-color: blue;}
+
+/* pc 전용 콘텐츠 (모바일에서 display: none) */
+.lg-only {display: block;}
+
+@media screen and (max-width: 768px){
+	.lg-only {display:none}
+}
+
+/* 모바일 전용 클래스 (모바일에서 display: block) */
+.sm-only-768 {display: none;}
+@media screen and (max-width: 768px){
+	.sm-only-768 {display:block}
+	.sm-flexColumn-768 {flex-direction: column!important;}
+	.sm-py-32 {padding: 3.2rem 0!important}
+}
