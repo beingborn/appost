@@ -25,7 +25,7 @@
 --gray02: #e4e4e4;
 --gray03: #d8d8d8;
 --gray04: #c6c6c6;
---gray07: #555555;
+--gray07: #555555; 
 --lightblue00: #EDF1F5;
 
 /* font size */
@@ -72,6 +72,19 @@ button {font-weight: 400;}
 
 /* label */
 .el-mustType::after { color: red;content: '*'; margin-left: .3rem;}
+
+/* input */
+input[type="tel"], input[type="text"], input[type="password"], input[type="search"], input[type="email"] {
+	background: var(--white00);
+	border: 1px solid #717171;
+	color: #8E8E8E;
+	padding: 0 1.6rem;
+	height: 5.6rem;
+}
+
+/* form input */
+input, select {vertical-align: middle; font-size: 1.9rem; border-radius: .8rem;}
+
 
 /* margin */
 /* top */
@@ -132,6 +145,8 @@ button {font-weight: 400;}
 .py-5 {padding: .5rem 0;}
 .py-10 {padding: 1rem 0;}
 .py-40 {padding: 4rem 0;}
+/* padding 전체 */
+.pd-40 {padding: 4rem;}
 
 /* min-width*/
 .miw-200{min-width: 20rem;}
