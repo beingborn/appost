@@ -206,6 +206,16 @@ $('.el-toggle-open').on('click',function(){
 	}
 })
 
+/**
+ * 함수명 : popMyOption
+ * 설명   : 로그인 후 마이페이지 클릭 시 팝업 토글
+ * param  : 
+ */
+function popMyOption(){
+
+}
+
+
 
 
 

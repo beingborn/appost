@@ -97,6 +97,10 @@ fieldset, img {
 	max-width:100%;
 }
 
+address {
+	font-style: normal;
+}
+
 ol, ul {
 	list-style: none;
 }

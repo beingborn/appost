@@ -172,7 +172,12 @@
 
 /* display */
 .hidden {display: none;}
+.show {display: block;}
 
+/* text transform */
+.txt-upper {text-transform: uppercase;}
+.txt-lower {text-transform: lowercase;}
+.txt-capital {text-transform: capitalize;}
 
 /* overflow */
 .overflow-auto {overflow: auto;}
@@ -236,16 +241,20 @@ table caption {display: none;}
 .icon-arrRight-20::after {content: ''; background: url(../assets/images/icon_arrow_00_right.svg) no-repeat center; background-size: cover; width: 2rem; height: 2rem; display: inline-block;}
 .icon-arrRight-20.ml-4::after {margin-left: .4rem;}
 /* pc 전용 콘텐츠 (모바일에서 display: none) */
-.lg-only {display: block;}
+.lg-only-768 {display: block;}
+.lg-onlyFlex-768 {display: flex;}
 
 @media screen and (max-width: 768px){
-	.lg-only {display:none}
+	.lg-only-768 {display:none!important}
+	.lg-onlyFlex-768 {display:none}
 }
 
 /* 모바일 전용 클래스 (모바일에서 display: block) */
 .sm-only-768 {display: none;}
+.sm-onlyFlex-768 {display: none;}
 @media screen and (max-width: 768px){
 	.sm-only-768 {display:block}
-	.sm-flexColumn-768 {flex-direction: column!important;}
+	.sm-onlyFlex-768 {display:flex}
+	.sm-flexColumn-768 {display: flex; flex-direction: column!important;}
 	.sm-py-32 {padding: 3.2rem 0!important}
 }
