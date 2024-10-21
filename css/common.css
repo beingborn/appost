@@ -61,6 +61,10 @@ button {font-weight: 400;}
 .el-btn-m { display: inline-flex; width: 11.5rem; padding: 1.1rem 0;font-size: 1.7rem; align-items: center; justify-content: center; border-radius: .8rem; min-height: 4.8rem;}
 .el-btn-xs {padding: .8rem .6rem; font-size: 1.3rem; line-height: 100%; border-radius: .2rem;}
 
+/* 아이콘 별 공통 button 스타일 */
+.el-btn-m.btn-next::after {content: ''; display: inline-block; width: 2rem; height: 2rem; background: url(../assets/images/icon_arrow_00_right_white_20x20.svg) no-repeat center; margin-left: .4rem;}
+.el-btn-m.btn-prev::before {content: ''; display: inline-block; width: 2rem; height: 2rem; background: url(../assets/images/icon_arrow_00_left_black_20x20.svg) no-repeat center; margin-right: .4rem;}
+.el-btn-m.btn-print::after {content: ''; display: inline-block; width: 2rem; height: 2rem; background: url(../assets/images/icon_print_00_white.svg) no-repeat center; margin-left: .4rem;}
 /* list toggle custom */
 .el-toggleList {display: inline-flex; align-items: center;}
 .el-toggleList::after { display: inline-block; width: 1.6rem; height: 1.6rem; background: url(../assets/images/icon_arrow_00_bottom_16x16.svg) no-repeat center;content: ''; margin-left: .2rem; transition: rotate .5s;}
@@ -261,9 +265,11 @@ table caption {display: none;}
 /* 모바일 전용 클래스 (모바일에서 display: block) */
 .sm-only-768 {display: none;}
 .sm-onlyFlex-768 {display: none;}
+
 @media screen and (max-width: 768px){
 	.sm-only-768 {display:block}
 	.sm-onlyFlex-768 {display:flex}
 	.sm-flexColumn-768 {display: flex; flex-direction: column!important;}
 	.sm-py-32 {padding: 3.2rem 0!important}
+	.sm-onlyWidth100-768 {width: 100%!important;}
 }
