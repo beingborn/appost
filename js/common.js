@@ -91,22 +91,6 @@ $('body').on("click", '.gnb-backdrop', function() {
 /**
  * 함수명 : 
  * 설명   : 탭 콘텐츠 변경
- * param  : 이벤트 발생 요소
- */
-var $this;
-$(".openPopup").on("click", function(event) {
-	$this = $(this);
-	$("#popup").fadeIn(400).attr("tabindex", 0).show().focus();; 
-	$("body").append('<div class="bgPopup"></div>');
-	});
-	$("#popup .close").on("click", function(event) { 
-	$("#popup").fadeOut(400); 
-	$(".bgPopup").fadeOut(400);
-});
-
-/**
- * 함수명 : 
- * 설명   : 탭 콘텐츠 변경
  * param  : 
  */
 $('.tab__content .tab').hide().eq(0).show();
@@ -117,6 +101,10 @@ $(".tab__wrap .tab__btn button").click(function () {
 	$(".tab__content .tab").eq(idx).fadeIn();
 	$(".tab__btn button").removeClass("active");
 	$(this).addClass("active");
+
+	// 재외동포 민원 포털에서 가지고 옴. (접근성 위에 추가해야할듯)
+	btnTab.removeClass("on").removeAttr("title");
+	$(this).addClass("on").attr("title","선택됨");
 });
 
 /**
@@ -162,17 +150,20 @@ $(".datepicker1").on('click', function(){
  */
 function fn_layers(e){
 	$('#' + e).fadeIn().addClass('is-open')
+	$('#' + e).attr('tabindex', 0).focus()
 	$('body').append('<div class="el-bg-popup"></div>')
 }
-
+// 레이어 닫기
 function fn_layers_close(e){
 	$('.modal').fadeOut();
+	$('.modal').removeAttr('tabindex')
 	$('.el-bg-popup').fadeOut()
 }
-
+// 레이어 bg 클릭 hide
 $('body').on("click", '.el-bg-popup', function() { 
 	$(this).hide();
 	$('#gnb-lg .gnb-menu').removeClass('is-active')
+	$('.modal').removeAttr('tabindex')
 	$('.modal').fadeOut();
 });
 
