@@ -47,7 +47,7 @@ body {position: relative;}
 #gnb-lg .gnb-area .gnb-menu.is-active {border-bottom: .3rem solid #003675;}
 #gnb-lg .gnb-area .gnb-menu.is-active > button::after {transform: rotate(180deg);}
 #gnb-lg .gnb-area .gnb-menu.is-active > .gnb-submenu {display: block;}
-#gnb-lg .gnb-submenu { display: none; position: absolute; top: 100%; left: 50%; width: 100%; height: auto; max-width: 100%; border-bottom: .1rem solid var(--gray04); border-top: .1rem solid var(--gray04); transform: translateX(-50%); background-color: var(--white00);}
+#gnb-lg .gnb-submenu { display: none; position: absolute; top: 100%; width: 100vw; height: auto; border-bottom: .1rem solid var(--gray04); border-top: .1rem solid var(--gray04); background-color: var(--white00); margin-left: calc(-50vw + 50%);}
 #gnb-lg .gnb-submenu > ul { display: flex; position: relative; height: 100%; flex-direction: column;}
 #gnb-lg .gnb-submenu-link {display: inline-flex; font-weight: 700; font-size: 1.9rem; min-height: 5.6rem; align-items: center;}
 #gnb-lg .gnb-submenu-link.is-active > button {color: #003675; text-decoration: underline; background-color: aliceblue;}
@@ -82,6 +82,7 @@ body {position: relative;}
 
 	/* header */
 	.ly-header .header-bottom { height: 4.8rem; margin: .8rem 0;}
+	.hp-header-border {width: 100vw; margin-left: calc(-50vw + 50%);}
 	.header-global > ul > li > a {flex-direction: column; font-size: 1.3rem; font-weight: 400; padding: .55rem .4rem; line-height: 100%;}
 	.header-global > ul > li > a::before {margin-right: 0!important; margin-bottom: .4rem;}
 	/* footer */
