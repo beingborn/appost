@@ -185,24 +185,130 @@
     </header>
     <!-- .// header -->
     <main id="main-body" class="ly-contBody-00">
-        <div class="ly-inner">
+        <div class="ly-inner hp-pd-1280">
             <!-- breadcrumb -->
             <nav class="bl-breadcrumb" aria-label="브레드크럼브">
                 <ol class="path">
-                    <li class="home"><a href="#" class="txt">홈</a></li>
-                    <li><a href="#">depth-1</a></li>
-                    <li><a href="#">depth-2</a></li>
-                    <li><a href="#">depth-3</a></li>
+                    <li class="home"><a href="index.html" class="txt">홈</a></li>
+                    <li><a href="#">인증서 신청</a></li>
+                    <li><a href="#">대법원</a></li>
+                    <li><a href="#">가족관계증명서 인증서 신청</a></li>
                 </ol>
             </nav>
             <!-- ./ breadcrumb -->
             <h2 class="el-text-lv1 pt-80">가족 관계 증명서</h2>
-            <!-- step-->
-            <div class="step mt-40"></div>
-            <!-- ./ step-->
-            <div class="el-cont-00">
-                <h4 class="el-text-lv4">시작하기 전에</h4>
+            <!-- bl-step -->
+            <ol class="bl-step mt-40">
+                <li class="is-curr">
+                    <div>
+                        <span class="step-ico"></span>
+                        <span class="step">1단계</span>
+                        <span class="step-tit">약관동의</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span class="step-ico"></span>
+                        <span class="step">2단계</span>
+                        <span class="step-tit">본인인증</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <em class="sr-only">현재단계</em>
+                        <span class="step-ico"></span>
+                        <span class="step">3단계</span>
+                        <span class="step-tit">정보입력</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span class="step-ico"></span>
+                        <span class="step">4단계</span>
+                        <span class="step-tit">정보 구상</span>
+                    </div>
+                </li>
+            </ol>
+            <!-- // bl-step -->
+            <section class="el-cont-00 mt-80">
+                    <p class="el-count-00"> 
+                        <strong class="hp-txt-blue-01" title="현재단계">1단계</strong> / <span title="총단계">4단계</span>
+                    </p>
+                    <h3 class="el-text-lv3 mt-24">문서정보 입력</h3>
+                    <div class="flex-col gap-40">
+                        <!-- 시작하기 전에-->
+                        <div class="el-cont-00 hp-bg-gray-00 mt-40 el-text-lv5">
+                            <h4 class="el-text-lv4 el-before-24 before-start flex-ac gap-4">시작하기 전에</h4>
+                            <p class="hp-txt-gray-07 mt-40 mb-40">대법원 민원 서류 신청 시 아포스티유 발급을 위해 신청한 정보만 조회됩니다. (무인 발급기에서 출력한 문서는 신청 불가) 
+                                <br>
+                                발급 신청 시 발급 비용이 발생합니다.
+                            </p>
+                            <!-- 체크박스 그룹 -->
+                            <div class="flex-col gap-16">
+                                <div class="el-check-00 flex-ac">
+                                    <input type="checkbox" id="check1">
+                                    <label for="check1" class="ml-16">전자가족관계등록시스템(온라인 발급)시 아포스티유 발급정보 전송</label>
+                                    <button type="button" class="flex-ac" onclick="fn_layers(a,b,c)">
+                                        <img src="./assets/images/icon_link_00.svg" alt="" class="mr-2 ml-8">자세히 알아보기
+                                    </button>
+                                </div>
+                                <div class="el-check-00 flex-ac">
+                                    <input type="checkbox" id="check2">
+                                    <label for="check2" class="ml-16">주민센터 발급문서 신청서 작성시 아포스티유 신청정보 전송동의 체크</label>
+                                    <button type="button" class="flex-ac">
+                                        <img src="./assets/images/icon_link_00.svg" alt="" class="mr-2 ml-8">자세히 알아보기
+                                    </button>
+                                </div>
+                                <div class="el-check-00 flex-ac">
+                                    <input type="checkbox" id="check3">
+                                    <label for="check3" class="ml-16">재외공관 발급 신청서 작성 시 아포스티유 신청 정보 전송 동의 체크</label>
+                                    <button type="button" class="flex-ac"><img src="./assets/images/icon_link_00.svg" alt="" class="mr-2 ml-8">
+                                        자세히 알아보기
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- ./ 체크박스 그룹 -->
+                            <p class="hp-txt-gray-07 mt-40">위의 사항을 완료하셔야 신청이 가능합니다.</p>
+                        </div>
+                        <!-- ./ 시작하기 전에 -->
+                        <!-- 문서 발급 번호-->
+                        <div class="el-cont-00">
+                            <h4 class="el-text-lv4">문서발급번호 검증</h4>
+                            <div class="flex-col gap-12 mt-40">
+                                <p class="el-text-lv7">문서발급번호</p>
+                                <div class="bl-formgroup flex-ac gap-8 flex-evenly" style="--max-width: 48.2rem;">
+                                    <input class="txt-l" type="text" placeholder="0000" title="문서발급번호 1~4자리">
+                                    <input class="txt-l" type="text" placeholder="0000" title="문서발급번호 5~8자리">
+                                    <input class="txt-l" type="text" placeholder="0000" title="문서발급번호 9~12자리">
+                                    <input class="txt-l" type="text" placeholder="0000" title="문서발급번호 13~16자리">
+                                </div>
+                                <p class="el-before-20 caution hp-txt-gray-07 flex-ac gap-4">해당 문서의 발급 번호를 입력해주세요.</p>
+                            </div>
+                        </div>
+                        <!-- ./ 문서 발급 번호 -->
+                        <!-- 보안문자 -->
+                        <div class="el-cont-00">
+                            <h4 class="el-text-lv4">보안문자</h4>
+                            <!-- captcha -->
+                            <div class="captcha mt-40">
+                                <input type="text" placeholder="아래문자를 입력해 주세요." title="captcha 보안문자 입력란" maxlength="5">
+                                <div class="flex-ac mt-12 gap-3">
+                                    <img src="assets/images/img_captcha_00_ex.svg" width="150" height="43" alt="보안문자 이미지">
+                                    <button class="el-before-24 voice" type="button" title="보안문자 음성으로 듣기 버튼" onclick="fn_example()"></button>
+                                    <button class="el-before-24 reset" type="button" title="보안문자 초기화 버튼"  onclick="fn_example()"></button>
+                                </div>
+                            </div>
+                            <!-- ./ captcha -->
+                        </div>
+                        <!-- ./ 보안문자 -->
+                    </div>
+            </section>
+            <!-- 하단 버튼 그룹 -->
+            <div class="flex-acjs mt-40">
+                <button type="button" class="el-btn-m hp-border-black-00 btn-prev" onclick="fn_example()">이전으로</button>
+                <button type="button" class="el-btn-m hp-txt-white-00 hp-bg-blue-00 btn-next">다음으로</button>
             </div>
+            <!-- ./ 하단 버튼 그룹 -->
         </div>
     </main>
     <!-- footer -->
@@ -336,5 +442,4 @@
     <!-- .// footer -->
     </div>
 </body>
-
 </html>

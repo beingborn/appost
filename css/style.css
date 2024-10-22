@@ -29,6 +29,10 @@
 .bl-rowTable th {padding: 20px; background: #f9f9f9; line-height: 22px; text-align: left;}
 .bl-rowTable td {padding: 20px; line-height: 22px; text-align: left;}
 
+/* form-group */
+.bl-formgroup{width: 100%; max-width: var(--max-width, 100%);}
+.bl-formgroup input {min-width: 0;}
+
 @media only screen and (max-width:768px) {
 	.bl-rowTable th, .bl-rowTable td { display: block;width: 100%;}
 	.bl-rowTable th {background: transparent;}
