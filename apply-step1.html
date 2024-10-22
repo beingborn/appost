@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="외교부">
-    <title>대민 아포스티유</title>
+    <title>인증서 신청</title>
 
     <!-- css -->
     <link rel="shortcut icon" type="text/css" href="./assets/images/favicon.ico">
@@ -58,10 +58,9 @@
                             <img src="./assets/images/logo_header_00_pc.png" alt="pc용 대민 아포스티유 로고">
                         </a>
                         <a href="index.html" class="sm-only-768">
-                            <img src="./assets/images/logo_header_00_mo.png" alt="모바일용 대민 아포스티유 로고">
+                            <img src="./assets/images/logo_header_00_pc.png" alt="모바일용 대민 아포스티유 로고">
                         </a>
                     </h1>
-
                     <div class="header-global">
                         <ul class="flex-ac gap-8">
                             <li><button type="button" class="el-btn-xs hp-border-gray-04 txt-upper lg-only-768">ENGLISH</button></li>
@@ -133,7 +132,7 @@
                                 </div>
                             </li>
                             <li class="gnb-menu">
-                                <button type="button">인증서 검증</button>
+                                <button type="button">인증서 신청</button>
                                 <div class="gnb-submenu">
                                     <ul class="ly-inner">
                                         <li class="gnb-submenu-link">
@@ -171,7 +170,7 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="gnb-menu"><button type="button">정책 정보</button></li>
+                            <li class="gnb-menu"><button type="button">인증서 검증</button></li>
                             <li class="gnb-menu"><button type="button">고객센터</button></li>
                         </ul>
                     </nav>
@@ -248,14 +247,14 @@
                                 <div class="el-check-00 flex-ac">
                                     <input type="checkbox" id="check1">
                                     <label for="check1" class="ml-16">전자가족관계등록시스템(온라인 발급)시 아포스티유 발급정보 전송</label>
-                                    <button type="button" class="flex-ac" onclick="fn_layers(a,b,c)">
+                                    <button type="button" class="flex-ac" onclick="fn_layers('modal-info-0')">
                                         <img src="./assets/images/icon_link_00.svg" alt="" class="mr-2 ml-8">자세히 알아보기
                                     </button>
                                 </div>
                                 <div class="el-check-00 flex-ac">
                                     <input type="checkbox" id="check2">
                                     <label for="check2" class="ml-16">주민센터 발급문서 신청서 작성시 아포스티유 신청정보 전송동의 체크</label>
-                                    <button type="button" class="flex-ac">
+                                    <button type="button" class="flex-ac"  onclick="fn_layers('modal-info-1')">
                                         <img src="./assets/images/icon_link_00.svg" alt="" class="mr-2 ml-8">자세히 알아보기
                                     </button>
                                 </div>
@@ -294,8 +293,8 @@
                                 <input type="text" placeholder="아래문자를 입력해 주세요." title="captcha 보안문자 입력란" maxlength="5">
                                 <div class="flex-ac mt-12 gap-3">
                                     <img src="assets/images/img_captcha_00_ex.svg" width="150" height="43" alt="보안문자 이미지">
-                                    <button class="el-before-24 voice" type="button" title="보안문자 음성으로 듣기 버튼" onclick="fn_example()"></button>
-                                    <button class="el-before-24 reset" type="button" title="보안문자 초기화 버튼"  onclick="fn_example()"></button>
+                                    <button class="el-before-24 voice" type="button" title="보안문자 음성으로 듣기" onclick="fn_example()"></button>
+                                    <button class="el-before-24 reset" type="button" title="보안문자 초기화"  onclick="fn_example()"></button>
                                 </div>
                             </div>
                             <!-- ./ captcha -->
@@ -441,5 +440,52 @@
     </footer>
     <!-- .// footer -->
     </div>
+    <!-- 자세히 알아보기 팝업 1-->
+    <div class="bl-modal-00 modal" id="modal-info-0" role="dialog">
+        <div class="ly-inner">
+            <div class="el-cont-00 hp-bg-white-00 modal-inner">
+                <div class="flex-col gap-32">
+                    <!-- modal-header -->
+                    <div class="modal-header flex-acjs">
+                        <h2 class="hp-font-bold">전자가족관계등록시스템 (온라인 민원)</h2>
+                        <button type="button" class="el-before-20 close" onclick="fn_layers_close()"><span class="sr-only">닫기</span></button>
+                    </div>
+                    <!-- ./ modal-header -->
+                    <!-- modal-body -->
+                    <div class="modal-body">
+                        <h2 class="el-text-lv5">문서 발급 시 확인할 사항</h2>
+                        <div class="flex-col gap-12 mt-24">
+                            <p class="el-before-16">공동인증서를 통해 조회할 경우에만 아포스티유 전송이 가능합니다.</p>
+                            <p class="el-before-16">발급이력 및 아포스티유 전송 버튼을 눌러 자료를 전송하셔야 조회가 가능합니다.</p>
+                        </div>
+                    </div>
+                    <!-- ./ modal-body -->
+                    <!-- modal-button-group -->
+                    <div class="modal-button-group txt-r">
+                        <button type="button" class="el-btn-s hp-border-black-00" onclick="fn_layers_close()">닫기</button>
+                    </div>
+                    <!-- ./ modal-button-group -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./ 자세히 알아보기 팝업 -->
+    <!-- 자세히 알아보기 팝업 2-->
+    <div class="bl-modal-00 modal" id="modal-info-1" role="dialog">
+        <div class="ly-inner">
+            <div class="el-cont-00 hp-bg-white-00">
+                <div class="flex-col gap-32">
+                    <div class="modal-header">
+                        <h2>안녕하세요</h2>
+                    </div>
+                    <div class="modal-body"></div>
+                    <div class="txt-r">
+                        <button type="button" class="el-btn-s hp-border-black-00 close-modal" onclick="fn_layers_close()">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./ 자세히 알아보기 팝업 -->
 </body>
 </html>

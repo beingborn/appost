@@ -88,19 +88,6 @@ $('body').on("click", '.gnb-backdrop', function() {
 	$('#gnb-lg .gnb-menu').removeClass('is-active')
 });
 
-// 팝업 열기
-function openPop(modalname) {
-	document.get
-	$("." + modalname).addClass('is-open');
-}
-	
-$(document).ready(function () {
-// 팝업 닫기
-	$(".ADpopup_wrap .close_btn").click(function() {
-		$('.ADpopup_wrap').removeClass('is-open');
-	});
-});
-
 /**
  * 함수명 : 
  * 설명   : 탭 콘텐츠 변경
@@ -167,30 +154,28 @@ $(".datepicker1").on('click', function(){
 	$('.ui-datepicker').addClass('clickEvent');
 })
 
+
 /**
- * 함수명 : fn_layer
+ * 함수명 : fn_layers
  * 설명   : 다중 레이어 팝업 관리
  * param  : 
  */
-function fn_layer(e,t,s) {
-var pdt = $('#'+e).find('> .inner').css('padding-top').replace(/[^-\d\.]/g, ''),
-	pdb = $('#'+e).find('> .inner').css('padding-bottom').replace(/[^-\d\.]/g, '');
-$('*:focus').addClass(e);
-$('#'+e).fadeIn(200).addClass('on');
-$('body, html').css({'overflow':'hidden'});
-$('#'+e).find('> .inner .cont').attr("tabindex",0).focus();
+function fn_layers(e){
+	$('#' + e).fadeIn().addClass('is-open')
+	$('body').append('<div class="el-bg-popup"></div>')
 }
 
-// 레이어 팝업 닫기
-function fn_layer_close(t){
-	var backFocus = $(t).closest(".layerPop").attr("id");
-	console.log(backFocus)
-	$(t).closest(".inner").parent().fadeOut(200).removeClass("on");
-	$("body, html").css({"overflow":"auto"});
-	setTimeout(function(){
-		$("." + backFocus).focus().removeClass(backFocus);
-	},200)
+function fn_layers_close(e){
+	$('.modal').fadeOut();
+	$('.el-bg-popup').fadeOut()
 }
+
+$('body').on("click", '.el-bg-popup', function() { 
+	$(this).hide();
+	$('#gnb-lg .gnb-menu').removeClass('is-active')
+	$('.modal').fadeOut();
+});
+
 
 /**
  * 함수명 : 
