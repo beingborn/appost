@@ -261,7 +261,7 @@
                                 <div class="el-check-00 flex-ac">
                                     <input type="checkbox" id="check3">
                                     <label for="check3" class="ml-16">재외공관 발급 신청서 작성 시 아포스티유 신청 정보 전송 동의 체크</label>
-                                    <button type="button" class="flex-ac"><img src="./assets/images/icon_link_00.svg" alt="" class="mr-2 ml-8">
+                                    <button type="button" class="flex-ac" onclick="fn_layers('modal-info-2')"><img src="./assets/images/icon_link_00.svg" alt="" class="mr-2 ml-8">
                                         자세히 알아보기
                                     </button>
                                 </div>
@@ -276,10 +276,10 @@
                             <div class="flex-col gap-12 mt-40">
                                 <p class="el-text-lv7">문서발급번호</p>
                                 <div class="bl-formgroup flex-ac gap-8 flex-evenly" style="--max-width: 48.2rem;">
-                                    <input class="txt-l" type="text" placeholder="0000" title="문서발급번호 1~4자리">
-                                    <input class="txt-l" type="text" placeholder="0000" title="문서발급번호 5~8자리">
-                                    <input class="txt-l" type="text" placeholder="0000" title="문서발급번호 9~12자리">
-                                    <input class="txt-l" type="text" placeholder="0000" title="문서발급번호 13~16자리">
+                                    <input class="txt-l" type="text" placeholder="0000" maxlength="4" title="문서발급번호 1~4자리">
+                                    <input class="txt-l" type="text" placeholder="0000" maxlength="4" title="문서발급번호 5~8자리">
+                                    <input class="txt-l" type="text" placeholder="0000" maxlength="4" title="문서발급번호 9~12자리">
+                                    <input class="txt-l" type="text" placeholder="0000" maxlength="4" title="문서발급번호 13~16자리">
                                 </div>
                                 <p class="el-before-20 caution hp-txt-gray-07 flex-ac gap-4">해당 문서의 발급 번호를 입력해주세요.</p>
                             </div>
@@ -454,9 +454,20 @@
                     <!-- modal-body -->
                     <div class="modal-body">
                         <h2 class="el-text-lv5">문서 발급 시 확인할 사항</h2>
-                        <div class="flex-col gap-12 mt-24">
-                            <p class="el-before-16">공동인증서를 통해 조회할 경우에만 아포스티유 전송이 가능합니다.</p>
-                            <p class="el-before-16">발급이력 및 아포스티유 전송 버튼을 눌러 자료를 전송하셔야 조회가 가능합니다.</p>
+                        <div class="modal-body-desc flex-col gap-12 mt-24">
+                            <p class="el-before-16 check-caution flex-ac gap-8">
+                                <span>
+                                    <strong class="hp-txt-blue-01">공동인증서</strong>를 통해 조회할 경우에만 아포스티유 전송이 가능합니다.
+                                </span>
+                            </p>
+                            <p class="el-before-16 check-caution flex-ac gap-8">
+                                <span>
+                                    <strong class="hp-txt-blue-01">발급이력 및 아포스티유 전송 버튼</strong>을 눌러 자료를 전송하셔야 조회가 가능합니다.
+                                </span>
+                            </p>
+                        </div>
+                        <div class="hp-border-radius-12 overflow-hidden mt-32">
+                            <img src="./assets/images/img_popup_00_.jpg" alt="전자가족관계등록시스템 민원 신청 안내">   
                         </div>
                     </div>
                     <!-- ./ modal-body -->
@@ -470,5 +481,77 @@
         </div>
     </div>
     <!-- ./ 자세히 알아보기 팝업 -->
+    <!-- 자세히 알아보기 팝업 2-->
+    <div class="bl-modal-00 modal" id="modal-info-1" role="dialog">
+        <div class="ly-inner hp-pd-1280">
+            <div class="el-cont-00 hp-bg-white-00 modal-inner">
+                <div class="flex-col gap-32">
+                    <!-- modal-header -->
+                    <div class="modal-header flex-acjs">
+                        <h2 class="hp-font-bold">주민센터 발급신청</h2>
+                        <button type="button" class="el-before-20 close" onclick="fn_layers_close()"><span class="sr-only">닫기</span></button>
+                    </div>
+                    <!-- ./ modal-header -->
+                    <!-- modal-body -->
+                    <div class="modal-body">
+                        <h2 class="el-text-lv5">문서 발급 시 확인할 사항</h2>
+                        <div class="modal-body-desc flex-col gap-12 mt-24">
+                            <p class="el-before-16 align-top-8 check-caution flex gap-8">
+                                <span>
+                                    발급서식 내 <strong class="hp-txt-blue-01">아포스티유 신청을 위한 증명서 발급정보 전송에 관한 동의 여부를</strong> 체크하셔야 발급이 가능합니다.
+                                </span>
+                            </p>
+                        </div>
+                        <div class="hp-border-radius-12 overflow-hidden mt-32">
+                            <img src="./assets/images/img_popup_01.jpg" alt="주민센터 발급 신청 문서 발급 시 확인 사항">   
+                        </div>
+                    </div>
+                    <!-- ./ modal-body -->
+                    <!-- modal-button-group -->
+                    <div class="modal-button-group txt-r">
+                        <button type="button" class="el-btn-s hp-border-black-00" onclick="fn_layers_close()">닫기</button>
+                    </div>
+                    <!-- ./ modal-button-group -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./ 자세히 알아보기 팝업 2-->
+    <!-- 자세히 알아보기 팝업 3-->
+    <div class="bl-modal-00 modal" id="modal-info-2" role="dialog">
+        <div class="ly-inner hp-pd-1280">
+            <div class="el-cont-00 hp-bg-white-00 modal-inner">
+                <div class="flex-col gap-32">
+                    <!-- modal-header -->
+                    <div class="modal-header flex-acjs">
+                        <h2 class="hp-font-bold">재외공관 발급 신청</h2>
+                        <button type="button" class="el-before-20 close" onclick="fn_layers_close()"><span class="sr-only">닫기</span></button>
+                    </div>
+                    <!-- ./ modal-header -->
+                    <!-- modal-body -->
+                    <div class="modal-body">
+                        <h2 class="el-text-lv5">문서 발급 시 확인할 사항</h2>
+                        <div class="modal-body-desc flex-col gap-12 mt-24">
+                            <p class="el-before-16 align-top-8 check-caution flex-as gap-8">
+                                <span>
+                                    발급서식 내 <strong class="hp-txt-blue-01">아포스티유 신청을 위한 증명서 발급정보 전송에 관한 동의 여부를</strong> 체크하셔야 발급이 가능합니다.
+                                </span>
+                            </p>
+                        </div>
+                        <div class="hp-border-radius-12 overflow-hidden mt-32">
+                            <img src="./assets/images/img_popup_02.jpg" alt="재외공관 발급 신청 안내">   
+                        </div>
+                    </div>
+                    <!-- ./ modal-body -->
+                    <!-- modal-button-group -->
+                    <div class="modal-button-group txt-r">
+                        <button type="button" class="el-btn-s hp-border-black-00" onclick="fn_layers_close()">닫기</button>
+                    </div>
+                    <!-- ./ modal-button-group -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./ 자세히 알아보기 팝업 3 -->
 </body>
 </html>

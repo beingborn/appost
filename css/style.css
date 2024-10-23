@@ -35,6 +35,8 @@
 
 /* modal */
 .bl-modal-00 { display: none;position: fixed; top: 50%; left: 50%; width: 100%; transform: translate(-50%, -50%); z-index: 1002; max-width: 72rem;}
+.bl-modal-00 .modal-body-desc {color: var(--gray07);}
+.bl-modal-00 .modal-body-desc strong {font-weight: 400;}
 
 @media only screen and (max-width:768px) {
 	.bl-rowTable th, .bl-rowTable td { display: block;width: 100%;}
@@ -50,7 +52,7 @@
 .bl-foldFaq-content {max-height: 0; overflow: hidden; transition: max-height 500ms ease-out;}
 
 /* option select */
-.bl-select {position: relative; width: 12rem; height: 3.5rem; border: 0.1rem solid #ddd;}
+.bl-select {position: relative;}
 .bl-select > button {width: 100%; height: 100%;}
 .bl-select.is-open .bl-select-optList {max-height: 20rem; overflow-y: auto;}
 .bl-select-optList { position: absolute; bottom: 100%; width: 100%; border: 0.1rem solid #ddd; overflow: hidden; transition: max-height .5s, overflow .5s; max-height: 0; overflow-y: hidden;} 
