@@ -26,8 +26,8 @@
     </div>
     <!-- .// skip navigation -->
     <div class="sub-wrap">
-        <!-- header -->
-        <header class="ly-header">
+    <!-- header -->
+    <header class="ly-header">
             <!-- gov-banner -->
             <div class="gov-banner">
                 <div class="ly-inner hp-pd-1280">
@@ -191,7 +191,7 @@
                     <li class="home"><a href="index.html" class="txt">홈</a></li>
                     <li><a href="#">인증서 신청</a></li>
                     <li><a href="#">대법원</a></li>
-                    <li><a href="#">가족관계증명서 인증서 신청</a></li>
+                    <li><a href="#">가족관계증명서 인증 신청</a></li>
                 </ol>
             </nav>
             <!-- ./ breadcrumb -->
@@ -200,36 +200,36 @@
             <ol class="bl-step mt-40">
                 <li class="is-curr">
                     <div>
+                        <em class="sr-only">현재단계</em>
                         <span class="step-ico"></span>
                         <span class="step">1단계</span>
-                        <span class="step-tit">약관동의</span>
+                        <span class="step-tit">문서정보 입력</span>
                     </div>
                 </li>
                 <li>
                     <div>
                         <span class="step-ico"></span>
                         <span class="step">2단계</span>
-                        <span class="step-tit">본인인증</span>
+                        <span class="step-tit">발급사실확인/추가정보입력</span>
                     </div>
                 </li>
                 <li>
                     <div>
-                        <em class="sr-only">현재단계</em>
                         <span class="step-ico"></span>
                         <span class="step">3단계</span>
-                        <span class="step-tit">정보입력</span>
+                        <span class="step-tit">입력정보확인</span>
                     </div>
                 </li>
                 <li>
                     <div>
                         <span class="step-ico"></span>
                         <span class="step">4단계</span>
-                        <span class="step-tit">정보 구상</span>
+                        <span class="step-tit">인증서 출력</span>
                     </div>
                 </li>
             </ol>
             <!-- // bl-step -->
-            <section class="el-cont-00 mt-80">
+            <section class="el-cont-00 sm-reset-768 mt-80">
                     <p class="el-count-00"> 
                         <strong class="hp-txt-blue-01" title="현재단계">1단계</strong> / <span title="총단계">4단계</span>
                     </p>
@@ -273,13 +273,15 @@
                         <!-- 문서 발급 번호-->
                         <div class="el-cont-00">
                             <h4 class="el-text-lv4">문서발급번호 검증</h4>
-                            <div class="flex-col gap-12 mt-40">
-                                <p class="el-text-lv7">문서발급번호</p>
-                                <div class="bl-formgroup flex-ac gap-8 flex-evenly" style="--max-width: 48.2rem;">
-                                    <input class="txt-l" type="text" placeholder="0000" maxlength="4" title="문서발급번호 1~4자리">
-                                    <input class="txt-l" type="text" placeholder="0000" maxlength="4" title="문서발급번호 5~8자리">
-                                    <input class="txt-l" type="text" placeholder="0000" maxlength="4" title="문서발급번호 9~12자리">
-                                    <input class="txt-l" type="text" placeholder="0000" maxlength="4" title="문서발급번호 13~16자리">
+                            <div class="flex-col gap-12 mt-40"> 
+                                <div class="bl-formgroup flex-evenly" style="--max-width: 48.2rem;">
+                                    <label>문서발급번호</label>
+                                    <div class="bl-formlist">
+                                        <input class="txt-l" type="text" placeholder="0000" maxlength="4" title="문서발급번호 1~4자리">
+                                        <input class="txt-l" type="text" placeholder="0000" maxlength="4" title="문서발급번호 5~8자리">
+                                        <input class="txt-l" type="text" placeholder="0000" maxlength="4" title="문서발급번호 9~12자리">
+                                        <input class="txt-l" type="text" placeholder="0000" maxlength="4" title="문서발급번호 13~16자리">
+                                    </div>
                                 </div>
                                 <p class="el-before-20 caution hp-txt-gray-07 flex-ac gap-4">해당 문서의 발급 번호를 입력해주세요.</p>
                             </div>
@@ -305,7 +307,7 @@
             <!-- 하단 버튼 그룹 -->
             <div class="flex-acjs mt-40">
                 <button type="button" class="el-btn-m hp-border-black-00 btn-prev" onclick="fn_example()">이전으로</button>
-                <button type="button" class="el-btn-m hp-txt-white-00 hp-bg-blue-00 btn-next">다음으로</button>
+                <button type="button" class="el-btn-m hp-txt-white-00 hp-bg-blue-00 btn-next" onclick="location.href='apply-step2.html'">다음으로</button>
             </div>
             <!-- ./ 하단 버튼 그룹 -->
         </div>

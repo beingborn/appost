@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="외교부">
+    <title>발급사실확인/추가정보입력</title>
+
+    <!-- css -->
+    <link rel="shortcut icon" type="text/css" href="./assets/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- js -->
+    <script defer src="js/jquery-3.7.1.js"></script>
+    <script defer src="js/jquery-ui.min.js"></script>
+    <script defer src="js/common.js"></script>
+</head>
+<body>
+    <!-- skip navigation -->
+    <div id="skip-nav">
+        <a href="#main-body">본문 바로가기</a>
+    </div>
+    <!-- .// skip navigation -->
+    <div class="sub-wrap">
+        <!-- header -->
+        <header class="ly-header">
+            <!-- gov-banner -->
+            <div class="gov-banner">
+                <div class="ly-inner hp-pd-1280">
+                    <span class="gov-desc">
+                        <img src="./assets/images/icon_taegeukgi.png" width="24" height="16" alt="태극기">
+                        이 누리집은 대한민국 공식 전자정부 누리집입니다.
+                    </span>
+                </div>
+            </div>
+            <!-- ./ gov-banner -->
+            <div class="ly-inner hp-pd-1280">
+                <!-- header-top -->
+                <div class="header-top"> 
+                    <!-- header-util -->
+                    <div class="header-util lg-onlyFlex-768">
+                        <ul class="flex-ac flex-item-right">
+                            <li><a href="#" class="flex-ac">재외동포청 365민원포탈<img src="./assets/images/icon_link_00.svg" alt="재외동포청 365민원포탈 바로가기" class="ml-2"></a></li>
+                            <li><button type="button" class="el-toggleList el-toggle-open">화면크기</button></li>
+                        </ul>
+                    </div>
+                    <!-- .// header-util -->
+                </div> 
+                <!-- header-top -->
+                <!-- header-bottom -->
+                <div class="header-bottom flex-acjs">
+                    <h1 class="logo">
+                        <a href="index.html" class="lg-only-768">
+                            <img src="./assets/images/logo_header_00_pc.png" alt="pc용 대민 아포스티유 로고">
+                        </a>
+                        <a href="index.html" class="sm-only-768">
+                            <img src="./assets/images/logo_header_00_pc.png" alt="모바일용 대민 아포스티유 로고">
+                        </a>
+                    </h1>
+                    <div class="header-global">
+                        <ul class="flex-ac gap-8">
+                            <li><button type="button" class="el-btn-xs hp-border-gray-04 txt-upper lg-only-768">ENGLISH</button></li>
+                            <li><a href="#" class="flex-ac login">로그인</a></li>
+                            <!-- 
+                                P : 로그인 완료 시 마이페이지 주석 활성화 , 로그인 비활성화    
+                                <li><button type="button" class="hp-font-bold" onclick="popMyOption()">마이페이지</button></li>
+                            -->
+                            <li><a href="#" class="flex-ac sign-up lg-onlyFlex-768">회원가입</a></li>
+                            <li><a href="#" class="flex-ac hamburger sm-onlyFlex-768">전체메뉴</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- .// header-bottom -->
+                <!-- header-border -->
+                <div class="hp-header-border"></div>
+                <!-- ./ header-border -->
+            </div>
+            <div class="ly-inner hp-pd-1280">
+                <div class="header-gnb lg-only-768">
+                    <!-- pc용 gnb -->
+                    <nav id="gnb-lg">
+                        <ul class="gnb-area flex gap-16" role="tablist"> 
+                            <li class="gnb-menu">
+                                <button type="button">제도 소개</button>
+                                <div class="gnb-submenu">
+                                    <ul class="ly-inner">
+                                        <!-- submenu depth 2 -->
+                                        <li class="gnb-submenu-link">
+                                            <button type="button">서브메뉴 링크 1</button>
+                                            <div class="dep3">
+                                                <strong class="dep3-title"><a href="#">증명서1</a></strong>  
+                                                <div class="dep3-content">
+                                                </div>                
+                                            </div>
+                                        </li>
+                                        <!-- ./ submenu depth 2 -->
+                                        <!-- submenu depth 2 -->
+                                        <li class="gnb-submenu-link">
+                                            <button type="button">서브메뉴 링크 2</button>
+                                            <div class="dep3">
+                                                <strong class="dep3-title"><a href="#">증명서2</a></strong>  
+                                                <div class="dep3-content">
+                                                </div>                
+                                            </div>
+                                        </li>
+                                        <!-- ./ submenu depth 2 -->
+                                        <!-- submenu depth 2 -->
+                                        <li class="gnb-submenu-link">
+                                            <button type="button">서브메뉴 링크 3</button>
+                                            <div class="dep3">
+                                                <strong class="dep3-title"><a href="#">증명서3</a></strong>  
+                                                <div class="dep3-content">
+                                                </div>                
+                                            </div>
+                                        </li>
+                                        <!-- ./ submenu depth 2 -->
+                                        <!-- submenu depth 2 -->
+                                        <li class="gnb-submenu-link">
+                                            <button type="button">서브메뉴 링크 4</button>
+                                            <div class="dep3">
+                                                <strong class="dep3-title"><a href="#">증명서4</a></strong>  
+                                                <div class="dep3-content">
+                                                </div>                
+                                            </div>
+                                        </li>
+                                        <!-- ./ submenu depth 2 -->
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="gnb-menu">
+                                <button type="button">인증서 신청</button>
+                                <div class="gnb-submenu">
+                                    <ul class="ly-inner">
+                                        <li class="gnb-submenu-link">
+                                            <button type="button">서브메뉴2 링크 1</button>
+                                            <div class="dep3">
+                                                <strong class="dep3-title"><a href="#">증명서1-1</a></strong>  
+                                                <div class="dep3-content">
+                                                </div>                
+                                            </div>
+                                        </li>
+                                        <li class="gnb-submenu-link">
+                                            <button type="button">서브메뉴2 링크 2</button>
+                                            <div class="dep3">
+                                                <strong class="dep3-title"><a href="#">증명서2-1</a></strong>  
+                                                <div class="dep3-content">
+                                                </div>                
+                                            </div>
+                                        </li>
+                                        <li class="gnb-submenu-link">
+                                            <button type="button">서브메뉴2 링크 3</button>
+                                            <div class="dep3">
+                                                <strong class="dep3-title"><a href="#">증명서3-1</a></strong>  
+                                                <div class="dep3-content">
+                                                </div>                
+                                            </div>
+                                        </li>
+                                        <li class="gnb-submenu-link">
+                                            <button type="button">서브메뉴2 링크 4</button>
+                                            <div class="dep3">
+                                                <strong class="dep3-title"><a href="#">증명서4-1</a></strong>  
+                                                <div class="dep3-content">
+                                                </div>                
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="gnb-menu"><button type="button">인증서 검증</button></li>
+                            <li class="gnb-menu"><button type="button">고객센터</button></li>
+                        </ul>
+                    </nav>
+                    <!-- .// pc용 gnb -->
+                <!-- 모바일용 gnb -->
+                <nav id="gnb-sm">
+                </nav>
+                <!-- 모바일용 gnb -->
+            </div>
+            </div>
+        </header>
+        <!-- ./ header -->
+        <!-- main -->
+        <main id="main-body" class="ly-contBody-00">
+            <div class="ly-inner hp-pd-1280">
+                <!-- breadcrumb -->
+                <nav class="bl-breadcrumb" aria-label="브레드크럼브">
+                    <ol class="path">
+                        <li class="home"><a href="index.html" class="txt">홈</a></li>
+                        <li><a href="#">인증서 신청</a></li>
+                        <li><a href="#">대법원</a></li>
+                        <li><a href="#">가족관계증명서 인증 신청</a></li>
+                    </ol>
+                </nav>
+                <!-- ./ breadcrumb -->
+                <h2 class="el-text-lv1 pt-80">가족 관계 증명서</h2>
+                <!-- bl-step -->
+                <ol class="bl-step mt-40">
+                    <li class="is-done">
+                        <div>
+                            <span class="step-ico"></span>
+                            <span class="step">1단계</span>
+                            <span class="step-tit">문서정보 입력</span>
+                        </div>
+                    </li>
+                    <li class="is-curr">
+                        <div>
+                            <em class="sr-only">현재단계</em>
+                            <span class="step-ico"></span>
+                            <span class="step">2단계</span>
+                            <span class="step-tit">발급사실확인/추가정보입력</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span class="step-ico"></span>
+                            <span class="step">3단계</span>
+                            <span class="step-tit">입력정보확인</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span class="step-ico"></span>
+                            <span class="step">4단계</span>
+                            <span class="step-tit">인증서 출력</span>
+                        </div>
+                    </li>
+                </ol>
+                <!-- // bl-step -->
+                <section class="el-cont-00 mt-80">
+                    <p class="el-count-00"> 
+                        <strong class="hp-txt-blue-01" title="현재단계">2단계</strong> / <span title="총단계">4단계</span>
+                    </p>
+                    <h3 class="el-text-lv3 mt-24">발급사실확인 및 추가정보입력</h3>
+                    <div class="flex-col gap-40">
+                        <!-- 발급 기록 정보 확인시 -->
+                        <div class="el-cont-00 hp-bg-gray-00 mt-40 el-text-lv5">
+                            <div class="flex-col gap-40">
+                                <h4 class="el-text-lv4 el-before-24 check-success flex-ac gap-4">발급기록정보가 확인 되었습니다.</h4>
+                                    <ul class="bl-infolist demical">
+                                        <li>
+                                            <span class="bl-infolist-tit">문서발행기관</span>
+                                            <span class="bl-infolist-desc">대법원</span>
+                                        </li>
+                                        <li>
+                                            <span class="bl-infolist-tit">문서종류</span>
+                                            <span class="bl-infolist-desc">가족관계증명서</span>
+                                        </li>
+                                        <li>
+                                            <span class="bl-infolist-tit">문서발급번호</span>
+                                            <span class="bl-infolist-desc">0000 - 0000 - 0000</span>
+                                        </li>
+                                    </ul>
+                                <p class="hp-txt-gray-07">하단의 이전으로 버튼을 누르고 발급기록을 다시 확인 하세요.</p>
+                            </div>
+                        </div>
+                        <div class="el-cont-00">
+                            <div class="flex-col gap-40">
+                                <h5 class="el-text-lv5">추가정보입력</h5>
+                                <section class="flex-col gap-24">
+                                    <h6 class="el-text-lv6">신청인 정보</h6>
+                                    <div class="bl-formgroup-w flex-ac gap-8" style="--max-width: 40.8rem;">
+                                        <div class="bl-formgroup w-40">
+                                            <label for="name">성명</label>
+                                            <input type="text" value="홍길동" id="name" readonly >
+                                        </div>
+                                        <div class="bl-formgroup w-60">
+                                            <label for="en-name">영문명</label>
+                                            <input type="text"  value="Hong-gil-dong" id="en-name" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="bl-formgroup" style="--max-width: 40.8rem">
+                                        <label for="phoneNum" class="el-mustType">연락처</label>
+                                        <div class="bl-formlist">
+                                            <input class="txt-l" type="text" placeholder="0000" maxlength="4" title="연락처 1~4자리" id="phoneNum"> -
+                                            <input class="txt-l" type="text" placeholder="0000" maxlength="4" title="연락처 5~8자리"> -
+                                            <input class="txt-l" type="text" placeholder="0000" maxlength="4" title="연락처 9~12자리">
+                                        </div>
+                                    </div>
+                                    <div class="bl-formgroup" style="--max-width: 39rem">
+                                        <label for="email">E-mail</label>
+                                        <div class="bl-formlist">
+                                            <input type="text" placeholder="0000" title="아이디(이메일) 앞자리" id="email"> @
+                                            <input type="text" placeholder="gmail.com" title="아이디(이메일) 뒷자리">
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="hp-borderTop-dashedGray-04"></div> 
+                                <section class="flex-col gap-24">
+                                    <h6 class="el-text-lv6">문서정보</h6>
+                                    <div class="bl-formgroup-w bl-formlist" style="--max-width: 40.8rem;">
+                                        <div class="bl-formgroup w-50">
+                                            <label for="documentNum">문서발급번호</label>
+                                            <input type="text" value="21654XDG4" id="documentNum" readonly >
+                                        </div>
+                                        <div class="bl-formgroup w-50">
+                                            <label for="documentDay">문서발급일자</label>
+                                            <input type="text"  value="2024-00-00" id="documentDay" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="bl-formgroup" style="--max-width: 60rem;">
+                                        <label for="documentName">문서명</label>
+                                        <input type="text" value="가족관계증명서 (국문)" id="documentName" readonly>
+                                    </div>
+                                    <div class="bl-formgroup-w flex-as gap-8" style="--max-width: 44.8rem;">
+                                        <div class="bl-formgroup w-50">
+                                            <label for="sendCountry" class="el-mustType">제출대상 국가</label>
+                                            <input type="text" value="노르웨이" id="sendCountry" readonly>
+                                        </div>
+                                        <div class="bl-formgroup w-50">
+                                            <label for="selectCountry" class="hidden-value">제출국가선택</label>
+                                            <select class="el-select-00" title="제출 국가 선택" id="selectCountry">
+                                                <option value="1">노르웨이</option>
+                                                <option value="2">한국</option>
+                                                <option value="3">일본</option>
+                                                <option value="4">미국</option>
+                                            </select>
+                                            <p class="el-before-20 check-success flex gap-4">아포스티유 대상국가 입니다.</p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="el-cont-00 hp-bg-gray-00">
+                            <div class="flex-col gap-40">
+                                <h6 class="el-text-lv6 flex-ac">
+                                    문서발급기관정보
+                                    <button type="button" class="flex-ac">
+                                        <img src="./assets/images/icon_link_00.svg" alt="" class="mr-2 ml-4">자세히 알아보기
+                                    </button>
+                                </h6>
+                                
+                            </div>
+                        </div>
+                        <!-- ./ 발급 기록 정보 확인시 -->
+                        
+                        <!-- 발급 기록 정보 없을 시 -->
+                        <!-- <div class="el-cont-00 hp-bg-gray-00 mt-40 el-text-lv5">
+                            <div class="flex-col gap-40">
+                                <h4 class="el-text-lv4 el-before-24 check-fail flex-ac gap-4">발급기록정보가 없습니다.</h4>
+                                    <ul class="bl-infolist demical">
+                                        <li>
+                                            <span class="bl-infolist-tit">문서발행기관</span>
+                                            <span class="bl-infolist-desc">대법원</span>
+                                        </li>
+                                        <li>
+                                            <span class="bl-infolist-tit">문서종류</span>
+                                            <span class="bl-infolist-desc"></span>
+                                        </li>
+                                        <li>
+                                            <span class="bl-infolist-tit">문서발급번호</span>
+                                            <span class="bl-infolist-desc">0000 - 0000 - 0000</span>
+                                        </li>
+                                    </ul>
+                                <p class="hp-txt-gray-07">하단의 이전으로 버튼을 누르고 발급기록을 다시 확인 하세요.</p>
+                            </div>
+                        </div> -->
+                        <!-- ./ 발급 기록 정보 없을 시 -->
+                    </div>
+                </section>
+                <!-- 정보가 있을 경우 그룹 -->
+                <div class="flex-acjs mt-40">
+                    <button type="button" class="el-btn-m hp-border-black-00 btn-prev" onclick="location.href='apply-step1.html'">이전으로</button>
+                    <button type="button" class="el-btn-m hp-txt-white-00 hp-bg-blue-00 btn-next" onclick="location.href='apply-step3.html'">다음으로</button>
+                </div>
+                <!-- ./ 하단 버튼 그룹 -->
+                <!-- 정보 없을 시 하단 버튼 그룹 -->
+                <!-- <div class="txt-c mt-40">
+                    <button type="button" class="el-btn-m hp-border-black-00 btn-prev" onclick="location.href='apply-step1.html'">이전으로</button>
+                </div> -->
+                <!-- ./ 정보 없을 시 하단 버튼 그룹 -->
+
+            </div>
+        </main>
+        <!-- ./main -->
+    </div>
+</body>
+</html>
