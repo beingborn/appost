@@ -196,6 +196,25 @@ function popMyOption(){
 
 
 
+/**
+ * 함수명 : 
+ * 설명   : 관인 직인 이미지 변경, 5개 시 비활성화 + 활성화
+ * param  : 
+ */
+let stampImgChangeCount = 0;
+$('.el-btn-refresh').on('click', function(){
+	stampImgChangeCount += 1
+	if (stampImgChangeCount == 6){
+		alert('새로고침 횟수 5회를 초과했습니다.')
+		$(this).attr('disabled', true)
+		stampImgChangeCount - 1;
+	} else {
+		stampImg = $(this).closest('.bl-stamp').find('.stamp').attr('src', `./assets/images/img_stamp_0${stampImgChangeCount}.png`);
+	}
+})
+
+
+
 
 
 
