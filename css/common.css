@@ -69,7 +69,7 @@ button {font-weight: 400;}
 .el-btn-m { display: inline-flex; width: 11.5rem; padding: 1.1rem 0;font-size: 1.7rem; align-items: center; justify-content: center; border-radius: .8rem; min-height: 4.8rem;}
 .el-btn-xs {padding: .8rem .6rem; font-size: 1.3rem; line-height: 100%; border-radius: .2rem;}
 .el-btn-ss {padding: .8rem 1rem; font-size: 1.5rem; line-height: 100%; border-radius: .6rem;}
-.el-btn-ss-01 {padding: 1rem; font-size: 1.5rem; line-height: 100%; border-radius: .6rem; display: inline-flex; align-items: center; justify-content: center;}
+.el-btn-ss-01 { display: inline-flex;padding: 1rem; font-size: 1.5rem; line-height: 100%; border-radius: .6rem; align-items: center; justify-content: center;}
 /* 새로고침 */
 .el-btn-refresh { display: inline-flex; border: .1rem solid var(--black00); background: var(--white00); align-items: center; gap: .4rem;}
 .el-btn-refresh::before { display: inline-block; width: 1.6rem; height: 1.6rem; background: url(../assets/images/icon_refresh_00.svg) no-repeat center;content: '';}
