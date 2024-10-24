@@ -142,7 +142,6 @@ $(".datepicker1").on('click', function(){
 	$('.ui-datepicker').addClass('clickEvent');
 })
 
-
 /**
  * 함수명 : fn_layers
  * 설명   : 다중 레이어 팝업 관리
@@ -152,14 +151,14 @@ function fn_layers(e){
 	$('#' + e).fadeIn().addClass('is-open')
 	$('#' + e).attr('tabindex', 0).focus()
 	$('body').append('<div class="el-bg-popup"></div>')
-	$('html, body').css('overflow', 'hidden')
+	// $('html, body').css('overflow', 'hidden')
 }
 // 레이어 닫기
 function fn_layers_close(e){
 	$('.modal').fadeOut();
 	$('.modal').removeAttr('tabindex')
 	$('.el-bg-popup').fadeOut()
-	$('html, body').css('overflow', '')
+	// $('html, body').css('overflow', '')
 }
 // 레이어 bg 클릭 hide
 $('body').on("click", '.el-bg-popup', function() { 
@@ -167,7 +166,7 @@ $('body').on("click", '.el-bg-popup', function() {
 	$('#gnb-lg .gnb-menu').removeClass('is-active')
 	$('.modal').removeAttr('tabindex')
 	$('.modal').fadeOut();
-	$('html, body').css('overflow', '')
+	// $('html, body').css('overflow', '')
 });
 
 
@@ -193,8 +192,6 @@ $('.el-toggle-open').on('click',function(){
 function popMyOption(){
 
 }
-
-
 
 /**
  * 함수명 : 

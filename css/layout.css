@@ -87,9 +87,10 @@ body {position: relative;}
 	.header-global > ul > li > a::before {margin-right: 0!important; margin-bottom: .4rem;}
 	/* footer */
 	.footer-body {padding: 3.2rem 0;}
-	.footer-quick .footer-quick-link:not(:last-child) {border-bottom: .1rem solid var(--gray03);}
+	.footer-quick .footer-quick-link:not(:last-child) {border-bottom: .1rem solid var(--gray03); border-right: .1rem solid var(--gray03);}
 	.footer-body .link-go {margin-top: 3.2rem;}
 	.copyright {padding-top: 2.4rem;}
+	.footer-quick > .ly-inner {padding: 0;} 
 }
 
 @media screen and (max-width: 1280px){

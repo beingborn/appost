@@ -30,7 +30,7 @@
     <header class="ly-header">
             <!-- gov-banner -->
             <div class="gov-banner">
-                <div class="ly-inner ">
+                <div class="ly-inner">
                     <span class="gov-desc">
                         <img src="./assets/images/icon_taegeukgi.png" width="24" height="16" alt="태극기">
                         이 누리집은 대한민국 공식 전자정부 누리집입니다.
@@ -195,7 +195,7 @@
                 </ol>
             </nav>
             <!-- ./ breadcrumb -->
-            <h2 class="el-text-lv1 pt-80">가족 관계 증명서</h2>
+            <h2 class="bl-text-00">가족 관계 증명서</h2>
             <!-- bl-step -->
             <ol class="bl-step mt-40">
                 <li class="is-curr">
@@ -229,42 +229,40 @@
                 </li>
             </ol>
             <!-- // bl-step -->
-            <section class="el-cont-00 sm-reset-768 mt-80">
+            <section class="el-cont-00 sm-reset-768 lg-mt-80 sm-mt-64">
                     <p class="el-count-00"> 
                         <strong class="hp-txt-blue-01" title="현재단계">1단계</strong> / <span title="총단계">4단계</span>
                     </p>
                     <h3 class="el-text-lv3 mt-24">문서정보 입력</h3>
-                    <div class="flex-col gap-40">
+                    <div class="flex-col gap-40 sm-gap-32">
                         <!-- 시작하기 전에-->
-                        <div class="el-cont-00 hp-bg-gray-00 mt-40 el-text-lv5">
+                        <div class="el-cont-00 hp-bg-gray-00 lg-mt-40 sm-mt-32 el-text-lv5">
                             <h4 class="el-text-lv4 el-before-24 before-start flex-ac gap-4">시작하기 전에</h4>
-                            <p class="hp-txt-gray-07 mt-40 mb-40">대법원 민원 서류 신청 시 아포스티유 발급을 위해 신청한 정보만 조회됩니다. (무인 발급기에서 출력한 문서는 신청 불가) 
+                            <p class="hp-txt-gray-07 my-40 sm-my-24-32 ">대법원 민원 서류 신청 시 아포스티유 발급을 위해 신청한 정보만 조회됩니다. (무인 발급기에서 출력한 문서는 신청 불가) 
                                 <br>
                                 발급 신청 시 발급 비용이 발생합니다.
                             </p>
                             <!-- 체크박스 그룹 -->
-                            <div class="flex-col gap-16">
-                                <div class="el-check-00 flex-ac">
-                                    <input type="checkbox" id="check1">
-                                    <label for="check1" class="ml-16">전자가족관계등록시스템(온라인 발급)시 아포스티유 발급정보 전송</label>
-                                    <button type="button" class="flex-ac" onclick="fn_layers('modal-info-0')">
-                                        <img src="./assets/images/icon_link_00.svg" alt="" class="mr-2 ml-8">자세히 알아보기
-                                    </button>
-                                </div>
-                                <div class="el-check-00 flex-ac">
-                                    <input type="checkbox" id="check2">
-                                    <label for="check2" class="ml-16">주민센터 발급문서 신청서 작성시 아포스티유 신청정보 전송동의 체크</label>
+                            <div class="flex-col gap-16 sm-gap-32">
+                                <p class="sm-flexColumn flex gap-8">
+                                    <span>
+                                        <img src="./assets/images/icon_check_00_bkbl_16x16.svg" alt="">
+                                        전자가족관계등록시스템(온라인 발급)시 아포스티유 발급정보 전송
+                                    </span>
                                     <button type="button" class="flex-ac"  onclick="fn_layers('modal-info-1')">
-                                        <img src="./assets/images/icon_link_00.svg" alt="" class="mr-2 ml-8">자세히 알아보기
+                                        <img src="./assets/images/icon_link_00.svg" alt="" class="mr-2">자세히 알아보기
                                     </button>
-                                </div>
-                                <div class="el-check-00 flex-ac">
-                                    <input type="checkbox" id="check3">
-                                    <label for="check3" class="ml-16">재외공관 발급 신청서 작성 시 아포스티유 신청 정보 전송 동의 체크</label>
-                                    <button type="button" class="flex-ac" onclick="fn_layers('modal-info-2')"><img src="./assets/images/icon_link_00.svg" alt="" class="mr-2 ml-8">
-                                        자세히 알아보기
+                                </p>
+                                <p class="el-before-16 sm-flexColumn align-top-8 check-caution flex gap-8">주민센터 발급문서 신청서 작성시 아포스티유 신청정보 전송동의 체크
+                                    <button type="button" class="flex-ac"  onclick="fn_layers('modal-info-1')">
+                                        <img src="./assets/images/icon_link_00.svg" alt="" class="mr-2 lg-ml-8">자세히 알아보기
                                     </button>
-                                </div>
+                                </p>
+                                <p class="el-before-16 sm-flexColumn align-top-8 check-caution flex gap-8">재외공관 발급 신청서 작성 시 아포스티유 신청 정보 전송 동의 체크
+                                    <button type="button" class="flex-ac"  onclick="fn_layers('modal-info-1')">
+                                        <img src="./assets/images/icon_link_00.svg" alt="" class="mr-2 lg-ml-8">자세히 알아보기
+                                    </button>
+                                </p>
                             </div>
                             <!-- ./ 체크박스 그룹 -->
                             <p class="hp-txt-gray-07 mt-40">위의 사항을 완료하셔야 신청이 가능합니다.</p>
@@ -273,7 +271,7 @@
                         <!-- 문서 발급 번호-->
                         <div class="el-cont-00">
                             <h4 class="el-text-lv4">문서발급번호 검증</h4>
-                            <div class="flex-col gap-12 mt-40"> 
+                            <div class="flex-col gap-12 mt-40 sm-mt-32"> 
                                 <div class="bl-formgroup flex-evenly" style="--max-width: 48.2rem;">
                                     <label>문서발급번호</label>
                                     <div class="bl-formlist">
@@ -291,7 +289,7 @@
                         <div class="el-cont-00">
                             <h4 class="el-text-lv4">보안문자</h4>
                             <!-- captcha -->
-                            <div class="captcha mt-40">
+                            <div class="captcha mt-40 sm-mt-32">
                                 <input type="text" placeholder="아래문자를 입력해 주세요." title="captcha 보안문자 입력란" maxlength="5">
                                 <div class="flex-ac mt-12 gap-3">
                                     <img src="assets/images/img_captcha_00_ex.svg" width="150" height="43" alt="보안문자 이미지">
@@ -305,7 +303,7 @@
                     </div>
             </section>
             <!-- 하단 버튼 그룹 -->
-            <div class="flex-acjs mt-40">
+            <div class="flex-acjs mt-40 sm-mt-64 sm-flex-equal gap-10">
                 <button type="button" class="el-btn-m hp-border-black-00 btn-prev" onclick="fn_example()">이전으로</button>
                 <button type="button" class="el-btn-m hp-txt-white-00 hp-bg-blue-00 btn-next" onclick="location.href='apply-step2.html'">다음으로</button>
             </div>
@@ -474,8 +472,8 @@
                     </div>
                     <!-- ./ modal-body -->
                     <!-- modal-button-group -->
-                    <div class="modal-button-group txt-r">
-                        <button type="button" class="el-btn-s hp-border-black-00" onclick="fn_layers_close()">닫기</button>
+                    <div class="modal-button-group sm-flex-equal flex">
+                        <button type="button" class="el-btn-s hp-border-black-00 flex-item-right" onclick="fn_layers_close()">닫기</button>
                     </div>
                     <!-- ./ modal-button-group -->
                 </div>
@@ -510,8 +508,8 @@
                     </div>
                     <!-- ./ modal-body -->
                     <!-- modal-button-group -->
-                    <div class="modal-button-group txt-r">
-                        <button type="button" class="el-btn-s hp-border-black-00" onclick="fn_layers_close()">닫기</button>
+                    <div class="modal-button-group flex sm-flex-equal">
+                        <button type="button" class="el-btn-s hp-border-black-00 flex-item-right" onclick="fn_layers_close()">닫기</button>
                     </div>
                     <!-- ./ modal-button-group -->
                 </div>
@@ -546,8 +544,8 @@
                     </div>
                     <!-- ./ modal-body -->
                     <!-- modal-button-group -->
-                    <div class="modal-button-group txt-r">
-                        <button type="button" class="el-btn-s hp-border-black-00" onclick="fn_layers_close()">닫기</button>
+                    <div class="modal-button-group flex sm-flex-equal">
+                        <button type="button" class="el-btn-s hp-border-black-00 flex-item-right" onclick="fn_layers_close()">닫기</button>
                     </div>
                     <!-- ./ modal-button-group -->
                 </div>

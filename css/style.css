@@ -46,8 +46,11 @@
 .bl-infolist > li > span {display: inline-block;}
 .bl-infolist.demical > li::before {content: "•"; color: var(--gray07);}
 .bl-infolist > li::before {position: absolute; left: 0; top: 0;}
-.bl-infolist-desc {margin-left: 8rem; color: var(--gray07);}
+.bl-infolist-desc {color: var(--gray07);}
 .bl-infolist-tit {min-width: 13rem;}
+
+/* bl-title */
+.bl-text-00 {font-size: 4rem; font-weight: 700; padding-top: 8rem;}
 
 
 /* breadcrumb */
@@ -55,8 +58,7 @@
 .bl-breadcrumb .path .home > a {position: relative;}
 .bl-breadcrumb .path .home > a::before { display : inline-block;position: absolute; top: 50%; right: 1.2rem; width: 2.4rem; height: 2.4rem; background: url(../assets/images/icon_home_00_breadcrumb.svg) no-repeat center;content: ""; transform: translateY(-50%); margin-right: .2rem;}
 .bl-breadcrumb .path > li {display: inline;}
-.bl-breadcrumb .path > li > a { position: relative; font-weight: 400;padding-bottom: 0.1rem;}
-.bl-breadcrumb .path > li > a::after { position: absolute; right: 0; bottom: 0; left: 0; height: 0.1rem;content: ''; background-color: #000;}
+.bl-breadcrumb .path > li > a { position: relative; font-weight: 400;padding-bottom: 0.1rem; text-decoration: underline; text-underline-position: under;}
 .bl-breadcrumb .path > li + li::before { display: inline-block;width: 2rem;height: 2rem; margin: 0 0.4rem;background: url(../assets/images/icon_arrow_00_right.svg) no-repeat center;content: "";vertical-align: middle;}
 
 /* step */
@@ -88,8 +90,22 @@
 .bl-select.is-open .bl-select-optList {max-height: 20rem; overflow-y: auto;}
 .bl-select-optList { position: absolute; bottom: 100%; width: 100%; border: 0.1rem solid #ddd; overflow: hidden; transition: max-height .5s, overflow .5s; max-height: 0; overflow-y: hidden;} 
 
+
+
 @media only screen and (max-width:768px) {
+	/* row table */
 	.bl-rowTable th, .bl-rowTable td { display: block;width: 100%;}
 	.bl-rowTable th {background: transparent;}
 	.bl-rowTable, .bl-rowTable thead, .bl-rowTable tbody, .bl-rowTable th, .bl-rowTable td, .bl-rowTable tr {display: block;}
+	/* step */
+	.bl-step .step, .bl-step .step-tit {display: none;}
+
+	.el-check-00.sm-res-768 > div {width: 100%;}
+
+	/* bl-title */
+	.bl-text-00 {font-size: 3.2rem; padding-top: 6.4rem;}
+}
+
+@media only screen and (min-width: 768px){
+	.bl-infolist-desc {margin-left: 8rem;}
 }
