@@ -37,7 +37,7 @@
 .bl-formlist {display: flex; gap: .8rem; align-items: center;}
 
 /* modal */
-.bl-modal-00 { display: none;position: fixed; top: 50%; left: 50%; width: 100%; transform: translate(-50%, -50%); z-index: 1002; max-width: 72rem;}
+.bl-modal-00 { display: none;position: fixed; top: 50%; left: 50%; width: 100%; transform: translate(-50%, -50%); z-index: 1002; max-width: 72rem; max-height: 98%; overflow: auto;}
 .bl-modal-00 .modal-body-desc {color: var(--gray07);}
 .bl-modal-00 .modal-body-desc strong {font-weight: 400;}
 

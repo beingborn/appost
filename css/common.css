@@ -384,7 +384,7 @@ table caption {display: none;}
 	.sm-gap-10 {gap: 1rem;}
 
 	/* flex equal */
-	.sm-flex-equal > * {flex: 1;}
+	.sm-flex-evenly > * {flex: 1;}
 }
 
 /* 768이상 pc 전용 링크 */
