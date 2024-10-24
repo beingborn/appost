@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="외교부">
-    <title>발급사실확인/추가정보입력</title>
+    <title>입력정보확인</title>
 
     <!-- css -->
     <link rel="shortcut icon" type="text/css" href="./assets/images/favicon.ico">
@@ -182,10 +182,9 @@
             </div>
             </div>
         </header>
-        <!-- ./ header -->
         <!-- main -->
         <main id="main-body" class="ly-contBody-00">
-            <div class="ly-inner ">
+            <div class="ly-inner">
                 <!-- breadcrumb -->
                 <nav class="bl-breadcrumb" aria-label="브레드크럼브">
                     <ol class="path">
@@ -206,16 +205,16 @@
                             <span class="step-tit">문서정보 입력</span>
                         </div>
                     </li>
-                    <li class="is-curr">
+                    <li class="is-done">
                         <div>
-                            <em class="sr-only">현재단계</em>
                             <span class="step-ico"></span>
                             <span class="step">2단계</span>
                             <span class="step-tit">발급사실확인/추가정보입력</span>
                         </div>
                     </li>
-                    <li>
+                    <li class="is-curr">
                         <div>
+                            <em class="sr-only">현재단계</em>
                             <span class="step-ico"></span>
                             <span class="step">3단계</span>
                             <span class="step-tit">입력정보확인</span>
@@ -230,115 +229,67 @@
                     </li>
                 </ol>
                 <!-- // bl-step -->
-                <section class="el-cont-00 mt-80">
-                    <p class="el-count-00"> 
-                        <strong class="hp-txt-blue-01" title="현재단계">2단계</strong> / <span title="총단계">4단계</span>
-                    </p>
-                    <h3 class="el-text-lv3 mt-24">발급사실확인 및 추가정보입력</h3>
-                    <div class="flex-col gap-40">
-                        <!-- 발급 기록 정보 확인시 -->
-                        <div class="el-cont-00 hp-bg-gray-00 mt-40 el-text-lv5">
-                            <div class="flex-col gap-40">
-                                <h4 class="el-text-lv4 el-before-24 check-success flex-ac gap-4">발급기록정보가 확인 되었습니다.</h4>
-                                    <ul class="bl-infolist demical">
-                                        <li>
-                                            <span class="bl-infolist-tit">문서발행기관</span>
-                                            <span class="bl-infolist-desc">대법원</span>
-                                        </li>
-                                        <li>
-                                            <span class="bl-infolist-tit">문서종류</span>
-                                            <span class="bl-infolist-desc">가족관계증명서</span>
-                                        </li>
-                                        <li>
-                                            <span class="bl-infolist-tit">문서발급번호</span>
-                                            <span class="bl-infolist-desc">0000 - 0000 - 0000</span>
-                                        </li>
-                                    </ul>
-                                <p class="hp-txt-gray-07">하단의 이전으로 버튼을 누르고 발급기록을 다시 확인 하세요.</p>
+                <section class="el-cont-00 sm-reset-768 mt-80">
+                        <p class="el-count-00">
+                            <strong class="hp-txt-blue-01" title="현재단계">3단계</strong> / <span title="총단계">4단계</span>
+                        </p>
+                        <div class="flex-col gap-40">
+                            <h3 class="el-text-lv3 mt-24">입력 정보 확인</h3>
+                            <div class="el-cont-00 hp-bg-lblue-01 hp-borderReset">
+                                <div class="flex">
+                                    <div class="w-50">
+                                        <h5 class="el-text-lv5">신청인 정보</h5>
+                                        <ul class="bl-infolist demical mt-12">
+                                            <li>
+                                                <span class="bl-infolist-tit">성명</span>
+                                                <span class="bl-infolist-desc">홍길동</span>
+                                            </li>
+                                            <li>
+                                                <span class="bl-infolist-tit">영문명</span>
+                                                <span class="bl-infolist-desc">Hong Gildong</span>
+                                            </li>
+                                            <li>
+                                                <span class="bl-infolist-tit">연락처</span>
+                                                <span class="bl-infolist-desc">010-1234-5623</span>
+                                            </li>
+                                            <li>
+                                                <span class="bl-infolist-tit">E-mail</span>
+                                                <span class="bl-infolist-desc">0000@gmail.com</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="w-50">
+                                        <h5 class="el-text-lv5">문서정보</h5>
+                                        <ul class="bl-infolist demical mt-12">
+                                            <li>
+                                                <span class="bl-infolist-tit">문서발급번호</span>
+                                                <span class="bl-infolist-desc">21654XDG4</span>
+                                            </li>
+                                            <li>
+                                                <span class="bl-infolist-tit">제출대상 국가 </span>
+                                                <span class="bl-infolist-desc">(아포스티유 대상국가)</span>
+                                            </li>
+                                            <li>
+                                                <span class="bl-infolist-tit">문서발급일자</span>
+                                                <span class="bl-infolist-desc">2024-00-00</span>
+                                            </li>
+                                            <li>
+                                                <span class="bl-infolist-tit">문서명</span>
+                                                <span class="bl-infolist-desc">가족관계증명서 (국문)</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="el-cont-00">
-                            <div class="flex-col gap-40">
-                                <h5 class="el-text-lv5">추가정보입력</h5>
-                                <section class="flex-col gap-24">
-                                    <h6 class="el-text-lv6">신청인 정보</h6>
-                                    <div class="bl-formgroup-w flex-ac gap-8" style="--max-width: 40.8rem;">
-                                        <div class="bl-formgroup w-40">
-                                            <label for="name">성명</label>
-                                            <input type="text" value="홍길동" id="name" readonly >
-                                        </div>
-                                        <div class="bl-formgroup w-60">
-                                            <label for="en-name">영문명</label>
-                                            <input type="text"  value="Hong-gil-dong" id="en-name" readonly>
-                                        </div>
-                                    </div>
-                                    <div class="bl-formgroup" style="--max-width: 40.8rem">
-                                        <label for="phoneNum" class="el-mustType">연락처</label>
-                                        <div class="bl-formlist">
-                                            <input class="txt-l" type="text" placeholder="0000" maxlength="4" title="연락처 1~4자리" id="phoneNum"> -
-                                            <input class="txt-l" type="text" placeholder="0000" maxlength="4" title="연락처 5~8자리"> -
-                                            <input class="txt-l" type="text" placeholder="0000" maxlength="4" title="연락처 9~12자리">
-                                        </div>
-                                    </div>
-                                    <div class="bl-formgroup" style="--max-width: 39rem">
-                                        <label for="email">E-mail</label>
-                                        <div class="bl-formlist">
-                                            <input type="text" placeholder="0000" title="아이디(이메일) 앞자리" id="email"> @
-                                            <input type="text" placeholder="gmail.com" title="아이디(이메일) 뒷자리">
-                                        </div>
-                                    </div>
-                                </section>
-                                <div class="hp-borderTop-dashedGray-04"></div> 
-                                <section class="flex-col gap-24">
-                                    <h6 class="el-text-lv6">문서정보</h6>
-                                    <div class="bl-formgroup-w bl-formlist" style="--max-width: 40.8rem;">
-                                        <div class="bl-formgroup w-50">
-                                            <label for="documentNum">문서발급번호</label>
-                                            <input type="text" value="21654XDG4" id="documentNum" readonly >
-                                        </div>
-                                        <div class="bl-formgroup w-50">
-                                            <label for="documentDay">문서발급일자</label>
-                                            <input type="text"  value="2024-00-00" id="documentDay" readonly>
-                                        </div>
-                                    </div>
-                                    <div class="bl-formgroup" style="--max-width: 60rem;">
-                                        <label for="documentName">문서명</label>
-                                        <input type="text" value="가족관계증명서 (국문)" id="documentName" readonly>
-                                    </div>
-                                    <div class="bl-formgroup-w flex-as gap-8" style="--max-width: 44.8rem;">
-                                        <div class="bl-formgroup w-50">
-                                            <label for="sendCountry" class="el-mustType">제출대상 국가</label>
-                                            <input type="text" value="노르웨이" id="sendCountry" readonly>
-                                        </div>
-                                        <div class="bl-formgroup w-50">
-                                            <label for="selectCountry" class="hidden-value">제출국가선택</label>
-                                            <select class="el-select-00" title="제출 국가 선택" id="selectCountry">
-                                                <option value="1">노르웨이</option>
-                                                <option value="2">한국</option>
-                                                <option value="3">일본</option>
-                                                <option value="4">미국</option>
-                                            </select>
-                                            <p class="el-before-20 check-success flex-ac gap-4">아포스티유 대상국가입니다.</p>
-                                            <!-- 
-                                            P : 조건 > 영상민원 대상국가 일 시 활성화
-                                            -->
-                                            <!-- <p class="el-before-20 check-success flex-ac gap-4">영사민원 대상국가입니다.</p> -->
-                                        </div>
-                                    </div>
-                                </section>
-                            </div>
-                        </div>
-                        <div class="el-cont-00 hp-bg-gray-00">
-                            <div class="flex-col gap-40">
-                                <h6 class="el-text-lv6 flex-ac">
-                                    문서발급기관정보
+                            <section>
+                                <div class="flex-ac mb-40">
+                                    <h4 class="el-text-lv4 flex-ac">문서발급기관정보</h4>
                                     <button type="button" class="flex-ac">
                                         <img src="./assets/images/icon_link_00.svg" alt="" class="mr-2 ml-4">자세히 알아보기
                                     </button>
-                                </h6>
-                                <div class="hp-borderTop-gray-04"></div>
+                                </div>
                                 <div class="flex">
-                                    <div class="flex-col gap-40">
+                                    <div class="flex-col gap-40 pt-32">
                                         <div>
                                             <h6 class="el-text-lv6">문서 발급기관</h6>
                                             <ul class="bl-infolist demical flex-col gap-8 mt-12">
@@ -379,7 +330,7 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <!-- 관인, 직인 새로고침 -->
+                                    <!-- 관인, 직인 새로고침 기능 -->
                                     <div class="flex-item-right flex-item-bottom w-100" style="max-width: 13.7rem;">
                                         <div class="gap-12 flex-col-ac">
                                             <h5 class="el-text-lv5">관인/ 직인 이미지</h5>
@@ -387,50 +338,20 @@
                                             <button type="button" class="el-btn-ss el-btn-refresh">새로고침</button>
                                         </div>
                                     </div>
-                                    <!-- ./ 관인, 직인 새로고침 -->
+                                    <!-- ./ 관인, 직인 새로고침 기능 -->
                                 </div>
-                            </div>
+                            </section>
                         </div>
-                        <!-- ./ 발급 기록 정보 확인시 -->
-                        
-                        <!-- 발급 기록 정보 없을 시 -->
-                        <!-- <div class="el-cont-00 hp-bg-gray-00 mt-40 el-text-lv5">
-                            <div class="flex-col gap-40">
-                                <h4 class="el-text-lv4 el-before-24 check-fail flex-ac gap-4">발급기록정보가 없습니다.</h4>
-                                    <ul class="bl-infolist demical">
-                                        <li>
-                                            <span class="bl-infolist-tit">문서발행기관</span>
-                                            <span class="bl-infolist-desc">대법원</span>
-                                        </li>
-                                        <li>
-                                            <span class="bl-infolist-tit">문서종류</span>
-                                            <span class="bl-infolist-desc"></span>
-                                        </li>
-                                        <li>
-                                            <span class="bl-infolist-tit">문서발급번호</span>
-                                            <span class="bl-infolist-desc">0000 - 0000 - 0000</span>
-                                        </li>
-                                    </ul>
-                                <p class="hp-txt-gray-07">하단의 이전으로 버튼을 누르고 발급기록을 다시 확인 하세요.</p>
-                            </div>
-                        </div> -->
-                        <!-- ./ 발급 기록 정보 없을 시 -->
-                    </div>
                 </section>
-                <!-- 정보가 있을 경우 그룹 -->
+                <!-- 하단 버튼 그룹 -->
                 <div class="flex-acjs mt-40">
-                    <button type="button" class="el-btn-m hp-border-black-00 btn-prev" onclick="location.href='apply-step1.html'">이전으로</button>
-                    <button type="button" class="el-btn-m hp-txt-white-00 hp-bg-blue-00 btn-next" onclick="location.href='apply-step3.html'">다음으로</button>
+                    <button type="button" class="el-btn-m hp-border-black-00 btn-prev" onclick="location.href='apply-step2'">이전으로</button>
+                    <button type="button" class="el-btn-m hp-txt-white-00 hp-bg-blue-00 btn-next" onclick="location.href='apply-step4.html'">다음으로</button>
                 </div>
                 <!-- ./ 하단 버튼 그룹 -->
-                <!-- 정보 없을 시 하단 버튼 그룹 -->
-                <!-- <div class="txt-c mt-40">
-                    <button type="button" class="el-btn-m hp-border-black-00 btn-prev" onclick="location.href='apply-step1.html'">이전으로</button>
-                </div> -->
-                <!-- ./ 정보 없을 시 하단 버튼 그룹 -->
             </div>
         </main>
-        <!-- ./main -->
+        <!-- ./ main -->
         <!-- footer -->
         <footer class="ly-footer">
             <!-- footer-quick -->

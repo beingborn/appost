@@ -75,12 +75,6 @@
 .bl-step li.is-curr .step-ico {width: 2rem; height: 2rem; background: url(../assets/images/icon_step_00_currentstep.svg) no-repeat center;}
 
 
-@media only screen and (max-width:768px) {
-	.bl-rowTable th, .bl-rowTable td { display: block;width: 100%;}
-	.bl-rowTable th {background: transparent;}
-	.bl-rowTable, .bl-rowTable thead, .bl-rowTable tbody, .bl-rowTable th, .bl-rowTable td, .bl-rowTable tr {display: block;}
-}
-
 /* fold faq */
 .bl-foldFaq {width: 100%;}
 .bl-foldFaq summary { position: relative; border: 1px solid red;cursor: pointer;} 
@@ -93,3 +87,9 @@
 .bl-select > button {width: 100%; height: 100%;}
 .bl-select.is-open .bl-select-optList {max-height: 20rem; overflow-y: auto;}
 .bl-select-optList { position: absolute; bottom: 100%; width: 100%; border: 0.1rem solid #ddd; overflow: hidden; transition: max-height .5s, overflow .5s; max-height: 0; overflow-y: hidden;} 
+
+@media only screen and (max-width:768px) {
+	.bl-rowTable th, .bl-rowTable td { display: block;width: 100%;}
+	.bl-rowTable th {background: transparent;}
+	.bl-rowTable, .bl-rowTable thead, .bl-rowTable tbody, .bl-rowTable th, .bl-rowTable td, .bl-rowTable tr {display: block;}
+}
