@@ -179,7 +179,6 @@ select {height: 5.6rem;}
 
 /* padding */
 /* top */
-.pt-5 {padding-top: .5rem;}
 .pt-6 {padding-top: .6rem;}
 .pt-10 {padding-top: 1rem;}
 .pt-16 {padding-top: 1.6rem;}
@@ -226,24 +225,30 @@ select {height: 5.6rem;}
 .miw-50per {min-width: 50%;}
 
 /* flex */
+/* content display pattern */
 .flex {display: flex;}
+.flex-smColumn-768 {display: flex;} /* 모바일에서 칼럼 1단 */
 .flex-ac {display: flex; align-items: center;}
 .flex-acjs {display: flex; align-items: center; justify-content: space-between;}
 .flex-ajs {display: flex; justify-content: space-between;}
 .flex-grow-1 {flex-grow: 1;}
+/* flex item layout */
 .flex-item-right {margin-left: auto;}
 .flex-item-bottom {margin-top: auto;}
 .flex-item-top {margin-bottom: auto;}
 .flex-item-left {margin-right: auto;}
 .flex-evenly > * {flex: 1;}
 .flex-as {display: flex; align-items: flex-start;}
-
 .flex-wrap {flex-wrap: wrap;}
 .flex-nowrap {flex-wrap: nowrap;}
+
+/* flex option */
+.flex-align-c {align-items: center;}
 
 /* flex column */
 .flex-col {display: flex; flex-direction: column;}
 .flex-col-ac {display: flex; flex-direction: column; align-items: center;}
+
 /* flex item gap */
 .gap-3 {gap: .3rem;}
 .gap-4 {gap: .4rem;}
@@ -296,7 +301,7 @@ table caption {display: none;}
 
 /* horizontal table */
 /* hp : 특정 스타일, 테마, 색상, 이미지 등을 변경 적용 범위 넓을 시 hp 접두어 추가 */
-/* emphasis : 강조 */
+/* txt style */
 .hp-txt-emp-00 {color: var(--navy00);}
 .hp-txt-gray-07 {color: var(--gray07);}
 .hp-txt-white-00 {color: var(--white00);}
@@ -314,13 +319,15 @@ table caption {display: none;}
 .el-bg-popup {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1001;}
 /* border */
 .hp-header-border { width: 100%;height: .1rem; background: var(--gray03);}
-
+/* border-radius */
 .hp-border-radius-2 {border-radius: .2rem;}
 .hp-border-radius-10 {border-radius: 1rem;}
 .hp-border-radius-12 {border-radius: 1.2rem;}
+/* border */
 .hp-border-gray-04 {border: .1rem solid var(--gray04);}
 .hp-border-blue-00 {border: .1rem solid var(--blue00);}
 .hp-border-black-00 {border: .1rem solid var(--black00);}
+/* borderTop */
 .hp-borderTop-gray-04 {border-top: .1rem solid var(--gray04);}
 .hp-borderTop-dashedGray-04 {border-top: .1rem dashed var(--gray04);}
 .hp-borderTop-gray-03 {border-top: .1rem solid var(--gray03);}
@@ -334,7 +341,6 @@ table caption {display: none;}
 /* pc 전용 콘텐츠 (모바일에서 display: none) */
 .lg-only-768 {display: block;}
 .lg-onlyFlex-768 {display: flex;}
-
 /* 모바일 전용 클래스 (모바일에서 display: block) */
 .sm-only-768 {display: none;}
 .sm-onlyFlex-768 {display: none;}
@@ -350,6 +356,9 @@ table caption {display: none;}
 	.sm-onlyFlex-768 {display:flex}
 	.sm-flexColumn {flex-direction: column;}
 	.sm-flexColumn-768 {display: flex; flex-direction: column!important;}
+
+	/* content display pattern */
+	.flex-smColumn-768 {flex-direction: column;}
 
 	.sm-el-text-lv2 {font-size: var(--fontLv2);}
 	.sm-el-text-lv3 {font-size: var(--fontLv3);}

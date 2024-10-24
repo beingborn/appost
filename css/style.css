@@ -90,8 +90,6 @@
 .bl-select.is-open .bl-select-optList {max-height: 20rem; overflow-y: auto;}
 .bl-select-optList { position: absolute; bottom: 100%; width: 100%; border: 0.1rem solid #ddd; overflow: hidden; transition: max-height .5s, overflow .5s; max-height: 0; overflow-y: hidden;} 
 
-
-
 @media only screen and (max-width:768px) {
 	/* row table */
 	.bl-rowTable th, .bl-rowTable td { display: block;width: 100%;}
