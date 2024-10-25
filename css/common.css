@@ -178,7 +178,7 @@ select {height: 5.6rem;}
 .pb-5 {padding-bottom: .5rem;}
 .pb-10 {padding-bottom: 1rem;}
 /* left */
-.pl-5 {padding-left: .5rem;}
+.pl-8 {padding-left: .8rem;}
 .pl-10 {padding-left: 1rem;}
 /* right */
 .pr-4 {padding-right: .4rem;}
@@ -206,6 +206,8 @@ select {height: 5.6rem;}
 .w-50 {width: 50%;}
 .w-60 {width: 60%;}
 .w-40 {width: 40%;}
+
+
 
 .w-60-i {width: 60%!important;}
 .w-40-i {width: 40%!important;}
