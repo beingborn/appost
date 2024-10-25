@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="외교부">
+    <title>인증서 검증 결과</title>
+
+    <!-- css -->
+    <link rel="shortcut icon" type="text/css" href="./assets/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- js -->
+    <script defer src="js/jquery-3.7.1.js"></script>
+    <script defer src="js/jquery-ui.min.js"></script>
+    <script defer src="js/common.js"></script>
+</head>
+<body>
+    <!-- skip navigation -->
+    <div id="skip-nav">
+        <a href="#main-body">본문 바로가기</a>
+    </div>
+    <!-- .// skip navigation -->
+    <div class="sub-wrap">
+        <!-- header -->
+        <header class="ly-header">
+            <!-- gov-banner -->
+            <div class="gov-banner">
+                <div class="ly-inner">
+                    <span class="gov-desc">
+                        <img src="./assets/images/icon_taegeukgi.png" width="24" height="16" alt="태극기">
+                        이 누리집은 대한민국 공식 전자정부 누리집입니다.
+                    </span>
+                </div>
+            </div>
+            <!-- ./ gov-banner -->
+            <div class="ly-inner ">
+                <!-- header-top -->
+                <div class="header-top"> 
+                    <!-- header-util -->
+                    <div class="header-util lg-onlyFlex-768">
+                        <ul class="flex-ac flex-item-right">
+                            <li><a href="#" class="flex-ac">재외동포청 365민원포탈<img src="./assets/images/icon_link_00.svg" alt="재외동포청 365민원포탈 바로가기" class="ml-2"></a></li>
+                            <li><button type="button" class="el-toggleList el-toggle-open">화면크기</button></li>
+                        </ul>
+                    </div>
+                    <!-- .// header-util -->
+                </div> 
+                <!-- header-top -->
+                <!-- header-bottom -->
+                <div class="header-bottom flex-acjs">
+                    <h1 class="logo">
+                        <a href="index.html" class="lg-only-768">
+                            <img src="./assets/images/logo_header_00_pc.png" alt="pc용 대민 아포스티유 로고">
+                        </a>
+                        <a href="index.html" class="sm-only-768">
+                            <img src="./assets/images/logo_header_00_pc.png" alt="모바일용 대민 아포스티유 로고">
+                        </a>
+                    </h1>
+                    <div class="header-global">
+                        <ul class="flex-ac gap-8">
+                            <li><button type="button" class="el-btn-xs hp-border-gray-04 txt-upper lg-only-768">ENGLISH</button></li>
+                            <li><a href="#" class="flex-ac login">로그인</a></li>
+                            <!-- 
+                                P : 로그인 완료 시 마이페이지 주석 활성화 , 로그인 비활성화    
+                                <li><button type="button" class="hp-font-bold" onclick="popMyOption()">마이페이지</button></li>
+                            -->
+                            <li><a href="#" class="flex-ac sign-up lg-onlyFlex-768">회원가입</a></li>
+                            <li><a href="#" class="flex-ac hamburger sm-onlyFlex-768">전체메뉴</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- .// header-bottom -->
+                <!-- header-border -->
+                <div class="hp-header-border"></div>
+                <!-- ./ header-border -->
+            </div>
+            <div class="ly-inner ">
+                <div class="header-gnb lg-only-768">
+                    <!-- pc용 gnb -->
+                    <nav id="gnb-lg">
+                        <ul class="gnb-area flex gap-16" role="tablist"> 
+                            <li class="gnb-menu">
+                                <button type="button">제도 소개</button>
+                                <div class="gnb-submenu">
+                                    <ul class="ly-inner">
+                                        <!-- submenu depth 2 -->
+                                        <li class="gnb-submenu-link">
+                                            <button type="button">서브메뉴 링크 1</button>
+                                            <div class="dep3">
+                                                <strong class="dep3-title"><a href="#">증명서1</a></strong>  
+                                                <div class="dep3-content">
+                                                </div>                
+                                            </div>
+                                        </li>
+                                        <!-- ./ submenu depth 2 -->
+                                        <!-- submenu depth 2 -->
+                                        <li class="gnb-submenu-link">
+                                            <button type="button">서브메뉴 링크 2</button>
+                                            <div class="dep3">
+                                                <strong class="dep3-title"><a href="#">증명서2</a></strong>  
+                                                <div class="dep3-content">
+                                                </div>                
+                                            </div>
+                                        </li>
+                                        <!-- ./ submenu depth 2 -->
+                                        <!-- submenu depth 2 -->
+                                        <li class="gnb-submenu-link">
+                                            <button type="button">서브메뉴 링크 3</button>
+                                            <div class="dep3">
+                                                <strong class="dep3-title"><a href="#">증명서3</a></strong>  
+                                                <div class="dep3-content">
+                                                </div>                
+                                            </div>
+                                        </li>
+                                        <!-- ./ submenu depth 2 -->
+                                        <!-- submenu depth 2 -->
+                                        <li class="gnb-submenu-link">
+                                            <button type="button">서브메뉴 링크 4</button>
+                                            <div class="dep3">
+                                                <strong class="dep3-title"><a href="#">증명서4</a></strong>  
+                                                <div class="dep3-content">
+                                                </div>                
+                                            </div>
+                                        </li>
+                                        <!-- ./ submenu depth 2 -->
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="gnb-menu">
+                                <button type="button">인증서 신청</button>
+                                <div class="gnb-submenu">
+                                    <ul class="ly-inner">
+                                        <li class="gnb-submenu-link">
+                                            <button type="button">서브메뉴2 링크 1</button>
+                                            <div class="dep3">
+                                                <strong class="dep3-title"><a href="#">증명서1-1</a></strong>  
+                                                <div class="dep3-content">
+                                                </div>                
+                                            </div>
+                                        </li>
+                                        <li class="gnb-submenu-link">
+                                            <button type="button">서브메뉴2 링크 2</button>
+                                            <div class="dep3">
+                                                <strong class="dep3-title"><a href="#">증명서2-1</a></strong>  
+                                                <div class="dep3-content">
+                                                </div>                
+                                            </div>
+                                        </li>
+                                        <li class="gnb-submenu-link">
+                                            <button type="button">서브메뉴2 링크 3</button>
+                                            <div class="dep3">
+                                                <strong class="dep3-title"><a href="#">증명서3-1</a></strong>  
+                                                <div class="dep3-content">
+                                                </div>                
+                                            </div>
+                                        </li>
+                                        <li class="gnb-submenu-link">
+                                            <button type="button">서브메뉴2 링크 4</button>
+                                            <div class="dep3">
+                                                <strong class="dep3-title"><a href="#">증명서4-1</a></strong>  
+                                                <div class="dep3-content">
+                                                </div>                
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="gnb-menu"><button type="button">인증서 검증</button></li>
+                            <li class="gnb-menu"><button type="button">고객센터</button></li>
+                        </ul>
+                    </nav>
+                    <!-- .// pc용 gnb -->
+                <!-- 모바일용 gnb -->
+                <nav id="gnb-sm">
+                </nav>
+                <!-- 모바일용 gnb -->
+            </div>
+            </div>
+        </header>
+        <!-- .// header -->
+        <main id="main-body" class="ly-contBody-00">
+            <div class="ly-inner">
+                <!-- breadcrumb -->
+                <nav class="bl-breadcrumb" aria-label="브레드크럼브">
+                    <ol class="path">
+                        <li class="home"><a href="index.html" class="txt">홈</a></li>
+                        <li><a href="#">인증서 신청</a></li>
+                        <li><a href="#">대법원</a></li>
+                        <li><a href="#">가족관계증명서 인증 신청</a></li>
+                    </ol>
+                </nav>
+                <!-- ./ breadcrumb --> 
+                <!-- 상단 제목 -->
+                <div class="txt-c my-80">
+                    <h2 class="el-text-lv1">
+                        <span class="hp-txt-blue-01">아포스티유 / 영상민원 인증서</span>의 검증 결과 안내
+                    </h2>
+                </div>
+                <!-- ./ 상단 제목 -->
+                <!-- 인증서 검증 결과 -->
+                <div class="el-cont-01 hp-bg-lblue-01">
+                    <ul class="bl-infolist-01 flex-col gap-40">
+                        <li class="gap-24">
+                            <span class="bl-infolist-tit">인증서 검증 결과</span>
+                            <span class="el-before-16 il-flex-ac gap-8 check-caution hp-txt-blue-01">정상적으로 발급된 인증서입니다.</span>
+                        </li>
+                        <li class="gap-24">
+                            <span class="bl-infolist-tit">인증서 발급번호</span>
+                            <span>XXA2016Q111M11</span>
+                        </li>
+                        <li class="gap-24">
+                            <span class="bl-infolist-tit">인증서 발급일자</span>
+                            <span>인증서 2020-12-01</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 인증서 검증 결과 -->
+                <!-- 인증서 검증 요청 결과 비교 이미지 -->
+                <div class="el-cont-00 hp-bg-gray-00 mt-64">
+                    <h3 class="el-text-lv3">인증서 요청 결과 비교 이미지</h3>
+                    <div class="bl-imgBox hp-responsive-w mt-40" style="--lg-maxwidth: 48.5rem">
+                        <img src="./assets/images/img_cert_06.jpg" alt="인증서 검증 요청 결과 비교 이미지">
+                    </div>
+                </div>
+                <!-- ./ 인증서 검증 요청 결과 비교 이미지 -->
+                <!-- 하단 버튼 그룹 -->
+                <div class="txt-c mt-40">
+                    <button type="button" class="el-btn-m hp-border-black-00 btn-prev" onclick="location.href='cert-check1.html'">이전으로</button>
+                </div>
+                <!-- ./ 하단 버튼 그룹 -->
+            </div>
+        </main>
+        <!-- footer -->
+        <footer class="ly-footer">
+            <!-- footer-quick -->
+            <div class="footer-quick">
+                <div class="ly-inner flex sm-flexColumn-768">
+                    <div class="footer-quick-link">
+                        <ul class="hidden">
+                            <li><a href="#">링크1</a></li>
+                            <li><a href="#">링크2</a></li>
+                            <li><a href="#">링크3</a></li>
+                            <li><a href="#">링크4</a></li>
+                            <li><a href="#">링크5</a></li>
+                            <li><a href="#">링크6</a></li>
+                            <li><a href="#">링크7</a></li>
+                        </ul>
+                        <button type="button" class="footer-quick-btn">관련기간 링크</button>
+                    </div>
+                    <div class="footer-quick-link">
+                        <ul class="hidden">
+                            <li><a href="#">링크1</a></li>
+                            <li><a href="#">링크2</a></li>
+                            <li><a href="#">링크3</a></li>
+                            <li><a href="#">링크4</a></li>
+                            <li><a href="#">링크5</a></li>
+                            <li><a href="#">링크6</a></li>
+                            <li><a href="#">링크7</a></li>
+                        </ul>
+                        <button type="button" class="footer-quick-btn">관련기간 링크</button>
+                    </div>
+                    <div class="footer-quick-link">
+                        <ul class="hidden">
+                            <li><a href="#">링크1</a></li>
+                            <li><a href="#">링크2</a></li>
+                            <li><a href="#">링크3</a></li>
+                            <li><a href="#">링크4</a></li>
+                            <li><a href="#">링크5</a></li>
+                            <li><a href="#">링크6</a></li>
+                            <li><a href="#">링크7</a></li>
+                        </ul>
+                        <button type="button" class="footer-quick-btn">관련기간 링크</button>
+                    </div>
+                    <div class="footer-quick-link">
+                        <ul class="hidden">
+                            <li><a href="#">링크1</a></li>
+                            <li><a href="#">링크2</a></li>
+                            <li><a href="#">링크3</a></li>
+                            <li><a href="#">링크4</a></li>
+                            <li><a href="#">링크5</a></li>
+                            <li><a href="#">링크6</a></li>
+                            <li><a href="#">링크7</a></li>
+                        </ul>
+                        <button type="button" class="footer-quick-btn">관련기간 링크</button>
+                    </div>
+                    <!-- ./ footer-quick -->
+                </div>
+            </div>
+            <div class="footer-body">
+                <div class="ly-inner ">
+                    <!-- footer-top -->
+                    <div class="footer-top">
+                        <!-- footer-logo -->
+                        <div class="footer-logo">
+                            <a href="https://oka.go.kr/oka" target="_blank">
+                                <img src="./assets/images/logo_footer_00_pc.png" alt="재외동포청 로고">
+                            </a>
+                        </div>
+                        <!-- ./ footer-logo -->
+                    </div>
+                    <!-- ./ footer-top -->
+                    <div class="footer-middle">
+                        <div class="flex-ajs py-40 sm-py-32 sm-flexColumn-768">
+                            <!-- footer-middleLeft -->
+                            <div class="footer-middleLeft">
+                                <div>
+                                    <div>
+                                        <!-- info-address -->
+                                        <div class="info-address">
+                                            <address>
+                                                <strong>본청 : </strong>(22009) 인천광역시 연수구 인천타워대로 241
+                                                    <br>
+                                                <strong>재외동포 서비스지원센터 (통합민원실) : </strong>(03142) 서울특별시 종로구 율곡로6 트윈트리A 15층
+                                            </address>
+                                        </div>
+                                        <!-- ./ info-address -->
+                                    </div>
+                                    <!-- info-cs -->
+                                    <div class="info-cs">
+                                        <p>통합콜센터 <strong>: +82-2-6747-0404</strong> (평일 09시~18시)</p>
+                                        <p>시스템장애문의 <strong> : (국내) 02-6399-7181 / (해외) +82-2-6399-7181</strong></p>
+                                    </div>
+                                    <!-- ./ info-cs -->
+                                </div>
+                            </div>
+                            <!-- ./ footer-middleLeft -->
+                            <!-- footer-middleRight -->
+                            <div class="footer-middleRight">
+                                <div class="flex-col gap-16 link-go">
+                                    <a href="#" class="icon-arrRight-20 flex-ac ml-4">이용안내</a>
+                                    <a href="#" class="icon-arrRight-20 flex-ac ml-4">찾아오시는 길</a>
+                                </div>
+                                <!-- sns-wrap -->
+                                <ul class="sns-wrap flex-ac mt-40 gap-8">
+                                    <li><a href="#" target="_blank" class="insta"></a></li>
+                                    <li><a href="#" target="_blank" class="youtube"></a></li>
+                                    <li><a href="#" target="_blank" class="facebook"></a></li>
+                                    <li><a href="#" target="_blank" class="naverblog"></a></li>
+                                </ul>
+                                <!-- ./ sns-wrap -->
+                            </div>
+                            <!-- ./ footer-middleRight -->
+                        </div>
+                    </div>
+                    <div class="footer-bottom pt-16 hp-borderTop-gray-03">
+                        <div class="flex-ajs sm-flexColumn-768">
+                            <!-- footer-menu -->
+                            <ul class="footer-menu">
+                                <li><a href="#">이용안내</a></li>
+                                <li><a href="#"><strong class="hp-txt-emp-00">개인정보처리방침</strong></a></li>
+                                <li><a href="#">저작권정책</a></li>
+                                <li><a href="#">웹 접근성 품질인증 마크 획득</a></li>
+                            </ul>
+                            <!-- ./ footer-menu -->
+                            <p class="copyright hp-font-regular hp-txt-gray-07">© The Government of the Republic of Korea. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- .// footer -->
+    </div>
+</body>
+</html>

@@ -46,8 +46,12 @@
 .bl-infolist > li > span {display: inline-block;}
 .bl-infolist.demical > li::before {content: "•"; color: var(--gray07);}
 .bl-infolist > li::before {position: absolute; left: 0; top: 0;}
-.bl-infolist-desc {color: var(--gray07);}
-.bl-infolist-tit {min-width: 13rem;}
+.bl-infolist .bl-infolist-desc {color: var(--gray07);}
+.bl-infolist .bl-infolist-tit {min-width: 13rem;}
+
+/* bl-infolist 01 */
+.bl-infolist-01 > li {display: flex; align-items: center;}
+.bl-infolist-01 .bl-infolist-tit {min-width: 12rem; font-weight: 700;}
 
 /* bl-title */
 .bl-text-00 {font-size: 4rem; font-weight: 700; padding-top: 8rem;}
@@ -108,5 +112,5 @@
 }
 
 @media only screen and (min-width: 768px){
-	.bl-infolist-desc {margin-left: 8rem;}
+	.bl-infolist .bl-infolist-desc {margin-left: 8rem;}
 }
