@@ -34,6 +34,12 @@
 --blue01: #1d56bc; 
 --navy00 : #003675;
 
+/* red */
+--red00 : #E71825;
+
+/* yellow */
+--yellow00 : #98690A;
+
 /* font size */
 --fontLv1 : 4rem;
 --fontLv2 : 3.2rem;
@@ -108,6 +114,8 @@ button.el-before-24{width: 2.4rem; height: 2.4rem;}
 .el-before-24.before-start::before {background: url(../assets/images/icon_before_start_00.svg) no-repeat center;}
 .el-before-24.check-success::before {background: url(../assets/images/icon_check_00_green_24x24.svg) no-repeat center;}
 .el-before-24.check-fail::before {background: url(../assets/images/icon_check_00_red_24x24.svg) no-repeat center;}
+.el-before-24.error-red::before {background: url(../assets/images/icon_error_red.svg) no-repeat center;}
+.el-before-24.wait-yellow::before {background: url(../assets/images/icon_waityellow_00.svg) no-repeat center;}
 .el-before-24.voice::before {background: url(../assets/images/icon_voice_00_24x24.gif) no-repeat center;}
 .el-before-24.reset::before {background: url(../assets/images/icon_reset_00_24x24.gif) no-repeat center;}
 
@@ -307,6 +315,9 @@ table caption {display: none;}
 .hp-txt-white-00 {color: var(--white00);}
 .hp-txt-blue-00 {color: var(--blue00);}
 .hp-txt-blue-01 {color: var(--blue01);}
+.hp-txt-red-00 {color: var(--red00);}
+.hp-txt-yellow-00 {color: var(--yellow00);}
+
 /* bg */
 .hp-bg-blue-00 {background: var(--blue00);}
 .hp-bg-gray-00 {background: var(--gray00);}
