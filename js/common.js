@@ -112,40 +112,46 @@ $(".tab__wrap .tab__btn button").click(function () {
  * 설명   : 제이쿼리 달력 출력
  * param  : 
  */
-$.datepicker.setDefaults({
-	prevText: "이전 달",
-	nextText: "다음 달",
-	closeText: '닫기',
-	monthNames: ["1","2","3","4","5","6","7","8","9","10","11","12"],
-	monthNamesShort: ['1','2','3','4','5','6','7','8','9','10','11','12'],
-	dayNames: ['S','M','T','W','T','F','S'],
-	dayNamesShort: ['S','M','T','W','T','F','S'],
-	//dayNamesMin: ['S','M','T','W','T','F','S'],
-	dayNamesMin: ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],
-	weekHeader: 'Wk',
-	yearSuffix: '.',
-	dateFormat: "yy-mm-dd",
-	firstDay: 0,
-	showMonthAfterYear: true,
-	//showOtherMonths: true,
-	showOn: "both",
-	buttonImage: "../../../images/portal/v2/icon_calendar.png",
-	buttonImageOnly: true,
-	buttonText: "달력 선택",
-	changeMonth : true,
-	changeYear : true,
-	yearRange : "c-100:c+5",
-	isRTL: false
-});
-$(".datepicker1").datepicker();
-$(".datepicker1").on('click', function(){
-	$('.ui-datepicker').addClass('clickEvent');
+// $(function(){
+// 	$.datepicker.setDefaults({
+// 		prevText: "이전 달",
+// 		nextText: "다음 달",
+// 		closeText: '닫기',
+// 		monthNames: ["1","2","3","4","5","6","7","8","9","10","11","12"],
+// 		monthNamesShort: ['1','2','3','4','5','6','7','8','9','10','11','12'],
+// 		dayNames: ['S','M','T','W','T','F','S'],
+// 		dayNamesShort: ['S','M','T','W','T','F','S'],
+// 		//dayNamesMin: ['S','M','T','W','T','F','S'],
+// 		dayNamesMin: ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],
+// 		weekHeader: 'Wk',
+// 		yearSuffix: '.',
+// 		dateFormat: "yy-mm-dd",
+// 		firstDay: 0,
+// 		showMonthAfterYear: true,
+// 		//showOtherMonths: true,
+// 		showOn: "both",
+// 		buttonImage: "../../../images/portal/v2/icon_calendar.png",
+// 		buttonImageOnly: true,
+// 		buttonText: "달력 선택",
+// 		changeMonth : true,
+// 		changeYear : true,
+// 		yearRange : "c-100:c+5",
+// 		isRTL: false
+// 	});
+// })
+// $(".bl-datePicker-btn").datepicker();
+$(function(){
+	$('.bl-datePicker-input').datepicker({
+		showOn: 'button',
+		buttonImageOnly : false,
+		dateFormat : 'dd/mm/yy'
+	})
 })
 
 /**
  * 함수명 : fn_layers
  * 설명   : 다중 레이어 팝업 관리
- * param  : 
+ * param  : event 발생 개체
  */
 function fn_layers(e){
 	$('#' + e).fadeIn().addClass('is-open')
@@ -153,6 +159,7 @@ function fn_layers(e){
 	$('body').append('<div class="el-bg-popup"></div>')
 	$('html, body').css('overflow', 'hidden')
 }
+
 // 레이어 닫기
 function fn_layers_close(e){
 	$('.modal').fadeOut();
@@ -173,7 +180,6 @@ $('body').on("click", '.el-bg-popup', function() {
 /**
  * 함수명 : 
  * 설명   : 커스텀 list 토글 클래스 부착, (화살표 백그라운드 변경 등에 사용)
- * param  : 
  */
 $('.el-toggle-open').on('click',function(){
 	$(this).parent().toggleClass('is-open')
@@ -185,18 +191,8 @@ $('.el-toggle-open').on('click',function(){
 })
 
 /**
- * 함수명 : popMyOption
- * 설명   : 로그인 후 마이페이지 클릭 시 팝업 토글
- * param  : 
- */
-function popMyOption(){
-
-}
-
-/**
  * 함수명 : 
  * 설명   : 관인 직인 이미지 변경, 5개 시 비활성화 + 활성화
- * param  : 
  */
 let stampImgChangeCount = 0;
 $('.el-btn-refresh').on('click', function(){
@@ -208,6 +204,13 @@ $('.el-btn-refresh').on('click', function(){
 	} else {
 		stampImg = $(this).closest('.bl-stamp').find('.stamp').attr('src', `./assets/images/img_stamp_0${stampImgChangeCount}.png`);
 	}
+})
+
+/** 페이지 네이션 액티브 활성화 */
+$('.bl-pagination .bl-page-link').eq(0).addClass('is-active')
+$('.bl-pagination .bl-page-link').on('click', function(){
+	$('.bl-pagination .bl-page-link').removeClass('is-active')
+	$(this).addClass('is-active')
 })
 
 

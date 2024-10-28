@@ -70,12 +70,17 @@ button {font-weight: 400;}
 .el-btn-xs {padding: .8rem .6rem; font-size: 1.3rem; line-height: 100%; border-radius: .2rem;}
 .el-btn-ss {padding: .8rem 1rem; font-size: 1.5rem; line-height: 100%; border-radius: .6rem;}
 .el-btn-ss-01 { display: inline-flex;padding: 1rem; font-size: 1.5rem; line-height: 100%; border-radius: .6rem; align-items: center; justify-content: center;}
+
+
 /* 새로고침 */
 .el-btn-refresh { display: inline-flex; border: .1rem solid var(--black00); background: var(--white00); align-items: center; gap: .4rem;}
 .el-btn-refresh::before { display: inline-block; width: 1.6rem; height: 1.6rem; background: url(../assets/images/icon_refresh_00.svg) no-repeat center;content: '';}
 /* content-box */
 .el-cont-00 {padding: 4rem; border: .1rem solid var(--gray04); border-radius: 1.2rem;} 
 .el-cont-01 {padding: 4rem; border-radius: 1.2rem;}
+/* search-content box */
+.el-search-cont {padding: 2.4rem; background: var(--lightblue00); border-radius: 1.2rem;}
+.el-search-cont input[type="text"], .el-search-cont select {height: 4.8rem;}
 /* 아이콘 별 공통 button 스타일 */
 .el-btn-m.btn-next::after { display: inline-block; width: 2rem; height: 2rem; background: url(../assets/images/icon_arrow_00_right_white_20x20.svg) no-repeat center;content: ''; margin-left: .4rem;}
 .el-btn-m.btn-prev::before { display: inline-block; width: 2rem; height: 2rem; background: url(../assets/images/icon_arrow_00_left_black_20x20.svg) no-repeat center;content: ''; margin-right: .4rem;}
@@ -194,6 +199,7 @@ select {height: 5.6rem;}
 .pd-40 {padding: 4rem;}
 
 /* min-width*/
+.miw-60{min-width: 6rem;}
 .miw-200{min-width: 20rem;}
 .miw-400{min-width: 40rem;}
 /* max-width */
@@ -290,7 +296,7 @@ select {height: 5.6rem;}
 #skip_nav a:active{position: static;}
 
 /* table */
-table { width: 100%; font-size: 1.5rem;table-layout: fixed; border-collapse: collapse; border-spacing: 0;}
+table { width: 100%; font-size: 1.7rem;table-layout: fixed; border-collapse: collapse; border-spacing: 0;}
 table caption {display: none;}
 
 /* horizontal table */

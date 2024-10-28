@@ -17,11 +17,11 @@
 .gov-banner .gov-desc > img {box-shadow: 0 0 .2rem rgba(0, 0, 0, .1);}
 
 /* vertical table */
-.bl-vertical-list {border-top: 2px solid #000; border-bottom: 1px solid #ddd;}
-.bl-vertical-list tr {border-top: 1px solid #ddd;}
-.bl-vertical-list thead th { padding: 15px; background: #f9f9f9;text-align: center; white-space: nowrap; border-right: 1px solid #ddd;}
-.bl-vertical-list thead th:last-child{border-right: 0;}
-.bl-vertical-list tbody td {padding: 15px; vertical-align: middle; word-break: break-all;}
+.bl-vertical-list {border-bottom: 1px solid var(--gray03);}
+.bl-vertical-list thead > tr {border-bottom: .1rem solid #99B0CB;}
+.bl-vertical-list thead th {background: var(--lightblue00); white-space: nowrap; font-weight: 700; text-align: left; padding: 1.45rem 0 1.45rem 1.6rem;}
+.bl-vertical-list tbody td {padding: 1.6rem 0 1.6rem 1.6rem; vertical-align: middle; word-break: keep-all;}
+.bl-vertical-list tbody tr:not(:first-of-type) {border-top: 1px solid #ddd;}
 
 /* horizontal table */
 .bl-rowTable {border-top: 2px solid #000; border-bottom: 1px solid #ddd;}
@@ -31,8 +31,8 @@
 
 /* form-group */
 .bl-formgroup-w {max-width: var(--max-width, 100%);}
-.bl-formgroup{max-width: var(--max-width, 100%); display: flex; flex-direction: column; gap: 1.2rem;}
-.bl-formgroup label {font-size: 1.5rem; font-weight: 400;}
+.bl-formgroup{ display: flex;max-width: var(--max-width, 100%); flex-direction: column; gap: 1.2rem;}
+.bl-formgroup label { font-weight: 400;font-size: 1.5rem;}
 .bl-formgroup input {min-width: 0;}
 .bl-formlist {display: flex; gap: .8rem; align-items: center;}
 
@@ -44,30 +44,49 @@
 /* bl-infolist */
 .bl-infolist > li {position: relative; padding-left: 1.6rem;}
 .bl-infolist > li > span {display: inline-block;}
-.bl-infolist.demical > li::before {content: "•"; color: var(--gray07);}
-.bl-infolist > li::before {position: absolute; left: 0; top: 0;}
+.bl-infolist.demical > li::before { color: var(--gray07);content: "•";}
+.bl-infolist > li::before {position: absolute; top: 0; left: 0;}
 .bl-infolist .bl-infolist-desc {color: var(--gray07);}
 .bl-infolist .bl-infolist-tit {min-width: 13rem;}
 
 /* bl-infolist 01 */
 .bl-infolist-01 > li {display: flex; align-items: center;}
-.bl-infolist-01 .bl-infolist-tit {min-width: 12rem; font-weight: 700;}
+.bl-infolist-01 .bl-infolist-tit { font-weight: 700;min-width: 12rem;}
+
+/* bl-dataTable */
+.bl-dataTable-list {display: flex; align-items: flex-start; justify-content: flex-start; flex-direction: row; flex-wrap: wrap;}
+.bl-dataTable-list > dt, .bl-dataTable-list > dd {vertical-align: top; }
+.bl-dataTable-list > dt {width: 24.8rem; font-weight: 700;}
+.bl-dataTable-list > dd {width: calc(100% - 24.8rem);}
+/* margin-top을 마지막 항목을 제외하고 적용 */
+.bl-dataTable-list.dataGap-24 > dt:not(:first-of-type),
+.bl-dataTable-list.dataGap-24 > dd:not(:first-of-type)
+{margin-top: 2.4rem;}
+
+/* bl-pagination */
+.bl-pagination {display: flex; align-items: center; justify-content: center; color: var(--gray07);} 
+.bl-pagination .bl-page-navi {line-height: 4rem;} 
+.bl-pagination .bl-page-navi.prev {display: inline-flex; align-items: center; margin-right: 2rem;} 
+.bl-pagination .bl-page-navi.prev::before {content: ""; width: 2rem; height: 2rem; display: inline-block; background: url(../assets/images/icon_arrow_00_left_gray07_20x20.svg) no-repeat center;} 
+.bl-pagination .bl-page-navi.next {display: inline-flex; align-items: center; margin-left: 2rem;} 
+.bl-pagination .bl-page-navi.next::after {content: ""; width: 2rem; height: 2rem; display: inline-block; background: url(../assets/images/icon_arrow_00_right_gray07_20x20.svg) no-repeat center;} 
+.bl-pagination .bl-page-link {display: inline-block; width: 4rem; line-height: 4rem; text-align: center; border-radius: .6rem;} 
+.bl-pagination .bl-page-link.is-active {background-color: #0c3975; color: #fff; font-weight: 700;}
 
 /* bl-title */
-.bl-text-00 {font-size: 4rem; font-weight: 700; padding-top: 8rem;}
-
+.bl-text-00 { font-weight: 700;font-size: 4rem; padding-top: 8rem;}
 
 /* breadcrumb */
 .bl-breadcrumb {display: flex; font-weight: 700; font-size: 1.5rem; align-items: center; padding-left: 2.4rem;}
 .bl-breadcrumb .path .home > a {position: relative;}
 .bl-breadcrumb .path .home > a::before { display : inline-block;position: absolute; top: 50%; right: 1.2rem; width: 2.4rem; height: 2.4rem; background: url(../assets/images/icon_home_00_breadcrumb.svg) no-repeat center;content: ""; transform: translateY(-50%); margin-right: .2rem;}
 .bl-breadcrumb .path > li {display: inline;}
-.bl-breadcrumb .path > li > a { position: relative; font-weight: 400;padding-bottom: 0.1rem; text-decoration: underline; text-underline-position: under;}
+.bl-breadcrumb .path > li > a { position: relative; font-weight: 400; text-decoration: underline;padding-bottom: 0.1rem; text-underline-position: under;}
 .bl-breadcrumb .path > li + li::before { display: inline-block;width: 2rem;height: 2rem; margin: 0 0.4rem;background: url(../assets/images/icon_arrow_00_right.svg) no-repeat center;content: "";vertical-align: middle;}
 
 /* step */
 .bl-step { display: flex;width: 100%; justify-content: center;}
-.bl-step .step {display: block; color: var(--gray07); margin: 1.2rem 0;}
+.bl-step .step {display: block; margin: 1.2rem 0; color: var(--gray07);}
 .bl-step .step-tit {font-weight: 700;}
 .bl-step li {position: relative;}
 .bl-step li:not(:last-child){flex: 1;}
@@ -96,6 +115,16 @@
 /* img box */
 .bl-imgBox {border-radius: .8rem; overflow: hidden;}
 .bl-imgBox > img {width: 100%;}
+
+/* datePicker */
+.bl-datePicker {position: relative;}
+/* .bl-datePicker-btn {position: absolute; top: 50%; right: 1.6rem; width: 2rem; height: 2rem; background: url(../assets/images/icon_calender_00_20x20.svg) no-repeat center; transform: translateY(-50%);} */
+
+/* bl-chkdata */
+.bl-chkdata > strong {color: var(--blue01); font-weight: 400;}
+
+
+.ui-datepicker-trigger {position: absolute; top: 50%; right: 1.6rem; width: 2rem; height: 2rem; background: url(../assets/images/icon_calender_00_20x20.svg) no-repeat center; transform: translateY(-50%); font-size: 0;} 
 
 @media only screen and (max-width:768px) {
 	/* row table */
