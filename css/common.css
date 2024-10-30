@@ -122,7 +122,8 @@ button.el-before-24{width: 2.4rem; height: 2.4rem;}
 /* form */
 input, select { font-size: 1.9rem;vertical-align: middle; border-radius: .8rem; max-width: 100%;}
 input:not([type=file],[type=checkbox],[type=radio]):read-only { border: .1rem solid var(--gray04);background: var(--gray03)!important; color: var(--black00);}
-/* input */
+.hp-readonlyStyle00 {color: var(--gray06);}
+ /* input */
 input[type="tel"], input[type="text"], input[type="password"], input[type="search"], input[type="email"] {height: 5.6rem;padding: 0 1.6rem;border: .1rem solid #717171;background: var(--white00);color: #8E8E8E;}
 select {height: 5.6rem;}
 
@@ -133,6 +134,7 @@ select {height: 5.6rem;}
 .el-check-00 input[type="checkbox"]:checked {background-color: var(--blue00); border-color: var(--blue00);}
 
 .el-radio-00 > input[type="radio"]{width: 2.4rem; height: 2.4rem; margin: 0;}
+
 
 /* margin */
 /* top */
@@ -216,12 +218,12 @@ select {height: 5.6rem;}
 
 /* percentage */
 .w-100 {width: 100%;}
+.w-90 {width: 90%;}
+.w-10 {width: 10%;}
 .w-80 {width: 80%;}
 .w-50 {width: 50%;}
 .w-60 {width: 60%;}
 .w-40 {width: 40%;}
-
-
 
 .w-60-i {width: 60%!important;}
 .w-40-i {width: 40%!important;}
@@ -229,6 +231,7 @@ select {height: 5.6rem;}
 /* min-width percent */
 .miw-100per {min-width: 100%;}
 .miw-50per {min-width: 50%;}
+
 
 /* flex */
 /* content display pattern */
@@ -284,6 +287,9 @@ select {height: 5.6rem;}
 .hidden-value {visibility: hidden;}
 .hidden-value::after {content: '\00a0'; visibility: visible;}
 .show {display: block;}
+
+/* white-space */
+.white-spaceNo {white-space: nowrap;}
 
 /* text transform */
 .txt-upper {text-transform: uppercase;}
@@ -356,12 +362,19 @@ table caption {display: none;}
 /* 모바일 전용 클래스 (모바일에서 display: block) */
 .sm-only-768 {display: none;}
 .sm-onlyFlex-768 {display: none;}
+/* sm-gap pattern */
+.sm-yflexGap-768-00 {display: flex; flex-direction: column; gap: 4rem;}
+
+
+/* 1024px 이하 태블릿 ~ 모바일 가로 */
+@media screen and (max-width : 1024px){
+	.md-flexColumn-1024 {display: flex; flex-direction: column;}
+}
 
 /* 768이하 모바일 전용 링크 */
 @media screen and (max-width: 768px){
 	.el-cont-00, .el-cont-01 {padding: 3.2rem 2.4rem;}
 	
-
 	/* content display */
 	.lg-only-768 {display:none!important}
 	.lg-onlyFlex-768 {display:none}
@@ -370,14 +383,23 @@ table caption {display: none;}
 	.sm-flexColumn {flex-direction: column;}
 	.sm-flexColumn-768 {display: flex; flex-direction: column!important;}
 
+	
+	/* Responsive 패턴 display */
+	.sm-responsiveFlex-768-00 {flex-direction: column;}
+	.sm-responsiveFlex-768-00 > * {width: 100%;}
+
+	/* Responsive 패턴 gap */
+	.sm-yflexGap-768-00 {gap: 3.2rem;}
+	
+
 	/* content display pattern */
 	.flex-smColumn-768 {flex-direction: column;}
 
 	.sm-el-text-lv2 {font-size: var(--fontLv2);}
 	.sm-el-text-lv3 {font-size: var(--fontLv3);}
-	.sm-el-text-lv4 {font-size: var(--fontLv3);}
-	.sm-el-text-lv5 {font-size: var(--fontLv3);}
-	.sm-el-text-lv6 {font-size: var(--fontLv3);}
+	.sm-el-text-lv4 {font-size: var(--fontLv4);}
+	.sm-el-text-lv5 {font-size: var(--fontLv5);}
+	.sm-el-text-lv6 {font-size: var(--fontLv6);}
 
 	/* content reset */
 	.el-cont-00.sm-reset-768{padding: 0; border: 0;}
@@ -387,8 +409,14 @@ table caption {display: none;}
 	.sm-onlyWidth100-768 {width: 100%!important;}
 
 	/* margin-top */
+	.sm-mt-24 {margin-top: 2.4rem;}
+	.sm-mt-32 {margin-top: 3.2rem}
 	.sm-mt-64 {margin-top: 6.4rem!important;}
-	.sm-mt-32 {margin-top: 3.2rem;}
+
+	/* sm margin left */
+	.sm-ml-16 {margin-left: 1.6rem;}
+	.sm-ml-24 {margin-left: 2.4rem;}
+	.sm-width-100 {width: 100%!important;}
 
 	.sm-my-24-32 {margin-top: 2.4rem; margin-bottom: 3.2rem;}
 
@@ -396,8 +424,11 @@ table caption {display: none;}
 	.hp-responsive-w {width: 100%; min-width: 0; max-width: 100%;}
 
 	/* gap */
-	.sm-gap-32 {gap: 3.2rem;}
 	.sm-gap-10 {gap: 1rem;}
+	.sm-gap-16 {gap: 1.6rem;}
+	.sm-gap-24 {gap: 2.4rem;}
+	.sm-gap-24-i {gap: 2.4rem!important;}
+	.sm-gap-32 {gap: 3.2rem;}
 
 	/* flex equal */
 	.sm-flex-evenly > * {flex: 1;}
@@ -408,4 +439,6 @@ table caption {display: none;}
 	.lg-mt-40 {margin-top: 4rem;}
 	.lg-mt-80 {margin-top: 8rem;}
 	.lg-ml-8 {margin-left: .8rem;}
+	/* padding left */
+	.lg-pl-8 {padding-left: .8rem;}
 }

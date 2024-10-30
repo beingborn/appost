@@ -19,8 +19,8 @@
 /* vertical table */
 .bl-vertical-list {border-bottom: 1px solid var(--gray03);}
 .bl-vertical-list thead > tr {border-bottom: .1rem solid #99B0CB;}
-.bl-vertical-list thead th {background: var(--lightblue00); white-space: nowrap; font-weight: 700; text-align: left; padding: 1.45rem 0 1.45rem 1.6rem;}
-.bl-vertical-list tbody td {padding: 1.6rem 0 1.6rem 1.6rem; vertical-align: middle; word-break: keep-all;}
+.bl-vertical-list thead th { padding: 1.45rem 0 1.45rem 1.6rem;background: var(--lightblue00); font-weight: 700; text-align: left; white-space: nowrap;}
+.bl-vertical-list tbody td {padding: .7rem; vertical-align: middle; word-break: keep-all;}
 .bl-vertical-list tbody tr:not(:first-of-type) {border-top: 1px solid #ddd;}
 
 /* horizontal table */
@@ -35,6 +35,7 @@
 .bl-formgroup label { font-weight: 400;font-size: 1.5rem;}
 .bl-formgroup input {min-width: 0;}
 .bl-formlist {display: flex; gap: .8rem; align-items: center;}
+.bl-formgroup button {height: 5.6rem; padding-left: 2rem; padding-right: 2rem;}
 
 /* modal */
 .bl-modal-00 { display: none;position: fixed; top: 50%; left: 50%; width: 100%; transform: translate(-50%, -50%); z-index: 1002; max-width: 72rem; max-height: 98%; overflow: auto;}
@@ -42,7 +43,7 @@
 .bl-modal-00 .modal-body-desc strong {font-weight: 400;}
 
 /* bl-infolist */
-.bl-infolist > li {position: relative; padding-left: 1.6rem;}
+.bl-infolist > li {position: relative; padding-left: 1.6rem; display: flex;}
 .bl-infolist > li > span {display: inline-block;}
 .bl-infolist.demical > li::before { color: var(--gray07);content: "•";}
 .bl-infolist > li::before {position: absolute; top: 0; left: 0;}
@@ -64,14 +65,14 @@
 {margin-top: 2.4rem;}
 
 /* bl-pagination */
-.bl-pagination {display: flex; align-items: center; justify-content: center; color: var(--gray07);} 
+.bl-pagination {display: flex; color: var(--gray07); align-items: center; justify-content: center;} 
 .bl-pagination .bl-page-navi {line-height: 4rem;} 
 .bl-pagination .bl-page-navi.prev {display: inline-flex; align-items: center; margin-right: 2rem;} 
-.bl-pagination .bl-page-navi.prev::before {content: ""; width: 2rem; height: 2rem; display: inline-block; background: url(../assets/images/icon_arrow_00_left_gray07_20x20.svg) no-repeat center;} 
+.bl-pagination .bl-page-navi.prev::before { display: inline-block; width: 2rem; height: 2rem; background: url(../assets/images/icon_arrow_00_left_gray07_20x20.svg) no-repeat center;content: "";} 
 .bl-pagination .bl-page-navi.next {display: inline-flex; align-items: center; margin-left: 2rem;} 
-.bl-pagination .bl-page-navi.next::after {content: ""; width: 2rem; height: 2rem; display: inline-block; background: url(../assets/images/icon_arrow_00_right_gray07_20x20.svg) no-repeat center;} 
+.bl-pagination .bl-page-navi.next::after { display: inline-block; width: 2rem; height: 2rem; background: url(../assets/images/icon_arrow_00_right_gray07_20x20.svg) no-repeat center;content: "";} 
 .bl-pagination .bl-page-link {display: inline-block; width: 4rem; line-height: 4rem; text-align: center; border-radius: .6rem;} 
-.bl-pagination .bl-page-link.is-active {background-color: #0c3975; color: #fff; font-weight: 700;}
+.bl-pagination .bl-page-link.is-active { color: #fff; font-weight: 700;background-color: #0c3975;}
 
 /* bl-title */
 .bl-text-00 { font-weight: 700;font-size: 4rem; padding-top: 8rem;}
@@ -123,8 +124,10 @@
 /* bl-chkdata */
 .bl-chkdata > strong {color: var(--blue01); font-weight: 400;}
 
+/* bl-stamp */
+.bl-stamp-position {margin-left: auto; margin-top: auto;}
 
-.ui-datepicker-trigger {position: absolute; top: 50%; right: 1.6rem; width: 2rem; height: 2rem; background: url(../assets/images/icon_calender_00_20x20.svg) no-repeat center; transform: translateY(-50%); font-size: 0;} 
+.ui-datepicker-trigger {position: absolute; top: 50%; right: 1.6rem; width: 2rem; height: 2rem; background: url(../assets/images/icon_calender_00_20x20.svg) no-repeat center; font-size: 0; transform: translateY(-50%);} 
 
 @media only screen and (max-width:768px) {
 	/* row table */
@@ -138,6 +141,16 @@
 
 	/* bl-title */
 	.bl-text-00 {font-size: 3.2rem; padding-top: 6.4rem;}
+
+	/* bl-buttonRow */
+	.bl-buttonRow button { width: 14.2rem;min-height: 6.4rem;}
+
+	/* 값을 동일하게 가져갈 경우 */
+	.bl-buttonRow.sm-flex-evenly {display: flex; gap: 1rem;}
+	.bl-buttonRow.sm-flex-evenly > * {width: auto; flex: 1;}
+
+	/* bl-stamp */
+	.bl-stamp-position {margin-right: auto; margin-left: 0;}
 }
 
 @media only screen and (min-width: 768px){
