@@ -43,7 +43,7 @@
 .bl-modal-00 .modal-body-desc strong {font-weight: 400;}
 
 /* bl-infolist */
-.bl-infolist > li {position: relative; padding-left: 1.6rem; display: flex;}
+.bl-infolist > li { display: flex;position: relative; padding-left: 1.6rem;}
 .bl-infolist > li > span {display: inline-block;}
 .bl-infolist.demical > li::before { color: var(--gray07);content: "•";}
 .bl-infolist > li::before {position: absolute; top: 0; left: 0;}
