@@ -44,6 +44,10 @@ ex) .btn.is-active {color: red;}
 복합모듈로써 판단하여 고유 클래스 지정
 ex) <div class="flex mr-4 bg-white content-pd overflowHidden">
 
+/* 공통적으로 사용되는 클래스들을 그룹화해서 모듈을 만들경우 */
+
+
+
 
 // 본문과의 간격 통일
 .ly-cont-inner {padding : 0 0 120px 0}

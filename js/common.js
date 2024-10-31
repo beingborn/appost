@@ -167,6 +167,7 @@ function fn_layers_close(e){
 	$('.modal').fadeOut();
 	$('.modal').removeAttr('tabindex')
 	$('.el-bg-popup').fadeOut()
+	$('body .el-bg-popup').remove();
 	$('html, body').css('overflow', '')
 }
 // 레이어 bg 클릭 hide
@@ -209,7 +210,9 @@ $('.el-btn-refresh').on('click', function(){
 })
 
 /** 페이지 네이션 액티브 활성화 */
-$('.bl-pagination .bl-page-link').eq(0).addClass('is-active')
+
+$('.bl-pagination.sm .bl-page-link').eq(0).addClass('is-active')
+$('.bl-pagination.lg .bl-page-link').eq(0).addClass('is-active')
 $('.bl-pagination .bl-page-link').on('click', function(){
 	$('.bl-pagination .bl-page-link').removeClass('is-active')
 	$(this).addClass('is-active')

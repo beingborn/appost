@@ -77,6 +77,9 @@ button {font-weight: 400;}
 .el-btn-ss {padding: .8rem 1rem; font-size: 1.5rem; line-height: 100%; border-radius: .6rem;}
 .el-btn-ss-01 { display: inline-flex;padding: 1rem; font-size: 1.5rem; line-height: 100%; border-radius: .6rem; align-items: center; justify-content: center;}
 
+/* el-btn-m variation */
+.el-btn-m.hp-bg-lblue-00 {border: .1rem solid var(--blue00); color: var(--blue00);}
+
 
 /* 새로고침 */
 .el-btn-refresh { display: inline-flex; border: .1rem solid var(--black00); background: var(--white00); align-items: center; gap: .4rem;}
@@ -96,7 +99,7 @@ button {font-weight: 400;}
 .el-toggleList::after { display: inline-block; width: 1.6rem; height: 1.6rem; background: url(../assets/images/icon_arrow_00_bottom_16x16.svg) no-repeat center;content: ''; margin-left: .2rem; transition: rotate .5s;}
 .el-toggleList.is-open::after {transform: rotate(180deg);}
 /* label */
-.el-mustType::after { color: red;content: '*'; margin-left: .3rem;}
+.el-mustType::after { color: red;content: '*'; margin-left: .3rem;}      
 /* icon */
 /* 16 x 16 */
 .el-before-16.align-top-8::before {margin-top: .6rem;}
@@ -120,6 +123,7 @@ button.el-before-24{width: 2.4rem; height: 2.4rem;}
 .el-before-24.reset::before {background: url(../assets/images/icon_reset_00_24x24.gif) no-repeat center;}
 
 /* form */
+input[type=text], input[type=number], input[type=tel], input[type=password], select, textarea {width: 100%;}
 input, select { font-size: 1.9rem;vertical-align: middle; border-radius: .8rem; max-width: 100%;}
 input:not([type=file],[type=checkbox],[type=radio]):read-only { border: .1rem solid var(--gray04);background: var(--gray03)!important; color: var(--black00);}
 .hp-readonlyStyle00 {color: var(--gray06);}
@@ -332,9 +336,10 @@ table caption {display: none;}
 .hp-bg-lblue-01 {background: #EDF1F5;}
 .hp-input-00 { height: 4rem; padding: 0 1.2rem; border: 1rem solid #ddd; text-align: left; border-radius: 1rem;}
 .hp-responsive-w {width: var(--lg-width, 100%); max-width: var(--lg-maxwidth, auto); min-width: var(--lg-minwidth, 0);}
+.lg-responsive-mw {max-width: var(--lg-maxwidth, auto);}
 /* backdrop bg */
 .gnb-backdrop {position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 999; background-color: rgba(0, 0, 0, 0.5);}
-.el-bg-popup {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1001;}
+.el-bg-popup {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.75); z-index: 1001;}
 /* border */
 .hp-header-border { width: 100%;height: .1rem; background: var(--gray03);}
 /* border-radius */
@@ -369,6 +374,8 @@ table caption {display: none;}
 /* 1024px 이하 태블릿 ~ 모바일 가로 */
 @media screen and (max-width : 1024px){
 	.md-flexColumn-1024 {display: flex; flex-direction: column;}
+	.md-gap-32 {gap: 3.2rem;}
+	.md-w-100 {width: 100%;}
 }
 
 /* 768이하 모바일 전용 링크 */
@@ -382,7 +389,7 @@ table caption {display: none;}
 	.sm-onlyFlex-768 {display:flex}
 	.sm-flexColumn {flex-direction: column;}
 	.sm-flexColumn-768 {display: flex; flex-direction: column!important;}
-
+	
 	
 	/* Responsive 패턴 display */
 	.sm-responsiveFlex-768-00 {flex-direction: column;}
@@ -391,10 +398,8 @@ table caption {display: none;}
 	/* Responsive 패턴 gap */
 	.sm-yflexGap-768-00 {gap: 3.2rem;}
 	
-
 	/* content display pattern */
 	.flex-smColumn-768 {flex-direction: column;}
-
 	.sm-el-text-lv2 {font-size: var(--fontLv2);}
 	.sm-el-text-lv3 {font-size: var(--fontLv3);}
 	.sm-el-text-lv4 {font-size: var(--fontLv4);}
@@ -404,7 +409,6 @@ table caption {display: none;}
 	/* content reset */
 	.el-cont-00.sm-reset-768{padding: 0; border: 0;}
 	.gnb-backdrop {display: none;}
-
 	.sm-py-32 {padding: 3.2rem 0!important}
 	.sm-onlyWidth100-768 {width: 100%!important;}
 
@@ -412,6 +416,9 @@ table caption {display: none;}
 	.sm-mt-24 {margin-top: 2.4rem;}
 	.sm-mt-32 {margin-top: 3.2rem}
 	.sm-mt-64 {margin-top: 6.4rem!important;}
+
+	/* margin bottom */
+	.sm-mb-64 {margin-bottom: 6.4rem;}
 
 	/* sm margin left */
 	.sm-ml-16 {margin-left: 1.6rem;}
@@ -422,6 +429,7 @@ table caption {display: none;}
 
 	/* hp-responsive width */
 	.hp-responsive-w {width: 100%; min-width: 0; max-width: 100%;}
+	.lg-responsive-mw {max-width: 100%;}
 
 	/* gap */
 	.sm-gap-10 {gap: 1rem;}
@@ -429,6 +437,10 @@ table caption {display: none;}
 	.sm-gap-24 {gap: 2.4rem;}
 	.sm-gap-24-i {gap: 2.4rem!important;}
 	.sm-gap-32 {gap: 3.2rem;}
+	.sm-gap-64 {gap: 6.4rem;}
+
+	/* sm width per */
+	.sm-w-100 {width: 100%;}
 
 	/* flex equal */
 	.sm-flex-evenly > * {flex: 1;}
@@ -441,4 +453,5 @@ table caption {display: none;}
 	.lg-ml-8 {margin-left: .8rem;}
 	/* padding left */
 	.lg-pl-8 {padding-left: .8rem;}
+	.lg-pt-32 {padding-top: 3.2rem;}
 }

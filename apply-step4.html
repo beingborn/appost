@@ -197,7 +197,7 @@
                 <!-- ./ breadcrumb -->
                 <h2 class="bl-text-00">가족 관계 증명서</h2>
                 <!-- bl-step -->
-                <ol class="bl-step mt-40">
+                <ol class="bl-step mg-type00">
                     <li class="is-done">
                         <div>
                             <span class="step-ico"></span>
@@ -229,24 +229,34 @@
                     </li>
                 </ol>
                 <!-- // bl-step -->
-                <section class="el-cont-00 sm-reset-768 mt-80">
+                <section class="el-cont-00 sm-reset-768">
                     <p class="el-count-00">
                         <strong class="hp-txt-blue-01" title="현재단계">4단계</strong> / <span title="총단계">4단계</span>
                     </p>
-                    <div class="flex-col gap-40">
+                    <div>
                         <h3 class="el-text-lv3 mt-24">인증서 출력</h3>
-                        <p class="hp-txt-gray-07">
+                        <p class="hp-txt-gray-07 my-40 sm-mb-64">
                             외교부 아포스티유 서비스를 이용해 주셔서 감사합니다.
-                            <br>
+                            <br class="lg-only-768">
                             인증서는 전자문서지갑과 종이 인증서 두가지 형태로 발급 받으실 수 있습니다.
                         </p>
                         <!-- 안내 사항 -->
                         <section class="el-cont-01 hp-bg-gray-00">
                             <h5 class="el-text-lv5">안내사항</h5>
-                            <div class="flex-col gap-40">
-                                <div class="flex-col gap-24 mt-32">
-                                    <p class="el-before-16 check-caution flex-ac gap-8 hp-txt-blue-01">인증서 출력까지 다소 시간이 걸릴 수 있으니 기다려 주시기 바랍니다.</p>
-                                    <p class="el-before-16 check-caution flex-ac gap-8 hp-txt-blue-01">인증서 출력이 안되는 경우 아래 내용을 확인해 주십시오.</p>
+                            <div class="sm-yflexGap-768-00">
+                                <div class="bl-chklist sm-indent hp-txt-blue-01 gap-24 mt-32 el-text-lv5">
+                                    <p class="flex-ac gap-8">
+                                        <span class="bl-chklist-desc">
+                                            <img src="./assets/images/icon_check_00_bkbl_16x16.svg" alt="">
+                                            인증서 출력까지 다소 시간이 걸릴 수 있으니 기다려 주시기 바랍니다.
+                                        </span>
+                                    </p>
+                                    <p class="flex-ac gap-8">
+                                        <span class="bl-chklist-desc">
+                                            <img src="./assets/images/icon_check_00_bkbl_16x16.svg" alt="">
+                                            인증서 출력이 안되는 경우 아래 내용을 확인해 주십시오.
+                                        </span>
+                                    </p>                                    
                                 </div>
                                 <div class="hp-borderTop-dashedGray-04"></div>
                                 <!-- 출력 주의 사항 -->
@@ -262,21 +272,11 @@
                                 </div>
                             </div>
                         </section>
-                        <!-- 
-                        P : 임시로 비활성화
-                        -->
-                        <!-- <div>
-                            <h5 class="el-text-lv5">발급 받기</h5>
-                            <div class="el-radio-00 flex-ac gap-8 mt-24">
-                                <input type="radio" name="print" id="print">
-                                <label for="print" class="el-text-lv5">출력하기</label>
-                            </div>
-                        </div> -->
                         <!-- ./ 안내 사항 -->
                     </div>
                 </section>
                 <!-- 하단 버튼 그룹 -->
-                <div class="flex-acjs mt-40">
+                <div class="flex-acjs bl-buttonRow mt-40 sm-mt-64">
                     <button type="button" class="el-btn-m hp-border-black-00 btn-prev" onclick="location.href='apply-step3.html'">이전으로</button>
                     <button type="button" class="el-btn-m hp-txt-white-00 hp-bg-blue-00 btn-print" onclick="location.href='index.html'">발급하기</button>
                 </div>

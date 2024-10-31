@@ -199,31 +199,29 @@
             <form class="el-search-cont mt-80" action="post">
                 <fieldset>
                     <legend class="sr-only">나의 민원 검색</legend>
-                    <div class="flex-acjs">
-                        <div class="flex-ac gap-8">
-                            <div class="bl-formgroup flex-evenly" style="--max-width: 30.9rem;">
+                        <div class="flex-ac sm-responsiveFlex-768-00 gap-8 sm-gap-24">
+                            <div class="bl-formgroup flex-evenly lg-responsive-mw" style="--lg-maxwidth:30.9rem;">
                                 <label for="docNum">접수번호</label>
                                 <div class="bl-formlist">
                                     <input class="txt-l" type="text" title="접수번호 입력" id="docNum" maxlength="20" >
                                 </div>
                             </div>
-                            <div class="bl-formgroup flex-evenly" style="--max-width: 40rem;">
+                            <div class="bl-formgroup flex-evenly lg-responsive-mw" style="--lg-maxwidth: 40rem;">
                                 <label>등록 일자</label>
                                 <div class="bl-formlist">
                                     <div class="bl-datePicker hp-responsive-w">
-                                        <input class="txt-l bl-datePicker-input" type="text" placeholder="2023-08-24" maxlength="10" title="등록일자 앞자리">
+                                        <input class="txt-l bl-datePicker-input w-100" type="text" placeholder="2023-08-24" maxlength="10" title="등록일자 앞자리">
                                     </div>
-                                    ~
+                                    -  
                                     <div class="bl-datePicker hp-responsive-w">
-                                        <input class="txt-l bl-datePicker-input" type="text" placeholder="2023-08-24" maxlength="10" title="등록일자 뒷자리">
+                                        <input class="txt-l bl-datePicker-input w-100" type="text" placeholder="2023-08-24" maxlength="10" title="등록일자 뒷자리">
                                     </div>
                                 </div>
                             </div>
+                            <div class="flex-item-bottom flex-item-right">
+                                <button type="button" class="el-btn-m hp-bg-lblue-00 sm-w-100">조회</button>
+                            </div>
                         </div>
-                        <div class="flex-item-bottom">
-                            <button type="button" class="el-btn-m hp-border-blue-00 hp-txt-blue-00 hp-bg-lblue-00">조회</button>
-                        </div>
-                    </div>
                 </fieldset>
             </form>
             <!-- ./ 검색영역 -->
@@ -231,79 +229,81 @@
             <section>
                 <h2 class="sr-only">민원 안내 게시판</h2>
                 <p class="bl-chkdata my-40">전체 <strong>114</strong>건</p>
-                <!-- vertical table -->
-                <table class="bl-vertical-list">
-                    <caption>민원 상태정보 안내 게시판</caption>
-                    <colgroup>
-                        <col style="width: 8.8rem;">
-                        <col style="width: 20%;">
-                        <col style="width: 16%;">
-                        <col>
-                        <col style="width: 9.38%;">
-                        <col style="width: 9.38%;">
-                        <col style="width: 7.19%;">
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th scope="col">번호</th>
-                            <th scope="col">접수번호</th>
-                            <th scope="col">문서발급기관</th>
-                            <th scope="col">문서명</th>
-                            <th scope="col">접수일자</th>
-                            <th scope="col">처리상태</th>
-                            <th scope="col">출력</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="txt-l">1379</td>
-                            <td class="txt-l"><a href="#">20231122MP-XXFI0003430</a></td>
-                            <td class="txt-l">주뉴욕대한민국총영사관</td>
-                            <td class="txt-l">가족관계에 관한 영문증명서 발급 신청</td>
-                            <td class="txt-l">2024.10.26</td>
-                            <td class="txt-l">
-                                <span>발급완료</span>
-                            </td>
-                            <td class="txt-l"><button type="button" class="miw-60 el-btn-ss hp-border-black-00">출력</button></td>
-                        </tr>
-                        <tr>
-                            <td class="txt-l">1379</td>
-                            <td class="txt-l"><a href="#">20231122MP-XXFI0003430</a></td>
-                            <td class="txt-l">주뉴욕대한민국총영사관</td>
-                            <td class="txt-l">가족관계에 관한 영문증명서 발급 신청</td>
-                            <td class="txt-l">2024.10.26</td>
-                            <td class="txt-l">
-                                <span class="hp-txt-red-00 el-before-24 error-red flex gap-4">처리불가</span>
-                            </td>
-                            <td class="txt-l"><button type="button" class="miw-60 el-btn-ss hp-border-black-00">출력</button></td>
-                        </tr>
-                        <tr>
-                            <td class="txt-l">1379</td>
-                            <td class="txt-l"><a href="#">20231122MP-XXFI0003430</a></td>
-                            <td class="txt-l">주뉴욕대한민국총영사관</td>
-                            <td class="txt-l">가족관계에 관한 영문증명서 발급 신청</td>
-                            <td class="txt-l">2024.10.26</td>
-                            <td class="txt-l">
-                                <span class="hp-txt-red-00 el-before-24 error-red flex gap-4">심사반려</span>
-                            </td>
-                            <td class="txt-l"><button type="button" class="miw-60 el-btn-ss hp-border-black-00">출력</button></td>
-                        </tr>
-                        <tr>
-                            <td class="txt-l">1379</td>
-                            <td class="txt-l"><a href="#">20231122MP-XXFI0003430</a></td>
-                            <td class="txt-l">주뉴욕대한민국총영사관</td>
-                            <td class="txt-l">가족관계에 관한 영문증명서 발급 신청</td>
-                            <td class="txt-l">2024.10.26</td>
-                            <td class="txt-l">
-                                <span class="hp-txt-yellow-00 el-before-24 wait-yellow flex gap-4">발급대기</span> 
-                            </td>
-                            <td class="txt-l"><button type="button" class="miw-60 el-btn-ss hp-border-black-00">출력</button></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <!-- .// vertical table -->
+                <div class="overflow-auto lg-only-768">
+                    <!-- vertical table -->
+                    <table class="bl-vertical-list" style="min-width: 1200px;">
+                        <caption>민원 상태정보 안내 게시판</caption>
+                        <colgroup>
+                            <col style="width: 8.8rem;">
+                            <col>
+                            <col style="width: 16%;">
+                            <col>
+                            <col style="width: 9.38%;">
+                            <col style="width: 9.38%;">
+                            <col style="width: 7.19%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">접수번호</th>
+                                <th scope="col">문서발급기관</th>
+                                <th scope="col">문서명</th>
+                                <th scope="col">접수일자</th>
+                                <th scope="col">처리상태</th>
+                                <th scope="col">출력</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="txt-l">1379</td>
+                                <td class="txt-l"><a href="#">20231122MP-XXFI0003430</a></td>
+                                <td class="txt-l">주뉴욕대한민국총영사관</td>
+                                <td class="txt-l">가족관계에 관한 영문증명서 발급 신청</td>
+                                <td class="txt-l">2024.10.26</td>
+                                <td class="txt-l">
+                                    <span>발급완료</span>
+                                </td>
+                                <td class="txt-l"><button type="button" class="miw-60 el-btn-ss hp-border-black-00">출력</button></td>
+                            </tr>
+                            <tr>
+                                <td class="txt-l">1379</td>
+                                <td class="txt-l"><a href="#">20231122MP-XXFI0003430</a></td>
+                                <td class="txt-l">주뉴욕대한민국총영사관</td>
+                                <td class="txt-l">가족관계에 관한 영문증명서 발급 신청</td>
+                                <td class="txt-l">2024.10.26</td>
+                                <td class="txt-l">
+                                    <span class="hp-txt-red-00 el-before-24 error-red flex gap-4">처리불가</span>
+                                </td>
+                                <td class="txt-l"><button type="button" class="miw-60 el-btn-ss hp-border-black-00">출력</button></td>
+                            </tr>
+                            <tr>
+                                <td class="txt-l">1379</td>
+                                <td class="txt-l"><a href="#">20231122MP-XXFI0003430</a></td>
+                                <td class="txt-l">주뉴욕대한민국총영사관</td>
+                                <td class="txt-l">가족관계에 관한 영문증명서 발급 신청</td>
+                                <td class="txt-l">2024.10.26</td>
+                                <td class="txt-l">
+                                    <span class="hp-txt-red-00 el-before-24 error-red flex gap-4">심사반려</span>
+                                </td>
+                                <td class="txt-l"><button type="button" class="miw-60 el-btn-ss hp-border-black-00">출력</button></td>
+                            </tr>
+                            <tr>
+                                <td class="txt-l">1379</td>
+                                <td class="txt-l"><a href="#">20231122MP-XXFI0003430</a></td>
+                                <td class="txt-l">주뉴욕대한민국총영사관</td>
+                                <td class="txt-l">가족관계에 관한 영문증명서 발급 신청</td>
+                                <td class="txt-l">2024.10.26</td>
+                                <td class="txt-l">
+                                    <span class="hp-txt-yellow-00 el-before-24 wait-yellow flex gap-4">발급대기</span> 
+                                </td>
+                                <td class="txt-l"><button type="button" class="miw-60 el-btn-ss hp-border-black-00">출력</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- .// vertical table -->
+                </div>
                 <!-- pagination w -->
-                <div class="bl-pagination mt-40">
+                <div class="bl-pagination lg mt-40">
                     <a onclick="fnSelectInfs(1);return false;" class="bl-page-navi step prev" href="#" title="이전페이지로 이동">이전</a>
                     <div class="bl-page-links">
                         <a onclick="fnSelectInfs(1);return false;" class="bl-page-link" href="#">1</a>
@@ -324,6 +324,53 @@
                     <a onclick="fnSelectInfs(1);return false;" class="bl-page-navi step next" href="#" title="다음페이지로 이동">다음</a>
                 </div>
                 <!-- ./ pagination w -->
+                <!-- pc -->
+                <ul class="bl-dataUl sm-only-768">
+                    <li class="bl-dataUl-title">
+                        <a class="flex-acjs" href="#">
+                            <span>182</span>
+                            <span>가족관계에 관한 영문증명서 발급신청</span>
+                        </a>
+                    </li>
+                    <li class="bl-dataUl-state">
+                        답변대기
+                    </li>
+                    <li class="bl-dataUl-data">
+                        <div style="background: lightgray;">
+                            <ul>
+                                <li class="flex-acjs">
+                                    <span>접수번호</span>
+                                    <span>202313213151515</span>
+                                </li>
+                                <li class="flex-acjs">
+                                    <span>문서발급기관</span>
+                                    <span>주뉴욕대한민국총영사관</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="bl-dataUl-date">
+                        <span>등록일자</span> 
+                        <span>2024.10.26</span>
+                    </li>
+                </ul>
+                <!-- bl-pagination-m -->
+                <div class="bl-pagination sm mt-64">
+                    <div class="bl-page-navis">
+                        <a onclick="fnSelectInfs(1); return false;" class="bl-page-navi step prev" href="#" title="이전페이지로 이동">이전</a>
+                        <a onclick="fnSelectInfs(1); return false;" class="bl-page-navi step next" href="#" title="다음페이지로 이동">다음</a>
+                    </div>
+                    <div class="bl-page-links">
+                        <a onclick="fnSelectInfs(1);return false;" class="bl-page-link " href="#">1</a>
+                        <span class="bl-page-link link-dot">...</span>
+                        <a onclick="fnSelectInfs(1);return false;" class="bl-page-link" href="#">7</a>
+                        <a onclick="fnSelectInfs(1);return false;" class="bl-page-link" href="#">8</a>
+                        <a onclick="fnSelectInfs(1);return false;" class="bl-page-link" href="#">9</a>
+                        <span class="bl-page-link link-dot">...</span>
+                        <a onclick="fnSelectInfs(1);return false;" class="bl-page-link" href="#">120</a>
+                    </div>
+                </div>
+                <!-- .// mobile 컨텐츠 -->
             </section>
             <!-- ./ 민원 게시판 -->
         </div>
