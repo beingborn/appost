@@ -57,14 +57,19 @@ $('#gnb-lg .gnb-menu > button').on('click', function(){
  * 설명   : gnb depth-2 버튼 클릭 시 active 클래스 바인딩, 진입 시 첫번째 서브 메뉴 액티브 처리
  * param  : 
  */
-
-$('.gnb-submenu').each(function() {
-	$(this).find('.gnb-submenu-link').eq(0).addClass('is-active');
-});
+function gnbDepth2Active() {
+	$('.gnb-submenu').each(function() {
+		$(this).find('.gnb-submenu-link').eq(0).addClass('is-active');
+	});
+}
+$(function(){
+	gnbDepth2Active()
+})
 $('#gnb-lg .gnb-submenu-link > button').on('click', function(){
 	$('#gnb-lg .gnb-submenu-link').removeClass('is-active')
 	$(this).parent().addClass('is-active')
 })
+
 
 /**
  * 함수명 : gnbBgOpen
@@ -76,6 +81,7 @@ function gnbBgOpen(isOpen){
 		$('.gnb-backdrop').remove();
 		$('body').append('<div class="gnb-backdrop"></div>')
 	} else {
+		gnbDepth2Active()
 		$('.gnb-backdrop').remove();
 	}
 }
@@ -108,6 +114,18 @@ $(".tab__wrap .tab__btn button").click(function () {
 	btnTab.removeClass("on").removeAttr("title");
 	$(this).addClass("on").attr("title","선택됨");
 });
+
+/** 메뉴 클릭 시 gnb 오픈  */
+$(".header-global .hamburger").on("click", function () {
+	$("#gnb-sm").addClass("is-open");
+	$("body").css("overflow", "hidden");
+});
+
+$('#gnb-sm .gnb-sm-close').on('click', function(){
+	$('#gnb-sm').removeClass('is-open')
+})
+
+
 
 /**
  * 함수명 : 

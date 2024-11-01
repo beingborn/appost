@@ -29,39 +29,6 @@
 .bl-rowTable tr {border-top: 1px solid #ddd;}
 .bl-rowTable th {padding: 20px; background: #f9f9f9; line-height: 22px; text-align: left;}
 .bl-rowTable td {padding: 20px; line-height: 22px; text-align: left;}
-
-/* state */
-.el-state { display: inline-flex; height: 2.4rem; padding: 0 .8rem; color: #fff; font-weight: 400;font-size: 1.5rem; border-radius: .4rem; align-items: center; justify-content: center;}
-.el-state.is-error {background: var(--red00);}
-.el-state.is-notice{background: var(--yellow00);}
-
-
-
-/* form-group */
-.bl-formgroup-w {max-width: var(--max-width, 100%);}
-.bl-formgroup{ display: flex; flex-direction: column; gap: 1.2rem;}
-.bl-formgroup label { font-weight: 400;font-size: 1.5rem;}
-.bl-formgroup input {min-width: 0;}
-.bl-formlist {display: flex; gap: .8rem; align-items: center;}
-.bl-formgroup button:not(.ui-datepicker-trigger) {height: 5.6rem; padding-left: 2rem; padding-right: 2rem;}
-
-/* modal */
-.bl-modal-00 { display: none;position: fixed; top: 50%; left: 50%; width: 100%; transform: translate(-50%, -50%); z-index: 1002; max-width: 72rem; max-height: 98%; overflow: auto;}
-.bl-modal-00 .modal-body-desc {color: var(--gray07);}
-.bl-modal-00 .modal-body-desc strong {font-weight: 400;}
-
-/* bl-infolist */
-.bl-infolist > li { display: flex;position: relative; padding-left: 1.6rem;}
-.bl-infolist > li > span {display: inline-block;}
-.bl-infolist.demical > li::before { color: var(--gray07);content: "•";}
-.bl-infolist > li::before {position: absolute; top: 0; left: 0;}
-.bl-infolist .bl-infolist-desc {color: var(--gray07);}
-.bl-infolist .bl-infolist-tit {min-width: 13rem;}
-
-/* bl-infolist 01 */
-.bl-infolist-01 > li {display: flex; align-items: center;}
-.bl-infolist-01 .bl-infolist-tit { font-weight: 700;min-width: 12rem;}
-
 /* bl-dataTable */
 .bl-dataTable-list {display: flex; align-items: flex-start; justify-content: flex-start; flex-direction: row; flex-wrap: wrap;}
 .bl-dataTable-list > dt, .bl-dataTable-list > dd {vertical-align: top;}
@@ -71,6 +38,60 @@
 .bl-dataTable-list.dataGap-24 > dt:not(:first-of-type),
 .bl-dataTable-list.dataGap-24 > dd:not(:first-of-type)
 {margin-top: 2.4rem;}
+
+/* fold faq */
+.bl-foldFaq {width: 100%;}
+.bl-foldFaq summary { position: relative; border: 1px solid red;cursor: pointer;} 
+.bl-foldFaq > details > summary::before { position: absolute; top: 50%; right: 1rem; content: '+'; transform: translateY(-50%);}
+.bl-foldFaq > details[open] > summary::before {content: '-';}
+.bl-foldFaq-content {max-height: 0; overflow: hidden; transition: max-height 500ms ease-out;}
+
+
+/* state */
+.el-state { display: inline-flex; height: 2.4rem; padding: 0 .8rem; color: #fff; font-weight: 400;font-size: 1.5rem; border-radius: .4rem; align-items: center; justify-content: center;}
+.el-state.is-error {background: var(--red00);}
+.el-state.is-notice{background: var(--yellow00);}
+
+/* form-group */
+.bl-formgroup-w {max-width: var(--max-width, 100%);}
+.bl-formgroup{ display: flex; flex-direction: column; gap: 1.2rem;}
+.bl-formgroup label { font-weight: 400;font-size: 1.5rem;}
+.bl-formgroup input {min-width: 0;}
+.bl-formlist {display: flex; gap: .8rem; align-items: center;}
+.bl-formgroup button:not(.ui-datepicker-trigger) {height: 5.6rem; padding-left: 2rem; padding-right: 2rem;}
+
+/* form > input > datePicker */
+.bl-datePicker {position: relative;}
+.ui-datepicker-trigger {position: absolute; top: 50%; right: 1.6rem; width: 2rem; height: 2rem; background: url(../assets/images/icon_calender_00_20x20.svg) no-repeat center; font-size: 0; transform: translateY(-50%);} 
+/* .bl-datePicker-btn {position: absolute; top: 50%; right: 1.6rem; width: 2rem; height: 2rem; background: url(../assets/images/icon_calender_00_20x20.svg) no-repeat center; transform: translateY(-50%);} */
+
+/* selcet custom */
+/* option select */
+.bl-select {position: relative;}
+.bl-select > button {width: 100%; height: 100%;}
+.bl-select.is-open .bl-select-optList {max-height: 20rem; overflow-y: auto;}
+.bl-select-optList { position: absolute; bottom: 100%; width: 100%; border: 0.1rem solid #ddd; overflow: hidden; transition: max-height .5s, overflow .5s; max-height: 0; overflow-y: hidden;} 
+
+
+
+/* modal */
+.bl-modal-00 { display: none;position: fixed; top: 50%; left: 50%; width: 100%; transform: translate(-50%, -50%); z-index: 1002; max-width: 72rem; max-height: 98%; overflow: auto;}
+.bl-modal-00 .modal-body-desc {color: var(--gray07);}
+.bl-modal-00 .modal-body-desc strong {font-weight: 400;}
+
+/* bl-infolist */
+.bl-infolist > li { display: flex;position: relative; padding-left: 1.6rem;}
+.bl-infolist > li > span {display: inline-block;}
+.bl-infolist.demical > li::before { color: var(--gray07);content: "•"; width: 1rem;}
+.bl-infolist > li::before {position: absolute; top: 0; left: 0;}
+.bl-infolist .bl-infolist-desc {color: var(--gray07);}
+.bl-infolist .bl-infolist-tit {width: var(--tit-width, 15rem);}
+.bl-infolist.no-marker > li {padding-left: 0;}
+
+
+/* bl-infolist 01 */
+.bl-infolist-01 > li {display: flex; align-items: center;}
+.bl-infolist-01 .bl-infolist-tit { font-weight: 700;min-width: 12rem;}
 
 /* bl-pagination */
 .bl-pagination {display: flex; color: var(--gray07); align-items: center; justify-content: center;} 
@@ -88,7 +109,7 @@
 
 
 /* bl-title */
-.bl-text-00 { font-weight: 700;font-size: 4rem; padding-top: 8rem;}
+.bl-text-00 { font-weight: 700; font-size: 4rem; padding-top: 8rem;}
 
 /* breadcrumb */
 .bl-breadcrumb {display: flex; font-weight: 700; font-size: 1.5rem; align-items: center; padding-left: 2.4rem;}
@@ -113,35 +134,16 @@
 /* is-curr = 진행중 */
 .bl-step li.is-curr .step-ico {width: 2rem; height: 2rem; background: url(../assets/images/icon_step_00_currentstep.svg) no-repeat center;}
 .bl-step.mg-type00 {margin-top: 4rem; margin-bottom: 8rem;}
-
-
-/* fold faq */
-.bl-foldFaq {width: 100%;}
-.bl-foldFaq summary { position: relative; border: 1px solid red;cursor: pointer;} 
-.bl-foldFaq > details > summary::before { position: absolute; top: 50%; right: 1rem; content: '+'; transform: translateY(-50%);}
-.bl-foldFaq > details[open] > summary::before {content: '-';}
-.bl-foldFaq-content {max-height: 0; overflow: hidden; transition: max-height 500ms ease-out;}
-
-/* option select */
-.bl-select {position: relative;}
-.bl-select > button {width: 100%; height: 100%;}
-.bl-select.is-open .bl-select-optList {max-height: 20rem; overflow-y: auto;}
-.bl-select-optList { position: absolute; bottom: 100%; width: 100%; border: 0.1rem solid #ddd; overflow: hidden; transition: max-height .5s, overflow .5s; max-height: 0; overflow-y: hidden;} 
-
 /* img box */
 .bl-imgBox {border-radius: .8rem; overflow: hidden;}
 .bl-imgBox > img {width: 100%;}
 
-/* datePicker */
-.bl-datePicker {position: relative;}
-/* .bl-datePicker-btn {position: absolute; top: 50%; right: 1.6rem; width: 2rem; height: 2rem; background: url(../assets/images/icon_calender_00_20x20.svg) no-repeat center; transform: translateY(-50%);} */
+
 
 /* bl-chkdata */
 .bl-chkdata > strong {color: var(--blue01); font-weight: 400;}
-
 /* bl-chelist */
 .bl-chklist {display: flex; flex-direction: column;}
-
 /* bl-dataList */
 /* 모바일 전용 컨텐츠 (데이터 테이블 대체) */
 /* 갔다와서 보더 겹침 현상 없애기   */
@@ -150,20 +152,16 @@
 .bl-dataList-header {min-height: 4.8rem;}
 .bl-dataList-header > a {display: block;}
 .bl-dataList-state {padding-bottom: .8rem;}
-.bl-dataList-title {margin-left: 1.6rem; text-overflow: ellipsis; white-space: nowrap;}
+.bl-dataList-title { white-space: nowrap;margin-left: 1.6rem; text-overflow: ellipsis;}
 .bl-dataList-inner {padding: 0 .8rem;}
 .bl-dataList-box {padding: .8rem; background: var(--gray00); font-size: 1.3rem;}
 .bl-dataList-box > li {line-height: 2.5rem;}
 .bl-dataList-date {font-size: 1.3rem;}
-
 /* captcha */
 .captcha input[type='text'] {max-width: 28rem;}
-
-
 /* bl-stamp */
 .bl-stamp-position {margin-left: auto; margin-top: auto;}
 
-.ui-datepicker-trigger {position: absolute; top: 50%; right: 1.6rem; width: 2rem; height: 2rem; background: url(../assets/images/icon_calender_00_20x20.svg) no-repeat center; font-size: 0; transform: translateY(-50%);} 
 
 @media only screen and (max-width:768px) {
 	/* pagination */
@@ -186,7 +184,7 @@
 	/* bl-buttonRow */
 	.bl-buttonRow button { width: 14.2rem; min-height: 6.4rem;}
 
-	/* 값을 동일하게 가져갈 경우 */
+	/* buttonRow */
 	.bl-buttonRow.sm-flex-evenly {display: flex; gap: 1rem;}
 	.bl-buttonRow.sm-flex-evenly > * {width: auto; flex: 1;}
 
@@ -203,7 +201,8 @@
 } 
 
 @media only screen and (min-width: 768px){
-	.bl-infolist .bl-infolist-desc {margin-left: 8rem;}
+	/* 2024/11/01 이민혁 임시 주석처리 (모든 리스트 줄간격 표시) */
+	/* .bl-infolist .bl-infolist-desc {margin-left: 8rem;} */
 }
 
 
