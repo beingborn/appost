@@ -209,8 +209,7 @@ $('.el-btn-refresh').on('click', function(){
 	}
 })
 
-/** 페이지 네이션 액티브 활성화 */
-
+/** 페이지 네이션 액티브 활성화 */  
 $('.bl-pagination.sm .bl-page-link').eq(0).addClass('is-active')
 $('.bl-pagination.lg .bl-page-link').eq(0).addClass('is-active')
 $('.bl-pagination .bl-page-link').on('click', function(){

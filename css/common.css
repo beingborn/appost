@@ -38,7 +38,8 @@
 --red00 : #E71825;
 
 /* yellow */
---yellow00 : #98690A;
+--yellow00 : #D68F00;
+--yellow01 : #98690A;
 
 /* font size */
 --fontLv1 : 4rem;
@@ -132,6 +133,7 @@ input[type="tel"], input[type="text"], input[type="password"], input[type="searc
 select {height: 5.6rem;}
 
 .el-select-00 { padding: 0 4.8rem 0 1.6rem; border: .1rem solid #717171;background: url(../assets/images/icon_arrow_00_bottom_24x24.svg); background-repeat: no-repeat; background-position: center right 1.6rem; appearance: none; background-color: var(--white00);}
+/* check box */
 .el-check-00 input[type="checkbox"]{ position: relative;width: 2.4rem; height: 2.4rem; margin: 0; border: .1rem solid #717171; cursor: pointer; border-radius: .4rem; accent-color: var(--blue00); appearance: none;}
 .el-check-00 input[type="checkbox"]:checked::after { display: inline-block; position: absolute; top: 50%; left: 50%; width: 2rem; height: 2rem; background: url(../assets/images/icon_check_00_white_20x20.svg) no-repeat center; color: #fff;content: ''; transform: translate(-50%, -50%); background-size: cover;}
 .el-check-00 input[type="checkbox"] + label {font-weight: 700; cursor: pointer; vertical-align: middle;}
@@ -173,6 +175,7 @@ select {height: 5.6rem;}
 .mr-4 {margin-right: .4rem;}
 .mr-5 {margin-right: .5rem;}
 .mr-10 {margin-right: 1rem;}
+.mr-12 {margin-right: 1.2rem;}
 .mr-16 {margin-right: 1.6rem;}
 .mr-17 {margin-right: 1.7rem;}
 /* margin 좌우 값 (x축) */
@@ -278,10 +281,7 @@ select {height: 5.6rem;}
 .gap-40 {gap: 4rem;}
 .gap-80 {gap: 8rem;}
 
-/* text align */
-.txt-l {text-align: left;}
-.txt-r {text-align: right;}
-.txt-c {text-align: center;}
+
 
 /* position */
 .relative {position: relative;}
@@ -295,6 +295,10 @@ select {height: 5.6rem;}
 /* white-space */
 .white-spaceNo {white-space: nowrap;}
 
+/* text align */
+.txt-l {text-align: left;}
+.txt-r {text-align: right;}
+.txt-c {text-align: center;}
 /* text transform */
 .txt-upper {text-transform: uppercase;}
 .txt-lower {text-transform: lowercase;}
@@ -303,6 +307,9 @@ select {height: 5.6rem;}
 /* overflow */
 .overflow-auto {overflow: auto;}
 .overflow-hidden {overflow: hidden;}
+
+/* text overflow */
+.txt-overflow-elip {text-overflow: ellipsis; white-space: nowrap;}
 
 /* 접근성 */
 /* screen reader */
@@ -337,6 +344,7 @@ table caption {display: none;}
 .hp-input-00 { height: 4rem; padding: 0 1.2rem; border: 1rem solid #ddd; text-align: left; border-radius: 1rem;}
 .hp-responsive-w {width: var(--lg-width, 100%); max-width: var(--lg-maxwidth, auto); min-width: var(--lg-minwidth, 0);}
 .lg-responsive-mw {max-width: var(--lg-maxwidth, auto);}
+.hp-miw {min-width: var(--minwidth, auto);}
 /* backdrop bg */
 .gnb-backdrop {position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 999; background-color: rgba(0, 0, 0, 0.5);}
 .el-bg-popup {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.75); z-index: 1001;}
@@ -418,6 +426,7 @@ table caption {display: none;}
 	.sm-mt-64 {margin-top: 6.4rem!important;}
 
 	/* margin bottom */
+	.sm-mb-32 {margin-bottom: 3.2rem;}
 	.sm-mb-64 {margin-bottom: 6.4rem;}
 
 	/* sm margin left */
