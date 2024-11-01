@@ -23,7 +23,7 @@
 .bl-vertical-list thead th { padding: .7rem;background: var(--lightblue00); font-weight: 700; text-align: left; white-space: nowrap;}
 .bl-vertical-list tbody td {padding: .7rem; vertical-align: middle; word-break: keep-all;}
 .bl-vertical-list tbody tr:not(:first-of-type) {border-top: 1px solid #ddd;}
-.bl-vertical-title {white-space: nowrap; text-overflow: ellipsis;}
+.bl-vertical-title {text-overflow: ellipsis;}
 /* horizontal table */
 .bl-rowTable {border-top: 2px solid #000; border-bottom: 1px solid #ddd;}
 .bl-rowTable tr {border-top: 1px solid #ddd;}
