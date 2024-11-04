@@ -125,6 +125,16 @@ $('#gnb-sm .gnb-sm-close').on('click', function(){
 	$('#gnb-sm').removeClass('is-open')
 })
 
+/* check box 클릭 시 클래스 바인딩 */
+$('.el-check-00 input[type="checkbox"]').on('click',function(){
+	let check = $(this).is(':checked')
+	if(check == true){
+		$(this).closest('.el-check-wrap').addClass('is-checked')
+	} else {
+		$(this).closest('.el-check-wrap').removeClass('is-checked')
+	}
+})
+
 
 
 /**

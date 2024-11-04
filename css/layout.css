@@ -50,7 +50,7 @@ body {position: relative;}
 #gnb-lg .gnb-area .gnb-menu.is-active > button::after {background: url(../assets/images/icon_arrow_00_top_navy.svg) no-repeat center;}
 #gnb-lg .gnb-area .gnb-menu.is-active > .gnb-submenu {display: block; visibility: visible; overflow: visible;}
 /* submenu styling */
-#gnb-lg .gnb-submenu { display: none; position: absolute; top: 100%; left: 0; width: 128rem; max-width: 100%; height: auto; border-bottom: .1rem solid var(--gray04); border-top: .1rem solid var(--gray04); background-color: var(--white00); overflow: hidden; visibility: hidden; }
+#gnb-lg .gnb-submenu { display: none; position: absolute; top: 100%; left: 0; width: 128rem; height: auto; max-width: 100%; border-bottom: .1rem solid var(--gray04); border-top: .1rem solid var(--gray04); background-color: var(--white00); overflow: hidden; visibility: hidden; }
 #gnb-lg .gnb-submenu::before {position: absolute; top: 0; left: 50%; width: 100vw; height: 100%; content: ""; z-index: -1; transform: translateX(-50%); background-color: #fff;}
 #gnb-lg .gnb-submenu > ul { display: flex; position: relative; height: 100%; flex-direction: column; padding-top: 1.6rem; padding-bottom: 1.6rem; min-height:20rem;}
 #gnb-lg .gnb-submenu > ul::before { position: absolute; top: 0; left: 0; width: 26rem; height: 100%; background: aliceblue;content: '';}
@@ -80,14 +80,14 @@ body {position: relative;}
 /* gnb-mobile */
 #gnb-sm {visibility: hidden;}
 #gnb-sm.is-open {visibility: visible; overflow-y: scroll;}
-#gnb-sm {position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: #fff; overflow: hidden; z-index: 1001;}
-.gnb-sm-in {display: flex; flex-direction: column; height: 100%;}
-.gnb-sm-header {min-height: 12.8rem; padding: 2rem 2.4rem;}
+#gnb-sm {position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #fff; overflow: hidden; z-index: 1001;}
+.gnb-sm-in {display: flex; height: 100%; flex-direction: column;}
+.gnb-sm-header { padding: 2rem 2.4rem;min-height: 12.8rem;}
 .gnb-sm-header .gnb-sm-util {display: flex; align-items: center;}
-.gnb-sm-header .gnb-sm-util > button {line-height: 3.2rem; padding: 0 1rem;}
+.gnb-sm-header .gnb-sm-util > button { padding: 0 1rem;line-height: 3.2rem;}
 .gnb-sm-header .gnb-sm-util > button:not(:first-child){position: relative;}
-.gnb-sm-header .gnb-sm-util > button:not(:first-child)::before {content: ''; width: .1rem; height: 1.6rem; background: var(--gray03); display: inline-block; position: absolute; left: 0; top: 50%; transform: translateY(-50%);}
-.gnb-sm-close {background: url(../assets/images/icon_close_01_rounded.svg) no-repeat center; position: absolute; right: 2.4rem; top: 2.4rem;}
+.gnb-sm-header .gnb-sm-util > button:not(:first-child)::before { display: inline-block; position: absolute; top: 50%; left: 0; width: .1rem; height: 1.6rem; background: var(--gray03);content: ''; transform: translateY(-50%);}
+.gnb-sm-close { position: absolute; top: 2.4rem; right: 2.4rem;background: url(../assets/images/icon_close_01_rounded.svg) no-repeat center;}
 
 /* footer */
 .ly-footer .footer-logo > a {display: inline-block; height: 100%; max-width: 17.2rem;}
@@ -114,7 +114,7 @@ body {position: relative;}
 	/* header */
 	.header-gnb #gnb-lg {display: none;}
 	.header-gnb {border-bottom: 0;}
-	.header-global > ul > li > a { padding: .55rem .4rem; font-weight: 400; font-size: 1.3rem; line-height: 100%;flex-direction: column;}
+	.header-global > ul > li > a { padding: .55rem .4rem; font-weight: 400; font-size: 1.3rem; line-height: 100%; white-space: nowrap; flex-direction: column;}
 	.header-global > ul > li > a::before {margin-right: 0!important; margin-bottom: .4rem;}
 }
 
@@ -125,7 +125,7 @@ body {position: relative;}
 	/* header */
 	.header-gnb {border-top: 0; border-bottom: 0;}
 	.ly-header .header-bottom { height: 4.8rem; margin: .8rem 0;}
-	.hp-header-border {width: 100vw; margin-left: calc(-50vw + 50%); height: .1rem; background: var(--gray03);}
+	.hp-header-border {width: 100vw; height: .1rem; background: var(--gray03); margin-left: calc(-50vw + 50%);}
 	/* footer */
 	.footer-body {padding: 3.2rem 0;}
 	.footer-quick .footer-quick-link:not(:last-child) {border-bottom: .1rem solid var(--gray03); border-right: .1rem solid var(--gray03);}

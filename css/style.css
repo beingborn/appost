@@ -21,7 +21,7 @@
 .bl-vertical-list {border-bottom: 1px solid var(--gray03);}
 .bl-vertical-list thead > tr {border-bottom: .1rem solid #99B0CB;}
 .bl-vertical-list thead th { padding: .7rem;background: var(--lightblue00); font-weight: 700; text-align: left; white-space: nowrap;}
-.bl-vertical-list tbody td {padding: .7rem; vertical-align: middle; word-break: keep-all;}
+.bl-vertical-list tbody td {padding: 1.1rem; vertical-align: middle; word-break: keep-all;}
 .bl-vertical-list tbody tr:not(:first-of-type) {border-top: 1px solid #ddd;}
 .bl-vertical-title {display: inline-block; white-space: nowrap; max-width: 99%;text-overflow: ellipsis; overflow: hidden; vertical-align: middle;}
 /* horizontal table */
@@ -38,14 +38,20 @@
 .bl-dataTable-list.dataGap-24 > dt:not(:first-of-type),
 .bl-dataTable-list.dataGap-24 > dd:not(:first-of-type)
 {margin-top: 2.4rem;}
-
 /* fold faq */
 .bl-foldFaq {width: 100%;}
 .bl-foldFaq summary { position: relative; border: 1px solid red;cursor: pointer;} 
 .bl-foldFaq > details > summary::before { position: absolute; top: 50%; right: 1rem; content: '+'; transform: translateY(-50%);}
 .bl-foldFaq > details[open] > summary::before {content: '-';}
 .bl-foldFaq-content {max-height: 0; overflow: hidden; transition: max-height 500ms ease-out;}
-
+/* bl-board 게시판 상세 */
+.bl-board .bl-board-info {margin-bottom: 4rem;}
+.bl-board .bl-board-content {padding: 4rem 0; color: var(--gray07); word-break: break-all; min-height: 30rem; border-top: .1rem solid var(--gray04); border-bottom: .1rem solid var(--gray04);}
+/* bl-file */
+.bl-file {color: var(--black00);}
+.bl-file-list {display: flex; flex-direction: column; gap: 1.6rem;}
+.bl-file-list > li {border: .1rem solid var(--gray03); border-radius: .8rem;}
+.bl-file-in {padding: 1.6rem; display: flex; justify-content: space-between;}
 
 /* state */
 .el-state { display: inline-flex; height: 2.4rem; padding: 0 .8rem; color: #fff; font-weight: 400;font-size: 1.5rem; border-radius: .4rem; align-items: center; justify-content: center;}
@@ -163,6 +169,7 @@
 .bl-stamp-position {margin-left: auto; margin-top: auto;}
 
 
+
 @media only screen and (max-width:768px) {
 	/* pagination */
 	.bl-pagination.lg {display: none;}
@@ -175,6 +182,10 @@
 	/* step */
 	.bl-step .step, .bl-step .step-tit {display: none;}
 	.bl-step.mg-type00 {margin-bottom: 6.4rem;}
+
+	/* bl-file */
+	.bl-file-in {flex-direction: column; gap: 1.6rem;}
+	.bl-file-in .bl-file-btn {margin-left: auto;}
 
 	.el-check-00.sm-res-768 > div {width: 100%;}
 
