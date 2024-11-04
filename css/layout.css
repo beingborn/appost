@@ -31,7 +31,7 @@ body {position: relative;}
 .header-util > ul > li {position: relative; font-size: 1.5rem; line-height: 2rem;}
 .header-util > ul > li:not(:last-child){padding-right: 1.2rem;}
 .header-util > ul > li {padding-left: 1.2rem;}
-.header-util > ul > li:not(:first-child)::before { position: absolute; top: 50%; left: 0; height: 1.6rem;content: ''; transform: translateY(-50%); border-left: 0.1rem solid #ddd;}
+.header-util > ul > li:not(:first-child)::before { position: absolute; top: 50%; left: 0; height: 1.6rem;content: ''; transform: translateY(-50%); border-left: 0.1rem solid var(--gray03);}
 /* header global */
 .header-global > ul > li > a { padding: 1rem 1.2rem; font-weight: 700;font-size: 1.7rem; line-height: 2rem;}
 .header-global .login::before { display: inline-block; width: 2rem; height: 2rem; background: url(../assets/images/icon_login_00_link.svg) no-repeat center;content: ''; margin-right: .8rem;}

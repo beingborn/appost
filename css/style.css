@@ -52,6 +52,9 @@
 .bl-file-list {display: flex; flex-direction: column; gap: 1.6rem;}
 .bl-file-list > li {border: .1rem solid var(--gray03); border-radius: .8rem;}
 .bl-file-in {padding: 1.6rem; display: flex; justify-content: space-between;}
+.bl-file-util > ul > li {padding-left: .8rem; position: relative; display: flex; align-items: center;}
+.bl-file-util > ul > li:not(:last-child){padding-right: .8rem;}
+.bl-file-util > ul > li:not(:first-child)::before {position: absolute; top: 50%; left: 0; height: 2rem; content: ''; transform: translateY(-50%); border-left: .1rem solid var(--gray03);}
 
 /* state */
 .el-state { display: inline-flex; height: 2.4rem; padding: 0 .8rem; color: #fff; font-weight: 400;font-size: 1.5rem; border-radius: .4rem; align-items: center; justify-content: center;}

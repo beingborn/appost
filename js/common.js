@@ -135,6 +135,18 @@ $('.el-check-00 input[type="checkbox"]').on('click',function(){
 	}
 })
 
+/* 파일 전체 다운로드 */
+$('#downloadAll').click(function(){
+	$('.bl-file-list .download').each(function(){
+		$(this)[0].click();
+	})
+})
+/* 파일 선택 다운로드 */
+$('#downloadSelected').click(function(){
+	$('.bl-file-list .el-check-wrap.is-checked .download').each(function(){
+		$(this)[0].click();
+	})
+})
 
 
 /**

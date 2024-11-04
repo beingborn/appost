@@ -116,6 +116,8 @@ button.el-before-20{width: 2rem; height: 2rem;}
 .el-before-20.close::before {background: url(../assets/images/icon_close_00_20x20.svg) no-repeat center;}
 .el-before-20.caution::before {background: url(../assets/images/icon_caution_00_20x20.svg) no-repeat center;}
 .el-before-20.check-success::before {background: url(../assets/images/icon_check_00_green_24x24.svg) no-repeat center; background-size: contain;}
+.el-before-20.select::before {background: url(../assets/images/icon_selectcheck_00.svg) no-repeat center;}
+.el-before-20.download::before {background: url(../assets/images/icon_download_00.svg) no-repeat center;}
 /* 24 x 24 */
 button.el-before-24{width: 2.4rem; height: 2.4rem;}
 .el-before-24::before { display: inline-block; min-width: 2.4rem; height: 2.4rem;content: '';}
@@ -202,6 +204,7 @@ select {height: 5.6rem;}
 /* top */
 .pt-6 {padding-top: .6rem;}
 .pt-10 {padding-top: 1rem;}
+.pt-20 {padding-top: 2rem;}
 .pt-16 {padding-top: 1.6rem;}
 .pt-32 {padding-top: 3.2rem;}
 .pt-80 {padding-top: 8rem;}
