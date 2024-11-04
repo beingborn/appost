@@ -41,10 +41,10 @@ body {position: relative;}
 /* header gnb */
 /* pc gnb */
 /* button styling */
-.header-gnb { position: relative; border-bottom: .1rem solid var(--gray03);}
+.header-gnb { position: relative; border-bottom: .1rem solid var(--gray03); border-top: .1rem solid var(--gray03);}
 #gnb-lg .gnb-area .gnb-menu {max-height: 6.4rem;}
 #gnb-lg .gnb-area .gnb-menu > button {display: inline-flex; padding: 0 1.6rem; color: var(--gray07); font-weight: 700; font-size: 1.9rem; line-height: 6.4rem; align-items: center;}
-#gnb-lg .gnb-area .gnb-menu > button::after { display: inline-block; width: 2rem; height: 2rem; background: url(../assets/images/icon_arrow_00_bottom_20x20.svg) no-repeat center;content: ''; margin-left: .8rem;}
+#gnb-lg .gnb-area .gnb-menu > button::after { display: inline-block; width: 2rem; height: 2rem; background: url(../assets/images/icon_arrow_00_bottom_16x16.svg) no-repeat center;content: ''; margin-left: .8rem; background-size: cover;}
 #gnb-lg .gnb-area .gnb-menu.is-active {border-bottom: .3rem solid #003675;}
 #gnb-lg .gnb-area .gnb-menu.is-active > button {color: #003675;}
 #gnb-lg .gnb-area .gnb-menu.is-active > button::after {background: url(../assets/images/icon_arrow_00_top_navy.svg) no-repeat center;}
@@ -111,7 +111,9 @@ body {position: relative;}
 .footer-body .sns-wrap > li > a.naverblog {background: url(../assets/images/icon_link_blog_00.svg) no-repeat center;}
 
 @media screen and (max-width: 1024px){
+	/* header */
 	.header-gnb #gnb-lg {display: none;}
+	.header-gnb {border-bottom: 0;}
 	.header-global > ul > li > a { padding: .55rem .4rem; font-weight: 400; font-size: 1.3rem; line-height: 100%;flex-direction: column;}
 	.header-global > ul > li > a::before {margin-right: 0!important; margin-bottom: .4rem;}
 }
@@ -120,8 +122,8 @@ body {position: relative;}
 @media screen and (max-width: 768px){
 	/* common */
 	.ly-contBody-00 {padding-bottom: 6.4rem;}
-	.header-gnb {border-bottom: 0;}
 	/* header */
+	.header-gnb {border-top: 0; border-bottom: 0;}
 	.ly-header .header-bottom { height: 4.8rem; margin: .8rem 0;}
 	.hp-header-border {width: 100vw; margin-left: calc(-50vw + 50%); height: .1rem; background: var(--gray03);}
 	/* footer */
