@@ -45,7 +45,22 @@
                         <div class="header-util lg-onlyFlex-768">
                             <ul class="flex-ac flex-item-right">
                                 <li><a href="#" class="flex-ac">재외동포 365민원포털<img src="./assets/images/icon_link_00.svg" alt="재외동포 365민원포털 바로가기" class="ml-2"></a></li>
-                                <li><button type="button" class="el-toggleList el-toggle-open">화면크기</button></li>
+                                <li class="bl-util-control">
+                                    <button type="button" class="el-toggleList el-toggle-open">화면크기</button>
+                                    <div class="bl-utilbox">
+                                        <ul class="bl-utilgroup">
+                                            <li><button type="button" onclick="zoom(50)">작게</button></li>
+                                            <li class="is-active"><button type="button" onclick="zoom(75)">보통</button></li>
+                                            <li><button type="button" onclick="zoom(100)">조금 크게</button></li>
+                                            <li><button type="button" onclick="zoom(125)">크게</button></li>
+                                            <li><button type="button" onclick="zoom(150)">가장 크게</button></li>
+                                        </ul>
+                                        <div class="bl-utiletc">
+                                            <button type="button">
+                                                <span class="flex-ac gap-4 el-before-20 reset" onclick="zoomReset()">초기화</span></button>
+                                        </div>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                         <!-- .// header-util -->
@@ -64,13 +79,39 @@
                         <div class="header-global">
                             <ul class="flex-ac gap-8">
                                 <li><button type="button" class="el-btn-xs hp-border-gray-04 txt-upper md-only-1024">ENGLISH</button></li>
-                                <li><a href="#" class="flex-ac login">로그인</a></li>
-                                <!-- 
-                                    P : 로그인 완료 시 마이페이지 주석 활성화 , 로그인 비활성화    
-                                    <li><button type="button" class="hp-font-bold" onclick="popMyOption()">마이페이지</button></li>
-                                -->
-                                <li><a href="#" class="flex-ac sign-up lg-onlyFlex-768">회원가입</a></li>
-                                <li><a href="#" class="flex-ac hamburger sm-onlyFlex-768">전체메뉴</a></li>
+                                <!-- <li><a href="#" class="flex-ac login">로그인</a></li> -->
+                                <li class="bl-util-control">
+                                    <button type="button" class="hp-font-bold el-toggle-open md-only-1024">
+                                        <span class="flex-ac el-before-20 my-page">마이페이지</span>
+                                    </button>
+                                    <div class="bl-utilbox my-util">
+                                        <div class="my-util-header">
+                                            <h5 class="my-util-name el-text-lv5">홍길동님</h5>
+                                            <div class="my-util-time mt-24">
+                                                <span>로그아웃까지 남은시간</span>
+                                                <div class="my-util-detail flex-acjs">
+                                                    <p class="hp-txt-blue-01 el-rest-time">
+                                                        <span class="minute">12</span>:
+                                                        <span class="second">00</span>
+                                                    </p>
+                                                    <button type="button" onclick="resetLoginTime()">시간 연장</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="bl-utilgroup">
+                                            <li><a href="#">회원정보 확인/수정</a></li>
+                                            <li><a href="#">공동인증서 등록/해제</a></li>
+                                            <li><a href="complain-list.html">나의 민원</a></li>
+                                            <li><a href="oneone-list.html">1:1 문의</a></li>
+                                        </ul>
+                                        <div class="bl-utiletc">
+                                            <button type="button">
+                                                <span class="flex-ac gap-4 el-before-20 reset">로그아웃</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="#" class="flex-ac hamburger md-onlyFlex-1024">전체메뉴</a></li>
                             </ul>
                         </div>
                     </div>
@@ -315,15 +356,83 @@
                             </ul>
                         </nav>
                         <!-- .// pc용 gnb -->
-                    <!-- 모바일용 gnb -->
+                    <!-- 모바일용 gnb --> 
                     <nav id="gnb-sm">
                         <div class="gnb-sm-in">
                             <div class="gnb-sm-header">
-                                <div class="gnb-sm-util el-text-lv7">
-                                    <button type="button">화면크기</button>
-                                    <button type="button">ENGLISH</button>
-                                </div>
+                                <section>
+                                    <div class="gnb-sm-util el-text-lv7">
+                                        <button type="button">화면크기</button>
+                                        <button type="button">ENGLISH</button>
+                                    </div>
+                                    <div class="gnb-sm-loginInfo">
+                                        <a href="#" class="hp-font-bold el-before-20 login flex-ac gap-8">로그인을 해주세요</a>
+                                    </div>
+                                </section>
                                 <button type="button" type="button" class="gnb-sm-close el-before-24"><span class="sr-only">닫기</span></button>
+                            </div>
+                            <div class="gnb-sm-body">
+                                <div class="gnb-sm-menu-wrap">
+                                    <div class="gnb-sm-menu">
+                                        <ul>
+                                            <li><button type="button">정책∙정보</button></li>
+                                            <li><button type="button">인증서 신청</button></li>
+                                            <li><button type="button">인증서 검증</button></li>
+                                            <li><button type="button">고객센터</button></li>
+                                        </ul>
+                                    </div>
+                                    <div class="gnb-sm-submenu">
+                                        <ul class="submenu-wrap">
+                                            <li class="submenu-title">인증서 신청</li>
+                                            <li>
+                                                <button type="button" class="el-toggle-open el-toggleList">경찰청</button>
+                                                <div class="submenu-dep3">
+                                                    <ul>
+                                                        <li><a href="#">범죄경력 회보서</a></li>
+                                                        <li><a href="#">범죄 수사 경력 회보서</a></li>
+                                                        <li><a href="#">범죄 수사 경력 회보서</a></li>
+                                                        <li><a href="#">수사경력회보서</a></li>
+                                                        <li><a href="#">운전경력증명서</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="el-toggle-open el-toggleList">경찰청</button>
+                                                <div class="submenu-dep3">
+                                                    <ul>
+                                                        <li><a href="#">범죄경력 회보서</a></li>
+                                                        <li><a href="#">범죄 수사 경력 회보서</a></li>
+                                                        <li><a href="#">범죄 수사 경력 회보서</a></li>
+                                                        <li><a href="#">수사경력회보서</a></li>
+                                                        <li><a href="#">운전경력증명서</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li><a href="#">인증서 신청2</a></li>
+                                            <li><a href="#">인증서 신청3</a></li>
+                                            <li><a href="#">인증서 신청4</a></li>
+                                            <li><a href="#">인증서 신청5</a></li>
+                                        </ul>
+                                        <ul class="submenu-wrap">
+                                            <li><a href="#">사자</a></li>
+                                            <li><a href="#">인증서 신청2</a></li>
+                                            <li><a href="#">인증서 신청3</a></li>
+                                        </ul>
+                                        <ul class="submenu-wrap">
+                                            <li class="submenu-title">인증서 검증</li>
+                                            <li><a href="#">한국어</a></li>
+                                            <li><a href="#">English</a></li>
+                                            <li><a href="#">中國語</a></li>
+                                            <li><a href="#">日本語</a></li>
+                                            <li><a href="#">tiếng việt</a></li>
+                                            <li><a href="#">français</a></li>
+                                            <li><a href="#">español</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gnb-sm-footer">
+                                <a href="#" class="flex-ac"><img src="./assets/images/icon_link_00.svg" alt="재외동포 365민원포털 바로가기" class="mr-2">재외동포 365민원포털</a>
                             </div>
                         </div>
                     </nav>
@@ -344,7 +453,7 @@
                 <section>
                     <h2>자주 찾는 서비스</h2>
                     <nav>
-
+ 
                     </nav>
                 </section>
                 <!-- ./ section 2 -->

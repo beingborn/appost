@@ -11,19 +11,16 @@
 	속성순서: 레이아웃 > 크기/간격 > 박스모양 > 폰트/정렬 > 기타
 *****************************************************/
 
-/* top gov banner */
-.gov-banner {position: relative; background: var(--lightblue00);}
-.gov-banner .gov-desc {display: flex; height: 3.2rem; font-weight: 400; font-size: 1.5rem; align-items: center; gap: 0.4rem;}
-.gov-banner .gov-desc > img {box-shadow: 0 0 .2rem rgba(0, 0, 0, .1);}
-
 /* table */
 /* vertical table */
 .bl-vertical-list {border-bottom: 1px solid var(--gray03);}
+.bl-vertical-list.hp-verticalTop td {vertical-align: top;} /* 두 줄이상 말줄임 필요한 테이블 삽입*/
 .bl-vertical-list thead > tr {border-bottom: .1rem solid #99B0CB;}
 .bl-vertical-list thead th { padding: .7rem;background: var(--lightblue00); font-weight: 700; text-align: left; white-space: nowrap;}
 .bl-vertical-list tbody td {padding: 1.1rem; vertical-align: middle; word-break: keep-all;}
 .bl-vertical-list tbody tr:not(:first-of-type) {border-top: 1px solid #ddd;}
 .bl-vertical-title {display: inline-block; white-space: nowrap; max-width: 99%;text-overflow: ellipsis; overflow: hidden; vertical-align: middle;}
+.bl-vertical-title.bl-vertical-multiTitle {display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; white-space: normal;}
 /* horizontal table */
 .bl-rowTable {border-top: 2px solid #000; border-bottom: 1px solid #ddd;}
 .bl-rowTable tr {border-top: 1px solid #ddd;}
@@ -32,8 +29,8 @@
 /* bl-dataTable */
 .bl-dataTable-list {display: flex; align-items: flex-start; justify-content: flex-start; flex-direction: row; flex-wrap: wrap;}
 .bl-dataTable-list > dt, .bl-dataTable-list > dd {vertical-align: top;}
-.bl-dataTable-list > dt {width: var(--dt-width, 14rem); font-weight: 700;} /* 기본 값으로 14rem을 두되, 특별히 사용되어야 할 width는 직접 변수로 바인딩 */
-.bl-dataTable-list > dd {width: calc(100% - var(--dt-width, 14rem));}
+.bl-dataTable-list > dt {width: var(--dt-width, 16rem); font-weight: 700;} /* 기본 값으로 16rem을 두되, 특별히 사용되어야 할 width는 직접 변수로 바인딩 */
+.bl-dataTable-list > dd {width: calc(100% - var(--dt-width, 16rem));}
 /* margin-top을 마지막 항목을 제외하고 적용 */
 .bl-dataTable-list.dataGap-24 > dt:not(:first-of-type),
 .bl-dataTable-list.dataGap-24 > dd:not(:first-of-type)
@@ -51,13 +48,13 @@
 .bl-file {color: var(--black00);}
 .bl-file-list {display: flex; flex-direction: column; gap: 1.6rem;}
 .bl-file-list > li {border: .1rem solid var(--gray03); border-radius: .8rem;}
-.bl-file-in {padding: 1.6rem; display: flex; justify-content: space-between;}
-.bl-file-util > ul > li {padding-left: .8rem; position: relative; display: flex; align-items: center;}
+.bl-file-in { display: flex;padding: 1.6rem; justify-content: space-between;}
+.bl-file-util > ul > li { display: flex; position: relative;padding-left: .8rem; align-items: center;}
 .bl-file-util > ul > li:not(:last-child){padding-right: .8rem;}
 .bl-file-util > ul > li:not(:first-child)::before {position: absolute; top: 50%; left: 0; height: 2rem; content: ''; transform: translateY(-50%); border-left: .1rem solid var(--gray03);}
 
 /* state */
-.el-state { display: inline-flex; height: 2.4rem; padding: 0 .8rem; color: #fff; font-weight: 400;font-size: 1.5rem; border-radius: .4rem; align-items: center; justify-content: center;}
+.el-state { display: inline-flex; height: 2.4rem; padding: 0 .8rem; color: #fff; font-weight: 400;font-size: 1.5rem; border-radius: .4rem; align-items: center; justify-content: center; vertical-align: middle;}
 .el-state.is-error {background: var(--red00);}
 .el-state.is-notice{background: var(--yellow00);}
 
@@ -80,14 +77,10 @@
 .bl-select > button {width: 100%; height: 100%;}
 .bl-select.is-open .bl-select-optList {max-height: 20rem; overflow-y: auto;}
 .bl-select-optList { position: absolute; bottom: 100%; width: 100%; border: 0.1rem solid #ddd; overflow: hidden; transition: max-height .5s, overflow .5s; max-height: 0; overflow-y: hidden;} 
-
-
-
 /* modal */
 .bl-modal-00 { display: none;position: fixed; top: 50%; left: 50%; width: 100%; transform: translate(-50%, -50%); z-index: 1002; max-width: 72rem; max-height: 98%; overflow: auto;}
 .bl-modal-00 .modal-body-desc {color: var(--gray07);}
 .bl-modal-00 .modal-body-desc strong {font-weight: 400;}
-
 /* bl-infolist */
 .bl-infolist > li { display: flex;position: relative; padding-left: 1.6rem;}
 .bl-infolist > li > span {display: inline-block;}
@@ -96,12 +89,9 @@
 .bl-infolist .bl-infolist-desc {color: var(--gray07);}
 .bl-infolist .bl-infolist-tit {width: var(--tit-width, 15rem);}
 .bl-infolist.no-marker > li {padding-left: 0;}
-
-
 /* bl-infolist 01 */
 .bl-infolist-01 > li {display: flex; align-items: center;}
 .bl-infolist-01 .bl-infolist-tit { font-weight: 700;min-width: 12rem;}
-
 /* bl-pagination */
 .bl-pagination {display: flex; color: var(--gray07); align-items: center; justify-content: center;} 
 .bl-pagination .bl-page-link {display: inline-block; width: 4rem; line-height: 4rem; text-align: center; border-radius: .6rem;} 
@@ -111,15 +101,11 @@
 .bl-pagination .bl-page-navi.prev::before { display: inline-block; width: 2rem; height: 2rem; background: url(../assets/images/icon_arrow_00_left_gray07_20x20.svg) no-repeat center;content: "";} 
 .bl-pagination .bl-page-navi.next {display: inline-flex; align-items: center; margin-left: 2rem;} 
 .bl-pagination .bl-page-navi.next::after { display: inline-block; width: 2rem; height: 2rem; background: url(../assets/images/icon_arrow_00_right_gray07_20x20.svg) no-repeat center;content: "";} 
-
 /* pagination mobile */
 .bl-pagination.sm { display: none;flex-direction: column;}
 .bl-pagination.sm .bl-page-navis {display: flex; align-items: center;}
-
-
 /* bl-title */
 .bl-text-00 { font-weight: 700; font-size: 4rem; padding-top: 8rem;}
-
 /* breadcrumb */
 .bl-breadcrumb {display: flex; font-weight: 700; font-size: 1.5rem; align-items: center; padding-left: 2.4rem;}
 .bl-breadcrumb .path .home > a {position: relative;}
@@ -127,7 +113,6 @@
 .bl-breadcrumb .path > li {display: inline;}
 .bl-breadcrumb .path > li > a { position: relative; font-weight: 400; text-decoration: underline;padding-bottom: 0.1rem; text-underline-position: under;}
 .bl-breadcrumb .path > li + li::before { display: inline-block;width: 2rem;height: 2rem; margin: 0 0.4rem;background: url(../assets/images/icon_arrow_00_right.svg) no-repeat center;content: "";vertical-align: middle;}
-
 /* step */
 .bl-step { display: flex;width: 100%; justify-content: center;}
 .bl-step .step {display: block; margin: 1.2rem 0; color: var(--gray07);}
@@ -146,32 +131,52 @@
 /* img box */
 .bl-imgBox {border-radius: .8rem; overflow: hidden;}
 .bl-imgBox > img {width: 100%;}
-
-
-
+/* top gov banner */
+.gov-banner {position: relative; background: var(--lightblue00);}
+.gov-banner .gov-desc {display: flex; height: 3.2rem; font-weight: 400; font-size: 1.5rem; align-items: center; gap: 0.4rem;}
+.gov-banner .gov-desc > img {box-shadow: 0 0 .2rem rgba(0, 0, 0, .1);}
 /* bl-chkdata */
 .bl-chkdata > strong {color: var(--blue01); font-weight: 400;}
 /* bl-chelist */
 .bl-chklist {display: flex; flex-direction: column;}
 /* bl-dataList */
 /* 모바일 전용 컨텐츠 (데이터 테이블 대체) */
-/* 갔다와서 보더 겹침 현상 없애기   */
 .bl-dataWrap > .bl-dataList {padding: 0rem 0 .8rem 0; border-top: .1rem solid var(--gray03);}
 .bl-dataWrap > .bl-dataList:last-child {border-bottom: .1rem solid var(--gray03);}
 .bl-dataList-header {min-height: 4.8rem;}
 .bl-dataList-header > a {display: block;}
 .bl-dataList-state {padding-bottom: .8rem;}
 .bl-dataList-title { white-space: nowrap;margin-left: 1.6rem; text-overflow: ellipsis;}
-.bl-dataList-inner {padding: 0 .8rem;}
+.bl-dataList-inner {padding: .8rem .8rem .8rem 0; line-height: 2rem;}
 .bl-dataList-box {padding: .8rem; background: var(--gray00); font-size: 1.3rem;}
-.bl-dataList-box > li {line-height: 2.5rem;}
+.bl-dataList-box > li {line-height: 2.5rem;}   
 .bl-dataList-date {font-size: 1.3rem;}
+.bl-dataList-date .bl-dataList-inner > ul {display: flex; align-items: center;}
+.bl-dataList-date .bl-dataList-inner > ul > li:not(:first-child) { position: relative;padding-left: .8rem;}
+.bl-dataList-date .bl-dataList-inner > ul > li:not(:first-child)::before {position: absolute; top: 50%; left: 0; height: .8rem; content: ''; transform: translateY(-50%); border-left: .1rem solid var(--gray03);}
+.bl-dataList-date .bl-dataList-inner > ul > li:not(:last-child) {padding-right: .8rem;}
 /* captcha */
 .captcha input[type='text'] {max-width: 28rem;}
 /* bl-stamp */
 .bl-stamp-position {margin-left: auto; margin-top: auto;}
 
-
+/* util group */
+.bl-utilbox {display: none;}
+.bl-util-control.is-open {position: relative;}
+.bl-util-control.is-open .bl-utilbox {display: block;}
+.bl-utilbox {position: absolute; top: 100%; left: 50%; padding: .8rem; border: .1rem solid var(--gray03); background: #fff; font-size: 1.7rem; box-shadow: 0 .4rem 1.2rem rgba(0, 0, 0, .12);
+z-index: 10; min-width: 12.8rem; border-radius: .8rem; transform: translateX(-50%); z-index: 10; margin-top: 1.6rem;}
+.bl-utilbox::before { display: inline-block; position: absolute; top: -1.2rem; left: 50%; width: 2.1rem; height: 1.2rem; background: url(../assets/images/bg_arrowtop_00.svg);content: '';  transform: translateX(-50%);z-index: 9;}
+.bl-utilbox .bl-utilgroup {display: flex; padding: .8rem 0; flex-direction: column; gap: 1.2rem;}
+.bl-utilbox .bl-utilgroup > li { line-height: 3.2rem;text-align: center;}
+.bl-utilbox .bl-utilgroup > li.is-active {background: var(--lightblue00); border-radius: .6rem;}
+.bl-utilbox .bl-utiletc {text-align: center; padding-top: 1.6rem; padding-bottom: .8rem; border-top: .1rem solid var(--gray03);}
+.bl-utilbox.my-util {width: 19.6rem;}
+.my-util .my-util-header {padding: 1.6rem; border-bottom: .1rem solid var(--gray03);}
+.my-util .my-util-time { display: flex;font-size: 1.5rem; flex-direction: column; gap: 1.6rem;}
+.my-util .my-util-time button {font-size: 1.7rem;}
+.el-rest-time { display: inline-flex; align-items: center; gap: .2rem;}
+.el-rest-time::before { display: inline-block; width: 1.6rem; height: 1.6rem; background: url(../assets/images/icon_clock_00.svg) no-repeat center;content: '';}
 
 @media only screen and (max-width:768px) {
 	/* pagination */

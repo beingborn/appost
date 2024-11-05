@@ -121,9 +121,26 @@ $(".header-global .hamburger").on("click", function () {
 	$("body").css("overflow", "hidden");
 });
 
+/* gnb 메뉴 클릭 시 active*/
 $('#gnb-sm .gnb-sm-close').on('click', function(){
 	$('#gnb-sm').removeClass('is-open')
 })
+
+$('.gnb-sm-menu > ul > li > button').eq(0).addClass('is-active')
+$('.gnb-sm-submenu .submenu-wrap').eq(0).addClass('is-active')
+
+$(' .gnb-sm-menu > ul > li > button').on('click', function(){
+	let subIdx = $(this).parent().index();
+	gnbSubMenuOpen(subIdx)
+	$('.gnb-sm-menu > ul > li > button').removeClass('is-active')
+	$(this).addClass('is-active')
+})
+
+function gnbSubMenuOpen(clicked){
+	$('.gnb-sm-submenu .submenu-wrap').removeClass('is-active')
+	$('.gnb-sm-submenu .submenu-wrap').eq(clicked).addClass('is-active')
+}
+
 
 /* check box 클릭 시 클래스 바인딩 */
 $('.el-check-00 input[type="checkbox"]').on('click',function(){
@@ -154,40 +171,37 @@ $('#downloadSelected').click(function(){
  * 설명   : 제이쿼리 달력 출력
  * param  : 
  */
-// $(function(){
-// 	$.datepicker.setDefaults({
-// 		prevText: "이전 달",
-// 		nextText: "다음 달",
-// 		closeText: '닫기',
-// 		monthNames: ["1","2","3","4","5","6","7","8","9","10","11","12"],
-// 		monthNamesShort: ['1','2','3','4','5','6','7','8','9','10','11','12'],
-// 		dayNames: ['S','M','T','W','T','F','S'],
-// 		dayNamesShort: ['S','M','T','W','T','F','S'],
-// 		//dayNamesMin: ['S','M','T','W','T','F','S'],
-// 		dayNamesMin: ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],
-// 		weekHeader: 'Wk',
-// 		yearSuffix: '.',
-// 		dateFormat: "yy-mm-dd",
-// 		firstDay: 0,
-// 		showMonthAfterYear: true,
-// 		//showOtherMonths: true,
-// 		showOn: "both",
-// 		buttonImage: "../../../images/portal/v2/icon_calendar.png",
-// 		buttonImageOnly: true,
-// 		buttonText: "달력 선택",
-// 		changeMonth : true,
-// 		changeYear : true,
-// 		yearRange : "c-100:c+5",
-// 		isRTL: false
-// 	});
-// })
-// $(".bl-datePicker-btn").datepicker();
 $(function(){
 	$('.bl-datePicker-input').datepicker({
 		showOn: 'button',
 		buttonImageOnly : false,
-		dateFormat : 'dd/mm/yy'
+		dateFormat : 'yy/mm/dd'
 	})
+	// 	$.datepicker.setDefaults({
+	// 	prevText: "이전 달",
+	// 	nextText: "다음 달",
+	// 	closeText: '닫기',
+	// 	monthNames: ["1","2","3","4","5","6","7","8","9","10","11","12"],
+	// 	monthNamesShort: ['1','2','3','4','5','6','7','8','9','10','11','12'],
+	// 	dayNames: ['S','M','T','W','T','F','S'],
+	// 	dayNamesShort: ['S','M','T','W','T','F','S'],
+	// 	//dayNamesMin: ['S','M','T','W','T','F','S'],
+	// 	dayNamesMin: ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],
+	// 	weekHeader: 'Wk',
+	// 	yearSuffix: '.',
+	// 	dateFormat: "yy-mm-dd",
+	// 	firstDay: 0,
+	// 	showMonthAfterYear: true,
+	// 	//showOtherMonths: true,
+	// 	showOn: "both",
+	// 	buttonImage: "../../../images/portal/v2/icon_calendar.png",
+	// 	buttonImageOnly: true,
+	// 	buttonText: "달력 선택",
+	// 	changeMonth : true,
+	// 	changeYear : true,
+	// 	yearRange : "c-100:c+5",
+	// 	isRTL: false
+	// });
 })
 
 /**
@@ -219,7 +233,6 @@ $('body').on("click", '.el-bg-popup', function() {
 	$('html, body').css('overflow', '')
 });
 
-
 /**
  * 함수명 : 
  * 설명   : 커스텀 list 토글 클래스 부착, (화살표 백그라운드 변경 등에 사용)
@@ -232,6 +245,12 @@ $('.el-toggle-open').on('click',function(){
 		overflowAutoAfterCheck()
 	}
 })
+
+/* 여러가지 util 버튼 개별 관리 */
+$('.bl-utilgroup').on('click', 'li > button, li > a', function(){ 
+	$(this).closest('.bl-utilgroup').find('li').removeClass('is-active'); 
+	$(this).parent().addClass('is-active'); 
+});
 
 /**
  * 함수명 : 
@@ -257,6 +276,44 @@ $('.bl-pagination .bl-page-link').on('click', function(){
 	$(this).addClass('is-active')
 })
 
+/* 시간 연장 기능 (마이페이지 사용) */
+/**  
+ * 
+ */
+
+/**
+ * 함수명 : updateTimer()
+ * 설명   : 로그인 남은 시간 바인딩 및 표시
+ */
+let totalTimer = 12 * 10;
+function updateTimer(){
+	const minutes = Math.floor(totalTimer / 60);
+	const second = totalTimer % 60;
+	if (totalTimer > 0) {
+		totalTimer--;
+	}
+	$('.el-rest-time .minute').text(`${String(minutes).padStart(2,'0')}`)
+	$('.el-rest-time .second').text(`${String(second).padStart(2,'0')}`)
+}
+setInterval(updateTimer, 1000)
+/* 시간 연장 */
+function resetLoginTime(){totalTimer = 12 * 60;}
+
+
+/**
+ * 함수명 : zoom()
+ * 설명   : 화면 크기 변경 기능 및 리셋   
+ */
+// 현재 화면 크기 비율
+let nowZoom = 100
+function zoom(zoomValue){
+	nowZoom = zoomValue;
+	$('body').css('zoom', nowZoom + "%");
+}   
+function zoomReset(){
+	nowZoom = 100;
+	zoom();
+}
 
 
 
