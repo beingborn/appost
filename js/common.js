@@ -285,7 +285,7 @@ $('.bl-pagination .bl-page-link').on('click', function(){
  * 함수명 : updateTimer()
  * 설명   : 로그인 남은 시간 바인딩 및 표시
  */
-let totalTimer = 12 * 10;
+let totalTimer = 12 * 60;
 function updateTimer(){
 	const minutes = Math.floor(totalTimer / 60);
 	const second = totalTimer % 60;
