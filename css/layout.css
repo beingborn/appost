@@ -80,11 +80,12 @@ body {position: relative;}
 #gnb-lg .gnb-area .gnb-menu.is-active.has-dep2 .gnb-submenu > ul::before {display: none;}
 #gnb-lg .gnb-area .gnb-menu.is-active.has-dep2 .gnb-submenu .dep-wrap {display: block; position: static; width: 100%; padding: 0 0 4rem 0; margin-left: 0;}
 #gnb-lg .gnb-area .gnb-menu.is-active.has-dep2 .dep-title {padding-bottom: 1.6rem; border-bottom: .1rem solid var(--gray03);}
+
 /* gnb-mobile */
-#gnb-sm {visibility: hidden;}
-#gnb-sm.is-open {visibility: visible; overflow-y: scroll;}
-#gnb-sm {position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #fff; overflow: hidden; z-index: 1001;}
+#gnb-sm {display: none;}
+
 .gnb-sm-in {display: flex; height: 100%; flex-direction: column;}
+/* gnb-sm-header */
 .gnb-sm-header { padding: 2rem 2.4rem;min-height: 12.8rem;}
 .gnb-sm-header .gnb-sm-util {display: flex; align-items: center; margin-bottom: 1.6rem;}
 .gnb-sm-header .gnb-sm-util > button { padding: 0 1rem;line-height: 3.2rem;}
@@ -92,7 +93,7 @@ body {position: relative;}
 .gnb-sm-header .gnb-sm-util > button:not(:first-child)::before { display: inline-block; position: absolute; top: 50%; left: 0; width: .1rem; height: 1.6rem; background: var(--gray03);content: ''; transform: translateY(-50%);}
 .gnb-sm-close { position: absolute; top: 2.4rem; right: 2.4rem;background: url(../assets/images/icon_close_01_rounded.svg) no-repeat center;}
 .gnb-sm-body {flex: 1; border-top: .1rem solid var(--gray03); border-bottom: .1rem solid var(--gray03);}
-/* gnb-sm-boy */
+/* gnb-sm-body */
 .gnb-sm-body .gnb-sm-menu-wrap {display: flex; height: 100%;}
 .gnb-sm-body .gnb-sm-menu {width: 14rem; background: var(--lightblue00); border-right: .1rem solid var(--gray03); height: 100%;}
 .gnb-sm-body .gnb-sm-submenu {width: calc(100% - 14rem);}
@@ -143,6 +144,9 @@ body {position: relative;}
 	.header-gnb {border-bottom: 0;}
 	.header-global > ul > li > a { padding: .55rem .4rem; font-weight: 400; font-size: 1.3rem; line-height: 100%; white-space: nowrap; flex-direction: column;}
 	.header-global > ul > li > a::before {margin-right: 0!important; margin-bottom: .4rem;}
+
+	/* gnb-sm open */
+	#gnb-sm.is-open {display: block;  position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #fff; overflow: hidden; overflow-y: auto; z-index: 1001;}
 }
 
 

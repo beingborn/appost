@@ -120,26 +120,25 @@ $(".header-global .hamburger").on("click", function () {
 	$("#gnb-sm").addClass("is-open");
 	$("body").css("overflow", "hidden");
 });
-
 /* gnb 메뉴 클릭 시 active*/
 $('#gnb-sm .gnb-sm-close').on('click', function(){
 	$('#gnb-sm').removeClass('is-open')
 })
-
+/* gnb 서브 탭 활성화 */
 $('.gnb-sm-menu > ul > li > button').eq(0).addClass('is-active')
 $('.gnb-sm-submenu .submenu-wrap').eq(0).addClass('is-active')
-
 $(' .gnb-sm-menu > ul > li > button').on('click', function(){
 	let subIdx = $(this).parent().index();
 	gnbSubMenuOpen(subIdx)
 	$('.gnb-sm-menu > ul > li > button').removeClass('is-active')
 	$(this).addClass('is-active')
 })
-
 function gnbSubMenuOpen(clicked){
 	$('.gnb-sm-submenu .submenu-wrap').removeClass('is-active')
 	$('.gnb-sm-submenu .submenu-wrap').eq(clicked).addClass('is-active')
 }
+
+
 
 
 /* check box 클릭 시 클래스 바인딩 */

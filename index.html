@@ -47,7 +47,7 @@
                                 <li><a href="#" class="flex-ac">재외동포 365민원포털<img src="./assets/images/icon_link_00.svg" alt="재외동포 365민원포털 바로가기" class="ml-2"></a></li>
                                 <li class="bl-util-control">
                                     <button type="button" class="el-toggleList el-toggle-open">화면크기</button>
-                                    <div class="bl-utilbox">
+                                    <div class="bl-utilbox lg-only-768" style="--xPosition: 1.2rem">
                                         <ul class="bl-utilgroup">
                                             <li><button type="button" onclick="zoom(50)">작게</button></li>
                                             <li class="is-active"><button type="button" onclick="zoom(75)">보통</button></li>
@@ -84,7 +84,7 @@
                                     <button type="button" class="hp-font-bold el-toggle-open md-only-1024">
                                         <span class="flex-ac el-before-20 my-page">마이페이지</span>
                                     </button>
-                                    <div class="bl-utilbox my-util">
+                                    <div class="bl-utilbox my-util md-only-1024" style="--xPosition: 3rem">
                                         <div class="my-util-header">
                                             <h5 class="my-util-name el-text-lv5">홍길동님</h5>
                                             <div class="my-util-time mt-24">
@@ -366,7 +366,21 @@
                                         <button type="button">ENGLISH</button>
                                     </div>
                                     <div class="gnb-sm-loginInfo">
-                                        <a href="#" class="hp-font-bold el-before-20 login flex-ac gap-8">로그인을 해주세요</a>
+                                        <!-- <a href="#" class="hp-font-bold el-before-20 login flex-ac gap-8">로그인을 해주세요</a> -->
+                                        <!-- 로그인 시 -->
+                                        <div class="gnb-sm-loginAfter flex-acjs">
+                                            <div class="flex-ac gap-8">
+                                                <button type="button" class="hp-font-bold">홍길동님</button>
+                                                <button type="button" class="el-text-lv7 el-before-16 login flex-ac gap-2">로그아웃</button>
+                                            </div>
+                                            <div class="my-util-detail flex-ac gap-10">
+                                                <p class="hp-txt-blue-01 el-rest-time el-text-lv7">
+                                                    <span class="minute">09</span>:
+                                                    <span class="second">55</span>
+                                                </p>
+                                                <button type="button" onclick="resetLoginTime()">시간 연장</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </section>
                                 <button type="button" type="button" class="gnb-sm-close el-before-24"><span class="sr-only">닫기</span></button>
@@ -383,40 +397,140 @@
                                     </div>
                                     <div class="gnb-sm-submenu">
                                         <ul class="submenu-wrap">
+                                            <li class="submenu-title">정책∙정보</li>
+                                            <li>
+                                                <button type="button" class="el-toggle-open el-toggleList">아포스티유</button>
+                                                <div class="submenu-dep3">
+                                                    <ul>
+                                                        <li><a href="#">아포스티유 대상 문서</a></li>
+                                                        <li><a href="#">아포스티유 발급 구비서류</a></li>
+                                                        <li><a href="#">아포스티유 발급 절차</a></li>
+                                                        <li><a href="#">아포스티유 신청서 작성 방법</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li> 
+                                                <button type="button" class="el-toggle-open el-toggleList">영사확인제도</button>
+                                                <div class="submenu-dep3">
+                                                    <ul>
+                                                        <li><a href="#">영사확인 대상 문서</a></li>
+                                                        <li><a href="#">영사확인 발급 구비서류</a></li>
+                                                        <li><a href="#">영사확인 발급 절차</a></li>
+                                                        <li><a href="#">영사확인 신청서 작성 방법</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul class="submenu-wrap">
                                             <li class="submenu-title">인증서 신청</li>
                                             <li>
                                                 <button type="button" class="el-toggle-open el-toggleList">경찰청</button>
                                                 <div class="submenu-dep3">
                                                     <ul>
-                                                        <li><a href="#">범죄경력 회보서</a></li>
+                                                        <li><a href="#">범죄 경력 회보서</a></li>
                                                         <li><a href="#">범죄 수사 경력 회보서</a></li>
-                                                        <li><a href="#">범죄 수사 경력 회보서</a></li>
+                                                        <li><a href="#">범죄 수사 경력 회보서<br>(구)신원조사 범죄경력증명서</a></li>
                                                         <li><a href="#">수사경력회보서</a></li>
                                                         <li><a href="#">운전경력증명서</a></li>
                                                     </ul>
                                                 </div>
                                             </li>
                                             <li>
-                                                <button type="button" class="el-toggle-open el-toggleList">경찰청</button>
+                                                <button type="button" class="el-toggle-open el-toggleList">교육부</button>
                                                 <div class="submenu-dep3">
                                                     <ul>
-                                                        <li><a href="#">범죄경력 회보서</a></li>
-                                                        <li><a href="#">범죄 수사 경력 회보서</a></li>
-                                                        <li><a href="#">범죄 수사 경력 회보서</a></li>
-                                                        <li><a href="#">수사경력회보서</a></li>
-                                                        <li><a href="#">운전경력증명서</a></li>
+                                                        <li><a href="#">검정고시 성적증명서</a></li>
+                                                        <li><a href="#">검정고시 합격증명서</a></li>
+                                                        <li><a href="#">중고등학교 성적증명서</a></li>
+                                                        <li><a href="#">초중고등학교 재학증명서</a></li>
+                                                        <li><a href="#">초중고등학교 졸업증명서</a></li>
                                                     </ul>
                                                 </div>
                                             </li>
-                                            <li><a href="#">인증서 신청2</a></li>
-                                            <li><a href="#">인증서 신청3</a></li>
-                                            <li><a href="#">인증서 신청4</a></li>
-                                            <li><a href="#">인증서 신청5</a></li>
-                                        </ul>
-                                        <ul class="submenu-wrap">
-                                            <li><a href="#">사자</a></li>
-                                            <li><a href="#">인증서 신청2</a></li>
-                                            <li><a href="#">인증서 신청3</a></li>
+                                            <li>
+                                                <button type="button" class="el-toggle-open el-toggleList">국세청</button>
+                                                <div class="submenu-dep3">
+                                                    <ul>
+                                                        <li><a href="#">사업자등록증명</a></li>
+                                                        <li><a href="#">사업자단위과제적용종된사업장증명</a></li>
+                                                        <li><a href="#">소득금액증명</a></li>
+                                                        <li><a href="#">납세증명서</a></li>
+                                                        <li><a href="#">납부내역증명</a></li>
+                                                        <li><a href="#">부가가치세 과세표준증명</a></li>
+                                                        <li><a href="#">부가가치세 면세사업자 수입금액증명</a></li>
+                                                        <li><a href="#">표준재무제표증명</a></li>
+                                                        <li><a href="#">폐업사실증명</a></li>
+                                                        <li><a href="#">휴업사실증명</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="el-toggle-open el-toggleList">대법원</button>
+                                                <div class="submenu-dep3">
+                                                    <ul>
+                                                        <li><a href="#">가족관계증명서</a></li>
+                                                        <li><a href="#">기본증명서</a></li>
+                                                        <li><a href="#">영문증명서</a></li>
+                                                        <li><a href="#">입양관계증명서</a></li>
+                                                        <li><a href="#">제적등본</a></li>
+                                                        <li><a href="#">제적초본</a></li>
+                                                        <li><a href="#">친양자입양관계증명서</a></li>
+                                                        <li><a href="#">혼인관계증명서</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="el-toggle-open el-toggleList">병무청</button>
+                                                <div class="submenu-dep3">
+                                                    <ul>
+                                                        <li><a href="#">병적증명서</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="el-toggle-open el-toggleList">외교부</button>
+                                                <div class="submenu-dep3">
+                                                    <ul>
+                                                        <li><a href="#">여권발급기록증명서</a></li>
+                                                        <li><a href="#">여권발급신청서류증명서</a></li>
+                                                        <li><a href="#">여권실효확인서</a></li>
+                                                        <li><a href="#">여권정보증명서</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="el-toggle-open el-toggleList">정부24</button>
+                                                <div class="submenu-dep3">
+                                                    <ul>
+                                                        <li><a href="#">주민등록등본</a></li>
+                                                        <li><a href="#">주민등록초본</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="el-toggle-open el-toggleList">질병관리청</button>
+                                                <div class="submenu-dep3">
+                                                    <ul>
+                                                        <li><a href="#">예방접종증명서</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="el-toggle-open el-toggleList">한국산업인력공단</button>
+                                                <div class="submenu-dep3">
+                                                    <ul>
+                                                        <li><a href="#">국가기술자격취득사항확인서</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="el-toggle-open el-toggleList">해양경찰청</button>
+                                                <div class="submenu-dep3">
+                                                    <ul>
+                                                        <li><a href="#">수상 구조사 자격증</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
                                         </ul>
                                         <ul class="submenu-wrap">
                                             <li class="submenu-title">인증서 검증</li>
@@ -427,6 +541,13 @@
                                             <li><a href="#">tiếng việt</a></li>
                                             <li><a href="#">français</a></li>
                                             <li><a href="#">español</a></li>
+                                        </ul>
+                                        <ul class="submenu-wrap">
+                                            <li class="submenu-title">고객센터</li>
+                                            <li><a href="#">공지사항</a></li>
+                                            <li><a href="#">자주묻는질문</a></li>
+                                            <li><a href="#">서식자료실</a></li>
+                                            <li><a href="#">오시는 길</a></li>
                                         </ul>
                                     </div>
                                 </div>
