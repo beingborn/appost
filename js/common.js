@@ -139,8 +139,6 @@ function gnbSubMenuOpen(clicked){
 }
 
 
-
-
 /* check box 클릭 시 클래스 바인딩 */
 $('.el-check-00 input[type="checkbox"]').on('click',function(){
 	let check = $(this).is(':checked')

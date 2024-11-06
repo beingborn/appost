@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 
     <!-- js -->
-    <script defer src="/js/jquery-3.7.1.js"></script>
-    <script defer src="/js/jquery-ui.min.js"></script>
+    <script src="/js/jquery-3.7.1.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
     <script defer src="/js/common.js"></script>
 
     <style>
@@ -78,6 +78,7 @@
     $('.bl-foldFaq details').on('toggle', function(e){
         let toggled = e.target;
         let content = $(toggled).find('.bl-foldFaq-content');
+        
         if($(toggled).attr('open')){           
             content.css('max-height', content.prop('scrollHeight') + 'px') // 트랜지션 약 .5초 max-height이 유지될 시 계속 animation이 안됨으로 애니메이션이 끝날시 max-height값을 초기화해줘야함;
             $('details[open]').each(function(){
@@ -87,8 +88,23 @@
             })
         } else {content.css('max-height', '0')}
     })
+    // const detailss = $('.bl-foldFaq details');
 
+    // detailss.on('toggle', function(){
+    //     if(this.open){
+    //         console.log('열림')
+    //         setTargetDetail(this)
+    //     }
+    // })
 
+    // function setTargetDetail(targetDetail){
+    //     detailss.each(function(){
+    //         if(this!== targetDetail){
+    //             this.open = false;
+    //         }
+    //     })
+    // }
+        
 
 
 
