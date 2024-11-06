@@ -49,6 +49,7 @@
 --fontLv5 : 1.9rem; 
 --fontLv6 : 1.7rem; 
 --fontLv7 : 1.5rem; 
+--fontLv8 : 1.3rem; 
 
 /* padding */
 --padding00: 0.8rem;
@@ -68,6 +69,7 @@
 .el-text-lv5 {font-size: var(--fontLv5);}
 .el-text-lv6 {font-size: var(--fontLv6);}
 .el-text-lv7 {font-size: var(--fontLv7);}
+.el-text-lv8 {font-size: var(--fontLv8);}
 
 /* button */
 button {font-weight: 400;}
