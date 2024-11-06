@@ -361,17 +361,40 @@
                         <div class="gnb-sm-in">
                             <div class="gnb-sm-header">
                                 <section>
-                                    <div class="gnb-sm-util el-text-lv7">
-                                        <button type="button">화면크기</button>
+                                    <div class="gnb-sm-util el-text-lv7 bl-util-control">
+                                        <!-- 화면 크기  -->
+                                        <button type="button" class="el-toggle-open">화면크기</button>
+                                        <div class="bl-utilbox" style="--xPosition: 5rem">
+                                            <ul class="bl-utilgroup">
+                                                <li><button type="button" onclick="zoom(50)">작게</button></li>
+                                                <li class="is-active"><button type="button" onclick="zoom(75)">보통</button></li>
+                                                <li><button type="button" onclick="zoom(100)">조금 크게</button></li>
+                                                <li><button type="button" onclick="zoom(125)">크게</button></li>
+                                                <li><button type="button" onclick="zoom(150)">가장 크게</button></li>
+                                            </ul>
+                                            <div class="bl-utiletc">
+                                                <button type="button">
+                                                    <span class="flex-ac gap-4 el-before-20 reset" onclick="zoomReset()">초기화</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- .// 화면 크기  -->
                                         <button type="button">ENGLISH</button>
                                     </div>
                                     <div class="gnb-sm-loginInfo">
                                         <!-- <a href="#" class="hp-font-bold el-before-20 login flex-ac gap-8">로그인을 해주세요</a> -->
-                                        <!-- 로그인 시 -->
+                                        <!-- 로그인 세션 확인 완료 시 -->
                                         <div class="gnb-sm-loginAfter flex-acjs">
-                                            <div class="flex-ac gap-8">
-                                                <button type="button" class="hp-font-bold">홍길동님</button>
-                                                <button type="button" class="el-text-lv7 el-before-16 login flex-ac gap-2">로그아웃</button>
+                                            <div class="flex-ac gap-8 bl-util-control">
+                                                <button type="button" class="hp-font-bold el-toggle-open">홍길동님</button>
+                                                <div class="bl-utilbox my-util">
+                                                    <ul class="bl-utilgroup">
+                                                        <li><a href="#">회원정보 확인/수정</a></li>
+                                                        <li><a href="complain-list.html">나의 민원</a></li>
+                                                        <li><a href="#">1:1 문의</a></li>
+                                                    </ul>
+                                                </div>
+                                                <button type="button" class="el-text-lv7 el-before-16 logout flex-ac gap-2">로그아웃</button>
                                             </div>
                                             <div class="my-util-detail flex-ac gap-10">
                                                 <p class="hp-txt-blue-01 el-rest-time el-text-lv7">
@@ -381,6 +404,7 @@
                                                 <button type="button" onclick="resetLoginTime()">시간 연장</button>
                                             </div>
                                         </div>
+                                        <!-- .// 로그인 세션 확인 완료 시 -->
                                     </div>
                                 </section>
                                 <button type="button" type="button" class="gnb-sm-close el-before-24"><span class="sr-only">닫기</span></button>

@@ -112,6 +112,7 @@ input[type="text"].bl-search-input {background: #fff; background-image: url(../a
 .el-before-16::before {display: inline-block; min-width: 1.6rem; height: 1.6rem; content: ''; min-width: 1.6rem;}
 .el-before-16.check-caution::before {background: url(../assets/images/icon_check_00_bkbl_16x16.svg) no-repeat center;}
 .el-before-16.login::before {background: url(../assets/images/icon_login_00_link.svg) no-repeat center; background-size: 1.6rem auto; background-size: contain;}
+.el-before-16.logout::before {background: url(../assets/images/icon_logout_00.svg) no-repeat center;}
 /* 20 x 20 */
 button.el-before-20{width: 2rem; height: 2rem;}
 .el-before-20::before {display: inline-block; min-width: 2rem; height: 2rem; content: '';}

@@ -185,6 +185,8 @@
 	.bl-pagination.lg {display: none;}
 	.bl-pagination.sm {display: flex;}
 
+	.bl-utilbox.my-util {width: 17.6rem;}
+
 	/* row table */
 	.bl-rowTable th, .bl-rowTable td { display: block;width: 100%;}
 	.bl-rowTable th {background: transparent;}
